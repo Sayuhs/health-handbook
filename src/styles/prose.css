@@ -1,0 +1,184 @@
+/* ==========================================================================
+   prose.css — 条目正文：固定的五段结构
+   一句话结论 / 自查要点 / 何时必须就医 / 常见误区 / 来源
+   ========================================================================== */
+
+.entry {
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+/* ---- 一句话结论：全篇最该被读到的一行 ---- */
+.entry__lead {
+  font-size: var(--step-1);
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0 0 var(--space-l);
+  padding-left: var(--space-m);
+  border-left: 3px solid var(--brass);
+}
+
+/* ---- 段落标题：细线 + 小型大写拉丁字母的观感（靠字距与字号实现） ---- */
+.entry h2 {
+  font-family: var(--font-ui);
+  font-size: var(--step-1);
+  margin: var(--space-xl) 0 var(--space-s);
+  padding-bottom: var(--space-2xs);
+  border-bottom: var(--rule-line);
+}
+
+.entry h2:first-of-type {
+  margin-top: var(--space-l);
+}
+
+.entry h3 {
+  font-size: var(--step-0);
+  margin: var(--space-l) 0 var(--space-xs);
+  color: var(--ink-soft);
+}
+
+.entry ul,
+.entry ol {
+  padding-left: 1.3em;
+}
+
+.entry li + li {
+  margin-top: var(--space-xs);
+}
+
+/* ---- 何时必须就医：唯一允许「响亮」的区块 ---- */
+.callout {
+  border: var(--hairline) solid var(--border);
+  background: var(--paper-raised);
+  padding: var(--space-m) var(--space-m) var(--space-xs);
+  margin: var(--space-m) 0;
+}
+
+.callout > :last-child {
+  margin-bottom: var(--space-s);
+}
+
+.callout__title {
+  font-family: var(--font-ui);
+  font-size: var(--step-0);
+  font-weight: 600;
+  margin: 0 0 var(--space-xs);
+  letter-spacing: 0.02em;
+}
+
+.callout--danger {
+  background: var(--danger-bg);
+  border-color: var(--seal);
+  border-left-width: 4px;
+}
+
+.callout--danger .callout__title {
+  color: var(--seal);
+}
+
+.callout--warn {
+  background: var(--warn-bg);
+  border-color: var(--brass-soft);
+  border-left-width: 4px;
+}
+
+.callout--note {
+  border-left-width: 4px;
+  border-left-color: var(--border);
+}
+
+/* ---- 常见误区：一组被否定的说法 ---- */
+.misconceptions dt {
+  font-family: var(--font-ui);
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: var(--space-s);
+}
+
+.misconceptions dd {
+  margin: var(--space-2xs) 0 0;
+  padding-left: var(--space-m);
+  color: var(--ink-soft);
+}
+
+/* ---- 来源列表 ---- */
+.sources {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: var(--step--1);
+}
+
+.sources li {
+  padding: var(--space-xs) 0;
+  border-bottom: var(--border-line);
+  color: var(--ink-soft);
+}
+
+.sources li:last-child {
+  border-bottom: 0;
+}
+
+.sources__label {
+  color: var(--ink);
+}
+
+.sources__url {
+  display: block;
+  margin-top: var(--space-3xs);
+  word-break: break-all;
+  font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  font-size: var(--step--2);
+  color: var(--ink-faint);
+}
+
+/* ---- 条目标头 ---- */
+.entry-head {
+  margin-bottom: var(--space-l);
+}
+
+.entry-head__eyebrow {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
+  margin: 0 0 var(--space-2xs);
+}
+
+.entry-head h1 {
+  margin-bottom: var(--space-s);
+}
+
+/* ---- 页脚元信息：更新日期 / 复核到期 / 证据强度 ---- */
+.entry-meta {
+  max-width: var(--measure);
+  margin: var(--space-xl) auto 0;
+  padding-top: var(--space-m);
+  border-top: var(--rule-line);
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  color: var(--ink-faint);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) var(--space-m);
+}
+
+.entry-meta__item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-2xs);
+}
+
+.entry-meta__label {
+  color: var(--ink-faint);
+}
+
+.entry-meta__value {
+  color: var(--ink-soft);
+}
+
+/* ---- 复核过期：不刺眼，但绝不能看不见 ---- */
+.entry-meta__stale {
+  color: var(--seal);
+  font-weight: 600;
+}

@@ -1,0 +1,22 @@
+# 依赖与构建产物
+node_modules/
+dist/
+.astro/
+
+# pnpm 本地存储（沙箱重定向到项目内）
+.pnpm-store/
+.pnpm-cache/
+.pnpm-state/
+
+# 残留的 npm 缓存（已弃用，改用 pnpm）
+.npm-cache/
+
+# 研究过程产物：不进公开仓库
+.notes/
+
+# 杂项
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.local

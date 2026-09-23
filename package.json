@@ -1,0 +1,27 @@
+{
+  "name": "health-handbook",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "医学自查手册：常见医学常识与养生参考。静态站点，部署于 GitHub Pages。",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:check": "node scripts/validate-content.mjs && node scripts/build.mjs",
+    "validate": "node scripts/validate-content.mjs",
+    "dev": "node scripts/serve.mjs",
+    "fonts": "node scripts/fetch-fonts.mjs"
+  },
+  "dependencies": {
+    "marked": "18.0.14",
+    "minisearch": "7.2.0",
+    "yaml": "2.9.1"
+  },
+  "pnpm": {
+    "//": "三个依赖全是纯 JS，没有需要 postinstall 的原生构建；这里显式列出被跳过的构建脚本，避免 pnpm 每次都来提醒。",
+    "ignoredBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "@parcel/watcher"
+    ]
+  }
+}

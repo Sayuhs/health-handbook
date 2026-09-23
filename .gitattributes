@@ -1,0 +1,21 @@
+# 行尾与二进制处理
+# 仓库内文本统一 LF；Windows 检出时也不转 CRLF，避免 CI（Ubuntu）与本地行为不一致。
+* text=auto eol=lf
+
+# 二进制文件明确声明，禁止任何行尾转换
+# 字体被转换过就废了，而且不会有人立刻发现
+*.woff2 binary
+*.woff binary
+*.ttf binary
+*.otf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.pdf binary
+*.ico binary
+
+# 生成物与锁文件：让 diff 与统计不把它们当源码
+pnpm-lock.yaml -diff
+dist/** linguist-generated=true

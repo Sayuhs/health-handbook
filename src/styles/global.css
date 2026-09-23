@@ -1,0 +1,11 @@
+/* ==========================================================================
+   global.css — 唯一入口，按依赖顺序引入
+   （@import 必须置于文件最前）
+   ========================================================================== */
+
+@import "./fonts.css";
+@import "./tokens.css";
+@import "./base.css";
+@import "./layout.css";
+@import "./prose.css";
+@import "./components.css";

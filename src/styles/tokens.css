@@ -1,0 +1,104 @@
+/* ==========================================================================
+   tokens.css — 设计令牌
+
+   浅色主题「药典」：19 世纪医学辞典的蛋壳纸、墨线、少量黄铜
+   暗色主题「煤气灯书房」：深棕黑纸面、黄铜金、泛黄字色
+   两套都是独立设计的色板，不是简单反转。
+   ========================================================================== */
+
+:root {
+  /* ---- 主题选择器：浅色为默认值 ---- */
+  --paper: #f5f0e4;
+  --paper-raised: #fbf7ee;
+  --paper-sunken: #ebe3d2;
+  --ink: #221d17;
+  --ink-soft: #4d443a;
+  --ink-faint: #786c5d;
+  --rule: #cbb994;
+  --rule-strong: #ab9569;
+  --border: #ded2b9;
+  --brass: #8a6a1c;
+  --brass-soft: #b09250;
+  --seal: #7d2026; /* 封蜡红：仅用于紧急与红旗 */
+  --seal-soft: #a8453f;
+  --link: #2f5044;
+  --link-visited: #4a3a5c;
+  --focus: #8a6a1c;
+  --danger-bg: #f6e7e3;
+  --warn-bg: #f7efdc;
+
+  /* ---- 字体：拉丁衬线自托管，中文回落到系统宋体 ---- */
+  --font-display: "Playfair Display", "EB Garamond", Georgia, "Times New Roman", serif;
+  --font-serif: "EB Garamond", Georgia, "Times New Roman", serif;
+  --font-cjk-serif: "Songti SC", "Source Han Serif SC", "Noto Serif CJK SC", "STSong", SimSun, serif;
+  --font-cjk-sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Segoe UI", sans-serif;
+  --font-body: var(--font-serif), var(--font-cjk-serif);
+  --font-ui: var(--font-serif), var(--font-cjk-sans);
+
+  /* ---- 字号尺度（rem；根字号由 --reading-scale 缩放） ---- */
+  --reading-scale: 1;
+  --step--2: 0.75rem;
+  --step--1: 0.875rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.25rem;
+  --step-2: 1.5rem;
+  --step-3: 1.875rem;
+  --step-4: 2.5rem;
+
+  /* ---- 行高与行宽 ---- */
+  --leading-tight: 1.3;
+  --leading: 1.75;
+  --measure: 34rem; /* 正文行宽：中文约 32~36 字 */
+
+  /* ---- 间距 ---- */
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-s: 0.75rem;
+  --space-m: 1.25rem;
+  --space-l: 2rem;
+  --space-xl: 3.25rem;
+  --space-2xl: 5rem;
+
+  /* ---- 线条与直角：维多利亚风靠细线而非圆角 ---- */
+  --radius: 2px;
+  --hairline: 1px;
+  --rule-line: var(--hairline) solid var(--rule);
+  --border-line: var(--hairline) solid var(--border);
+
+  /* ---- 阴影：极克制，仅用于浮层 ---- */
+  --shadow-pop: 0 6px 24px rgba(34, 29, 23, 0.16);
+  --shadow-sink: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+
+  color-scheme: light;
+}
+
+html[data-theme="dark"] {
+  --paper: #17130e;
+  --paper-raised: #1f1a13;
+  --paper-sunken: #120f0b;
+  --ink: #e9dcc2;
+  --ink-soft: #c3b498;
+  --ink-faint: #8d8069;
+  --rule: #4a3d29;
+  --rule-strong: #6b5836;
+  --border: #332a1d;
+  --brass: #c9a227;
+  --brass-soft: #8e7526;
+  --seal: #b8433c;
+  --seal-soft: #8d322d;
+  --link: #9dc4a8;
+  --link-visited: #b9a8cc;
+  --focus: #c9a227;
+  --danger-bg: #2a1715;
+  --warn-bg: #2a2314;
+
+  color-scheme: dark;
+}
+
+/* 高对比模式（阅读模式的一档），强化正文对比，压掉装饰 */
+html[data-contrast="high"] {
+  --ink-soft: var(--ink);
+  --ink-faint: var(--ink-soft);
+  --rule: var(--rule-strong);
+}
