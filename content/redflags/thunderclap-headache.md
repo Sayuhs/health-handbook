@@ -48,6 +48,7 @@ sources:
     year: 2022
   - label: NHS — Subarachnoid haemorrhage（蛛网膜下腔出血）
     url: https://www.nhs.uk/conditions/subarachnoid-haemorrhage/
+    year: 2025
 ---
 
 头痛是太常见的症状，正因为常见，它最容易被放过。但有一类头痛的分界不在「痛不痛」，而在**多久达到最痛**。

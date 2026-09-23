@@ -45,6 +45,7 @@ triage:
 sources:
   - label: NHS — Febrile seizures（高热惊厥）
     url: https://www.nhs.uk/conditions/febrile-seizures/
+    year: 2023
   - label: 美国 NINDS — Febrile Seizures（国立神经病学与卒中研究所）
     url: https://www.ninds.nih.gov/health-information/disorders/febrile-seizures
   - label: St John Ambulance — Febrile seizure（临床复核 2025-04-28）

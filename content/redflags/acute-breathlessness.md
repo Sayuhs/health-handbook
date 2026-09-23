@@ -47,6 +47,7 @@ sources:
     url: https://www.nhs.uk/conditions/shortness-of-breath/
   - label: NHS — Asthma（哮喘）
     url: https://www.nhs.uk/conditions/asthma/
+    year: 2025
   - label: NICE NG245 — 哮喘（BTS/NICE/SIGN 2024，Recommendations）
     url: https://www.nice.org.uk/guidance/ng245/chapter/Recommendations
     year: 2024

@@ -49,8 +49,10 @@ sources:
     url: https://www.nice.org.uk/guidance/ng143/chapter/Recommendations
   - label: NHS — Meningitis（脑膜炎）
     url: https://www.nhs.uk/conditions/meningitis/
+    year: 2026
   - label: WHO — 脑膜炎实况报道（中文版）
     url: https://www.who.int/zh/news-room/fact-sheets/detail/meningitis
+    year: 2025
   - label: St John Ambulance — Seizure（抽搐，临床复核 2025-04-28）
     url: https://www.sja.org.uk/first-aid-advice/seizure/
     year: 2025

@@ -43,6 +43,7 @@ triage:
 sources:
   - label: NHS — Anaphylaxis（严重过敏反应）
     url: https://www.nhs.uk/conditions/anaphylaxis/
+    year: 2023
   - label: St John Ambulance — Anaphylaxis（临床复核 2025-04-28）
     url: https://www.sja.org.uk/first-aid-advice/anaphylaxis/
     year: 2025

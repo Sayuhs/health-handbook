@@ -36,7 +36,7 @@ sources:
   - label: 英国 NHS — Atrial fibrillation（心房颤动）
     url: https://www.nhs.uk/conditions/atrial-fibrillation/
     year: 2025
-  - label: NICE NG196 — Atrial fibrillation: diagnosis and management（心房颤动的诊断与管理）
+  - label: "NICE NG196 — Atrial fibrillation: diagnosis and management（心房颤动的诊断与管理）"
     url: https://www.nice.org.uk/guidance/ng196
     year: 2021
 ---

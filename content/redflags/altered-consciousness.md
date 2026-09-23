@@ -46,16 +46,19 @@ triage:
 sources:
   - label: NHS — Low blood sugar (hypoglycaemia)（低血糖）
     url: https://www.nhs.uk/conditions/low-blood-sugar-hypoglycaemia/
+    year: 2023
   - label: St John Ambulance — Diabetic emergencies（糖尿病急症，临床复核 2025-04-28）
     url: https://www.sja.org.uk/first-aid-advice/diabetes/
     year: 2025
   - label: NHS — Poisoning（中毒）
     url: https://www.nhs.uk/conditions/poisoning/
+    year: 2025
   - label: St John Ambulance — Poisoning（中毒，临床复核 2025-04-28）
     url: https://www.sja.org.uk/first-aid-advice/poisoning/
     year: 2025
   - label: NHS — Head injury and concussion（头部外伤与脑震荡）
     url: https://www.nhs.uk/conditions/head-injury-and-concussion/
+    year: 2025
   - label: St John Ambulance — Head injury（头部外伤，临床复核 2025-04-28）
     url: https://www.sja.org.uk/first-aid-advice/head-injury/
     year: 2025
