@@ -21,32 +21,32 @@ export const CATEGORIES = {
     note: "必须立即就医的情况",
     description: "会要命的情况。这一类不是知识，是必须记住的动作。",
   },
-  firstaid: {
-    label: "急救技能",
-    order: 3,
-    note: "在救护车到达之前",
-    description: "在救护车到达之前该做什么。步骤写得很具体——那种时候没人在读长文。",
-  },
   diseases: {
     label: "常见疾病常识",
-    order: 4,
+    order: 3,
     description: "家里最常出现的那些诊断：是什么、怎么看、什么情况下要升级处理。",
   },
   medications: {
     label: "用药与检查常识",
-    order: 5,
+    order: 4,
     description: "吃药、体检、看化验单之前该知道的事——以及最常见的误解。",
   },
   drugs: {
     label: "常见药物速查",
-    order: 6,
+    order: 5,
     note: "认成分与商品名",
     description: "拿着药盒认不出是什么？先认成分。这里不给剂量，也不判断适不适合你。",
   },
   labs: {
     label: "体检指标解读",
-    order: 7,
+    order: 6,
     description: "报告单上的箭头到底意味着什么，哪些需要管，哪些可以再看一年。",
+  },
+  foods: {
+    label: "食物选择",
+    order: 7,
+    note: "吃什么、少买什么",
+    description: "没有单一「最养生」的食物。这里说的是长期吃什么，以及哪些其实不必买。",
   },
   lifestyle: {
     label: "养生",
