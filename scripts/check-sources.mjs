@@ -42,29 +42,47 @@ for (const e of entries) {
 
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36";
+const UA_ALT =
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15";
 
-async function probe(url) {
+/**
+ * 单个链接探测，带退避重试。
+ *
+ * 为什么必须重试：第一版 6 并发跑下来，nhs.uk / medlineplus / who.int / kdigo.org
+ * 整片报「fetch failed」——它们不可能同时挂，是被限流了。
+ * 一个会误报的巡查工具，跑两次就没人看了，那还不如不做。
+ *
+ * 403 换 UA 再试一次：有些站点对「看起来像脚本」的 UA 直接拒绝。
+ */
+async function probe(url, ua = UA, attempt = 1) {
   try {
-    // 有些政府站点对 HEAD 不友好，直接 GET
     const res = await fetch(url, {
-      headers: { "user-agent": UA, "accept-language": "zh-CN,zh;q=0.9,en;q=0.8" },
+      headers: { "user-agent": ua, "accept-language": "zh-CN,zh;q=0.9,en;q=0.8" },
       redirect: "follow",
-      signal: AbortSignal.timeout(30000),
+      signal: AbortSignal.timeout(40000),
     });
     const body = await res.text();
+
+    if (res.status === 403 && ua === UA) {
+      return probe(url, UA_ALT, attempt);
+    }
     return { url, status: res.status, finalUrl: res.url, bytes: body.length };
   } catch (err) {
-    return { url, status: 0, error: err.message };
+    if (attempt < 3) {
+      await new Promise((r) => setTimeout(r, 1200 * attempt));
+      return probe(url, ua, attempt + 1);
+    }
+    return { url, status: 0, error: err.message, attempts: attempt };
   }
 }
 
-// 限制并发，避免把对方站点打疼
+// 并发压到 3：宁可慢，也不要误报
 const urls = [...byUrl.keys()];
-const CONCURRENCY = 6;
+const CONCURRENCY = 3;
 const results = [];
 for (let i = 0; i < urls.length; i += CONCURRENCY) {
   const batch = urls.slice(i, i + CONCURRENCY);
-  results.push(...(await Promise.all(batch.map(probe))));
+  results.push(...(await Promise.all(batch.map((u) => probe(u)))));
 }
 
 const ok = results.filter((r) => r.status >= 200 && r.status < 400);
