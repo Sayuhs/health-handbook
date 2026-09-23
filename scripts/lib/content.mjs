@@ -229,6 +229,7 @@ export function validateEntry({ data, body, relPath }) {
   const SECTION_ALIASES = [
     REQUIRED_SECTION,
     "什么时候该问医生药师",
+    "什么时候该问医生或营养师",
     "什么时候该问医生",
     "何时该问医生药师",
     "何时该问医生",
