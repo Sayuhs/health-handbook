@@ -59,6 +59,10 @@ https://sousuo.www.gov.cn/search-gov/data?t=zhengce&q=<关键词>
 | 文件名 `who-sodium-benchmark.html` | 成人高血压药物治疗指南网络附件 |
 | 文件名 `cn-gov-news-dietguide-2022b.html` | 中央财经委员会会议新闻稿（与膳食无关） |
 | `who.int/.../fact-sheets/detail/osteoporosis` | **200，但正文 0 字**（空壳） |
+| `ninds.nih.gov/.../disorders/back-pain` | 「Pain」通用疼痛页（请求背痛，给通用页） |
+| `stacks.cdc.gov/view/cdc/112700` | 实际返回 `113400`，内容是**霍乱周报** |
+| `nhs.uk/live-well/exercise/common-posture-mistakes-and-fixes/` | 实为 `/live-well/exercise/` 栏目总页，无姿势内容 |
+| `cdc.gov/niosh/topics/ergonomics/`（含 `default.html`） | **200，但正文 0 字**（207 字节） |
 | `who.int/.../fact-sheets/detail/chronic-kidney-disease` | 404 |
 | `cn-gov-bp-2008` / `cn-ynsjkj-alt` | 200，但**重定向回首页** |
 | 某「甲亢基层诊疗指南」页面 | 正文 34 字符空壳 |
@@ -71,9 +75,12 @@ https://sousuo.www.gov.cn/search-gov/data?t=zhengce&q=<关键词>
 2. **看 `FINAL_URL`**。200 但重定向回首页，等于什么也没拿到。
 3. **看正文长度**。空壳页同样返回 200。抓取脚本里最好直接记录字节数。
 
-## 四、另外两类坑
+## 四、另外几类坑
 
-- **内容重复**：NHS 的 `/diagnosis/`、`/treatment/` 子路径抓回来的字节数与主页**一模一样**。多列一条不增加任何信息量，只增加维护成本。
+- **静默回退（最危险的一种）**：NHS 的 `/conditions/xxx/treatment/` 这类子路径会**不报错、返回 200、但内容回退到父页**。状态码正常、页面正常、只是缺了一段——没有任何信号。同类还有 `stacks.cdc.gov/view/cdc/112700` 实际返回 `113400`，内容是霍乱周报。
+- **内容重复**：NHS 的 `/diagnosis/`、`/treatment/` 子路径抓回来的字节数与主页**一模一样**。多列一条不增加信息量，只增加维护成本。
+- **站点改版**：NHS 已大规模迁移，旧 `/conditions/xxx/` 大量 404，新路径在 `/symptoms/`、`/tests-and-treatments/`、`/mental-health/conditions/`。**抓 NHS 必须逐条核对 `FINAL_URL`，不能只看状态码。**
+- **路由陷阱（MSD 中文版）**：`/home/brain,-spinal-cord,-and-nerve-disorders/...` 这条**带逗号**的路径对部分文章会 404，真实路径族是 `brain-spinal-cord-and-nerve-disorders`（无逗号）；耳部文章在 `ear-nose-and-throat-disorders` 下。抓之前先从目录页挖真实 slug。
 - **页面自标日期与 URL 里的日期不一致**：以**页面自标**为准（例如 URL 含 `20230424`、页面写 2023-04-19）。
 
 ## 五、拿不到就是拿不到
