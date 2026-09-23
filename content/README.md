@@ -50,6 +50,19 @@ sources:                          # 必填，至少 1 条
 
 `severity: emergency` 的条目，正文里**必须**有「何时必须就医」这一段，否则构建失败。
 
+## 一个会咬人的细节
+
+YAML 里**值中包含「`: `」（冒号加空格）时必须用引号包起来**，否则解析直接失败，而且报错信息会指向别处（常见的是误报 slug 重复）：
+
+```yaml
+# 错：NICE 的标题里带冒号，解析器会把它当成新的键
+- label: NICE NG219 Gout: diagnosis and management
+# 对
+- label: "NICE NG219 Gout: diagnosis and management"
+```
+
+来源名里带冒号的情况相当常见（尤其是英文指南标题），直接加引号最省事。
+
 ## 正文结构
 
 固定四段（「一句话结论」由 `summary` 自动渲染）：

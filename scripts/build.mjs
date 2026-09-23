@@ -17,6 +17,8 @@ import MiniSearch from "minisearch";
 import { CATEGORIES, EVIDENCE_LABEL, SEVERITY_LABEL, loadContent } from "./lib/content.mjs";
 import { buildStyles, FONT_FILES } from "./lib/assets.mjs";
 import { createRenderer } from "./lib/render.mjs";
+import { renderOgImage } from "./lib/og.mjs";
+import { SEARCH_OPTIONS } from "../src/client/tokenize.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = resolve(here, "..");
@@ -142,15 +144,8 @@ function slugify(s) {
 }
 
 /* ---------------------------------------------------- 3. 搜索索引 */
-const segmenter = new Intl.Segmenter("zh-CN", { granularity: "word" });
-const tokenize = (text) => {
-  const t = String(text ?? "").normalize("NFKC").toLowerCase();
-  const tokens = [];
-  for (const seg of segmenter.segment(t)) if (seg.isWordLike) tokens.push(seg.segment);
-  // 单字兜底：让「压高」这类非词子串也能命中（Pagefind 官方承认它做不到）
-  for (const ch of t.replace(/[^\u4e00-\u9fff]/g, "")) tokens.push(ch);
-  return tokens;
-};
+// tokenize 与搜索参数都与浏览器端共用同一份实现（src/client/tokenize.js），
+// 避免两端漂移导致「索引里有、搜不到」。
 
 const docs = entries.map((e) => ({
   id: `${e.category}/${e.data.slug}`,
@@ -162,12 +157,7 @@ const docs = entries.map((e) => ({
   body: e.body.replace(/<[^>]+>/g, " ").replace(/[#*`>|【】]/g, " "),
 }));
 
-const mini = new MiniSearch({
-  fields: ["title", "summary", "tags", "body"],
-  storeFields: ["url", "title", "summary", "category"],
-  tokenize,
-  searchOptions: { prefix: true, combineWith: "OR", boost: { title: 3, summary: 2 } },
-});
+const mini = new MiniSearch(SEARCH_OPTIONS);
 mini.addAll(docs);
 
 put("search-index.json", JSON.stringify(mini.toJSON()));
@@ -190,6 +180,9 @@ for (const [rel, content] of files) {
   await writeFile(target, content, "utf8");
 }
 
+// 分享图：纯线条生成，无图像库依赖（微信/社交卡片用）
+await writeFile(join(outDir, "og.png"), renderOgImage());
+
 // 字体
 await mkdir(join(outDir, "fonts"), { recursive: true });
 for (const f of FONT_FILES) {
@@ -200,6 +193,7 @@ for (const f of FONT_FILES) {
 await mkdir(join(outDir, "assets"), { recursive: true });
 const clientAssets = [
   [join(root, "src", "client", "controls.js"), "controls.js"],
+  [join(root, "src", "client", "tokenize.js"), "tokenize.js"],
   [join(root, "src", "client", "search-core.js"), "search-core.js"],
   [join(root, "src", "client", "search.js"), "search.js"],
   [join(root, "src", "client", "triage.js"), "triage.js"],

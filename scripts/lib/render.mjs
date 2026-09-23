@@ -48,12 +48,17 @@ export function createRenderer({ config, categories, severityLabel, evidenceLabe
 <title>${fullTitle}</title>
 <meta name="description" content="${esc(description || config.tagline)}">
 <link rel="canonical" href="${esc(canonical)}">
-<meta property="og:type" content="article">
+<meta property="og:type" content="${path ? "article" : "website"}">
 <meta property="og:site_name" content="${esc(config.title)}">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description || config.tagline)}">
 <meta property="og:url" content="${esc(canonical)}">
+<meta property="og:image" content="${esc(config.site.replace(/\/$/, "") + url("og.png"))}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(config.title)}">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#f5f0e4">
 <link rel="stylesheet" href="${url("styles.css")}">
 <script>${THEME_BOOT}</script>
