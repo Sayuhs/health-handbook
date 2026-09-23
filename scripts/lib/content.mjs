@@ -230,6 +230,7 @@ export function validateEntry({ data, body, relPath }) {
     REQUIRED_SECTION,
     "什么时候该问医生药师",
     "什么时候该问医生或营养师",
+    "什么时候该寻求专业帮助",
     "什么时候该问医生",
     "何时该问医生药师",
     "何时该问医生",
