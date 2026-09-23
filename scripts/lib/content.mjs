@@ -37,14 +37,20 @@ export const CATEGORIES = {
     order: 5,
     description: "吃药、体检、看化验单之前该知道的事——以及最常见的误解。",
   },
+  drugs: {
+    label: "常见药物速查",
+    order: 6,
+    note: "认成分与商品名",
+    description: "拿着药盒认不出是什么？先认成分。这里不给剂量，也不判断适不适合你。",
+  },
   labs: {
     label: "体检指标解读",
-    order: 6,
+    order: 7,
     description: "报告单上的箭头到底意味着什么，哪些需要管，哪些可以再看一年。",
   },
   lifestyle: {
     label: "养生",
-    order: 7,
+    order: 8,
     description: "有证据支持的生活方式，以及被证据否定的流行说法。",
   },
 };
@@ -218,12 +224,24 @@ export function validateEntry({ data, body, relPath }) {
   }
 
   // ---- emergency 级必须有「何时必须就医」段 ----
-  const hasSection = new RegExp(`^##\\s*${REQUIRED_SECTION}\\s*$`, "m").test(body ?? "");
+  // 接受若干等价标题：药物速查类说「什么时候该问医生药师」比「何时必须就医」准确得多，
+  // 不该为了迁就校验器去写一句不自然的话。
+  const SECTION_ALIASES = [
+    REQUIRED_SECTION,
+    "什么时候该问医生药师",
+    "什么时候该问医生",
+    "何时该问医生药师",
+    "何时该问医生",
+    "何时必须问医生",
+  ];
+  const hasSection = SECTION_ALIASES.some((alias) =>
+    new RegExp(`^##\\s*${alias}\\s*$`, "m").test(body ?? ""),
+  );
   if (data.severity === "emergency" && !hasSection) {
-    err("body", `severity 为 emergency 的条目必须在正文里包含「## ${REQUIRED_SECTION}」`);
+    err("body", `severity 为 emergency 的条目必须在正文里包含「## ${REQUIRED_SECTION}」或等价标题`);
   }
   if (!hasSection) {
-    warn("body", `正文里没有「## ${REQUIRED_SECTION}」，建议补上`);
+    warn("body", `正文里没有「## ${REQUIRED_SECTION}」或等价标题，建议补上`);
   }
 
   // ---- 正文长度兜底 ----

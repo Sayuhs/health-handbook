@@ -23,5 +23,8 @@
       "sharp",
       "@parcel/watcher"
     ]
+  },
+  "devDependencies": {
+    "pdfjs-dist": "^6.3.289"
   }
 }
