@@ -10,7 +10,7 @@ review_due: 2027-09-24
 age_group: [adult, older]
 tags: [幽门螺杆菌, 胃炎, 消化性溃疡, 胃癌, 呼气试验]
 quickref:
-  - situation: 呕血、黑便、持续呕吐、不明原因体重下降或缺铁
+  - situation: 消化道出血、持续呕吐、不明原因体重下降或缺铁
     action: 尽快就医，评估是否需要内镜与活检
     detail: 这类警示特征属于内镜 + 活检的指征，不能只按普通胃炎处理。
     level: 3
@@ -94,7 +94,7 @@ sources:
 <div class="callout callout--danger">
 <p class="callout__title">出现以下任一情况，必须就医</p>
 <ul>
-<li><strong>消化道出血（呕血、黑便）、持续呕吐、不明原因体重下降、缺铁</strong>——ACG 将这类「警示特征」列为需内镜 + 活检的情形 [1]。</li>
+<li><strong>消化道出血、持续呕吐、不明原因体重下降、缺铁</strong>——ACG 将这类「警示特征」列为需内镜 + 活检的情形 [1]。</li>
 <li><strong>已确认 H. pylori 感染</strong>——按原文「所有感染者都应接受治疗」，应就诊制定治疗方案 [1]。</li>
 <li><strong>治疗结束后症状不缓解，或需要确认是否根除</strong>——治愈检测应在治疗结束后至少 4 周完成 [1][4]。</li>
 <li><strong>家庭成员中有胃癌病史，或本人属于 ACG 列出的高风险人群</strong>（自身免疫性胃炎、胃部癌前病变、MALT 淋巴瘤等）——这些均属明确的检测指征 [1]。</li>
