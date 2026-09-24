@@ -22,7 +22,7 @@ function highlight(text, tokens) {
 
 function renderEmpty(q) {
   list.hidden = false;
-  list.innerHTML = `<li class="search__empty">没有找到「${esc(q)}」。换个说法试试，或者先看<a href="../quickref/">紧急速查</a>。如果身体正不舒服，不要靠搜索。</li>`;
+  list.innerHTML = `<li class="search__empty">没有找到「${esc(q)}」。换个说法试试——通用名、商品名、俗名、指标名称都能搜。如果身体正不舒服，不要靠搜索。</li>`;
 }
 
 function renderResults(q, hits) {

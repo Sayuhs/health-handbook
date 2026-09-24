@@ -3,31 +3,11 @@ title: 慢性乙型肝炎（乙肝）
 category: diseases
 slug: chronic-hepatitis-b
 summary: 乙肝只经血液、性接触、母婴三条途径传播，日常接触不传染；疫苗保护力接近 100%。
-severity: see-doctor
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [child, adult, older]
 tags: [乙肝, 肝炎, 乙肝疫苗, 感染]
-triage:
-  - group: 感染与免疫
-    label: 被他人血液污染伤口，或被使用过的针具刺伤
-    level: 2
-  - group: 感染与免疫
-    label: 皮肤或眼白发黄，或尿色深如浓茶
-    level: 3
-  - group: 感染与免疫
-    label: 持续明显乏力、食欲减退
-    level: 3
-  - group: 感染与免疫
-    label: 已知慢性乙肝，抗病毒治疗期间自行停药或漏服
-    level: 3
-  - group: 感染与免疫
-    label: 共用过剃须刀、牙刷、指甲剪，或做过消毒情况不明的纹身、穿孔、拔牙
-    level: 4
-  - group: 感染与免疫
-    label: 不清楚自己是否接种过乙肝疫苗，也未做过相关检测
-    level: 4
 sources:
   - label: 国家卫生健康委办公厅 —《中国公民健康素养——基本知识与技能（2024年版）》第 11 条
     url: https://www.gov.cn/zhengce/zhengceku/202405/content_6954649.htm
@@ -67,19 +47,6 @@ sources:
 - 是否完成过乙肝疫苗接种，可以查接种记录。
 - 皮肤或眼白是否发黄、尿色是否深如浓茶、是否长期明显乏力。
 - 家人、伴侣中是否有人从未检测过乙肝。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下任一情况，尽快就医</p>
-<ul>
-<li>出现黄疸（皮肤或眼白发黄）、尿色明显变深、持续明显乏力或食欲减退。</li>
-<li>被他人血液污染伤口，或被使用过的针具刺伤——需要尽快就医评估是否需要暴露后预防。</li>
-<li>已知是乙肝感染者，出现新发症状；或在抗病毒治疗期间出现停药、漏服。</li>
-</ul>
-</div>
-
-已确诊慢性乙肝者需要按医嘱定期监测。具体的监测项目与间隔，本页未取得可公开访问的原文，因此不列出——不要用网络上的传言替代医嘱。
 
 ## 常见误区
 

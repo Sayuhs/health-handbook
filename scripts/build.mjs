@@ -7,6 +7,9 @@
  *   node scripts/build.mjs --content <dir> --out <dir>   # 测试用
  *
  * 校验不过就中止，绝不让缺来源的内容上线。
+ *
+ * 结构：三个模块（drugs / labs / wellness）+ 一组隐藏分类（diseases / medications）。
+ * 隐藏分类照样生成页面与索引，只是不进导航、并加 noindex。
  */
 import { readFile, writeFile, mkdir, rm, copyFile, stat } from "node:fs/promises";
 import { join, dirname, resolve } from "node:path";
@@ -14,7 +17,15 @@ import { fileURLToPath } from "node:url";
 import { marked } from "marked";
 import MiniSearch from "minisearch";
 
-import { CATEGORIES, EVIDENCE_LABEL, SEVERITY_LABEL, loadContent } from "./lib/content.mjs";
+import {
+  CATEGORIES,
+  MODULES,
+  HIDDEN_CATEGORIES,
+  EVIDENCE_LABEL,
+  drugAnchor,
+  loadContent,
+  splitFrontmatter,
+} from "./lib/content.mjs";
 import { buildStyles, FONT_FILES } from "./lib/assets.mjs";
 import { createRenderer } from "./lib/render.mjs";
 import { renderOgImage } from "./lib/og.mjs";
@@ -51,123 +62,189 @@ console.log(`✓ 内容校验通过，共 ${entries.length} 条`);
 /* ---------------------------------------------------- 2. 渲染 */
 marked.setOptions({ gfm: true, breaks: false });
 
-// 只渲染合法条目（校验已通过，所以全部合法）
 const renderer = createRenderer({
   config,
   categories: CATEGORIES,
-  severityLabel: SEVERITY_LABEL,
   evidenceLabel: EVIDENCE_LABEL,
 });
 
 const files = new Map(); // 相对路径 → 内容
-
 const outPath = (rel) => join(outDir, rel);
 const put = (rel, html) => files.set(rel, html);
+const entriesOf = (key) => entries.filter((e) => e.category === key);
 
-// 条目页
+// ---- 条目页 ----
 for (const entry of entries) {
-  const bodyHtml = marked.parse(entry.body);
+  let bodyHtml = marked.parse(entry.body);
+
+  // 药品的对照表来自 frontmatter 的结构化数据
+  if (Array.isArray(entry.data.drugs) && entry.data.drugs.length) {
+    const injected = renderer.injectDrugTable(bodyHtml, entry.data.drugs);
+    if (injected === null) {
+      console.error(`✗ ${entry.relPath} 正文里找不到 <!--DRUGS_TABLE--> 占位标记，构建中止`);
+      process.exit(1);
+    }
+    bodyHtml = injected;
+  }
+
   const related = entries
     .filter((e) => e.category === entry.category && e !== entry)
     .slice(0, 6);
+
   put(
     `${entry.category}/${entry.data.slug}/index.html`,
     renderer.entryPage({ entry, bodyHtml, related }),
   );
 }
 
-// 分类页
-const groups = Object.entries(CATEGORIES)
-  .map(([key, meta]) => ({ key, meta, entries: entries.filter((e) => e.category === key) }))
-  .filter((g) => g.entries.length > 0);
-
-for (const g of groups) {
-  put(`${g.key}/index.html`, renderer.categoryPage({ key: g.key, meta: g.meta, entries: g.entries }));
+// ---- 三个模块页 ----
+/**
+ * 模块级的说明文字。存在 `content/_modules/<模块>.md` 里，没有就返回空。
+ * 之所以需要它：十个药品分类各自的「使用这张表要注意的」原本逐字节相同——
+ * 同一段话抄十遍，不是内容，是重复。共享的部分放这里，只出现一次。
+ */
+async function moduleIntro(moduleKey) {
+  try {
+    const raw = await readFile(join(contentDir, "_modules", `${moduleKey}.md`), "utf8");
+    const { body } = splitFrontmatter(raw);
+    return `<div class="entry">${marked.parse(body)}</div>`;
+  } catch {
+    return "";
+  }
 }
 
-// 首页
-put("index.html", renderer.homePage({ groups, total: entries.length }));
+const moduleSummaries = [];
+for (const [moduleKey, moduleMeta] of Object.entries(MODULES).sort((a, b) => a[1].order - b[1].order)) {
+  const groups = moduleMeta.categories
+    .map((key) => ({ key, meta: CATEGORIES[key], entries: entriesOf(key) }))
+    .filter((g) => g.entries.length > 0);
+  if (!groups.length) continue;
 
-// 免责声明页
+  put(
+    `${moduleKey}/index.html`,
+    renderer.listingPage({
+      title: moduleMeta.label,
+      description: moduleMeta.description,
+      path: `${moduleKey}/`,
+      active: `${moduleKey}/`,
+      groups,
+      moduleKey,
+      intro: await moduleIntro(moduleKey),
+    }),
+  );
+
+  const drugCount = groups.reduce(
+    (n, g) => n + g.entries.reduce((m, e) => m + (Array.isArray(e.data.drugs) ? e.data.drugs.length : 0), 0),
+    0,
+  );
+  const entryCount = groups.reduce((n, g) => n + g.entries.length, 0);
+  moduleSummaries.push({
+    href: `${moduleKey}/`,
+    eyebrow: moduleMeta.note ?? "",
+    title: moduleMeta.label,
+    desc: moduleMeta.description,
+    count:
+      drugCount > 0 && moduleKey === "drugs"
+        ? `${drugCount} 种药 · ${entryCount} 张分类对照表`
+        : `${entryCount} 条`,
+  });
+}
+
+// ---- 隐藏分类的列表页（老 URL 不能断，但要 noindex）----
+for (const key of HIDDEN_CATEGORIES) {
+  const list = entriesOf(key);
+  if (!list.length) continue;
+  put(
+    `${key}/index.html`,
+    renderer.listingPage({
+      title: CATEGORIES[key].label,
+      description: CATEGORIES[key].description,
+      path: `${key}/`,
+      active: "",
+      groups: [{ key, meta: CATEGORIES[key], entries: list }],
+      noindex: true,
+    }),
+  );
+}
+
+// ---- 首页 ----
+const hiddenCount = HIDDEN_CATEGORIES.reduce((n, key) => n + entriesOf(key).length, 0);
+put("index.html", renderer.homePage({ cards: moduleSummaries, total: entries.length, hiddenCount }));
+
+// ---- 免责声明页 / 搜索页 ----
 put("disclaimer/index.html", renderer.disclaimerPage());
-
-// 搜索页
 put("search/index.html", renderer.searchPage());
 
-// ---- 紧急速查：由各条目的 quickref 汇总，按严重度排序 ----
-const quickItems = [];
-for (const e of entries) {
-  for (const q of e.data.quickref ?? []) {
-    quickItems.push({
-      situation: q.situation,
-      action: q.action,
-      detail: q.detail,
-      level: q.level ?? 1,
-      href: `${config.base}${e.category}/${e.data.slug}/`,
-      title: e.data.title,
-      summary: e.data.summary,
-    });
-  }
-}
-quickItems.sort((a, b) => a.level - b.level);
-put("quickref/index.html", renderer.quickrefPage({ items: quickItems }));
-
-// ---- 自测：规则表由条目的 triage 字段汇聚，可逐条追溯到来源条目 ----
-const triageGroups = new Map();
-for (const e of entries) {
-  for (const t of e.data.triage ?? []) {
-    if (!triageGroups.has(t.group)) {
-      triageGroups.set(t.group, { key: slugify(t.group), legend: t.group, hint: "勾选现在正在发生的", columns: 2, options: [] });
-    }
-    triageGroups.get(t.group).options.push({
-      value: `${e.data.slug}--${slugify(t.label).slice(0, 24)}`,
-      label: t.label,
-      level: t.level,
-      source: e.data.title,
-      slug: e.data.slug,
-      category: e.category,
-    });
-  }
-}
-put(
-  "check/index.html",
-  renderer.triagePage({ groups: [...triageGroups.values()] }),
-);
-
-function slugify(s) {
-  return String(s)
-    .normalize("NFKD")
-    .replace(/[^\w\u4e00-\u9fff]+/g, "-")
-    .replace(/^-+|-+$/g, "")
-    .toLowerCase()
-    .slice(0, 40) || "g";
+// ---- 旧地址存根：不 404 ----
+const STUBS = [
+  {
+    from: "quickref/",
+    fromLabel: "紧急速查",
+    to: "",
+    toLabel: "首页",
+    note: "这个站不再提供急症分诊。真出现急症，请直接拨打 120，不要在这里查。",
+  },
+  {
+    from: "check/",
+    fromLabel: "自测",
+    to: "",
+    toLabel: "首页",
+    note: "这个站不再提供按症状勾选的行动档位判定。",
+  },
+  {
+    from: "foods/",
+    fromLabel: "食物选择",
+    to: "wellness/",
+    toLabel: "养生",
+    note: "「吃什么」和「怎么生活」现在合成一个模块了。",
+  },
+  {
+    from: "lifestyle/",
+    fromLabel: "养生",
+    to: "wellness/",
+    toLabel: "养生",
+    note: "「吃什么」和「怎么生活」现在合成一个模块了。",
+  },
+];
+for (const s of STUBS) {
+  put(s.from + "index.html", renderer.stubPage(s));
 }
 
 /* ---------------------------------------------------- 3. 搜索索引 */
 // tokenize 与搜索参数都与浏览器端共用同一份实现（src/client/tokenize.js），
 // 避免两端漂移导致「索引里有、搜不到」。
 
-const docs = entries.map((e) => ({
+const entryDocs = entries.map((e) => ({
   id: `${e.category}/${e.data.slug}`,
   url: `${config.base}${e.category}/${e.data.slug}/`,
   title: e.data.title,
   summary: e.data.summary,
-  category: CATEGORIES[e.category]?.label ?? e.category,
+  category: CATEGORIES[e.category]?.module ? MODULES[CATEGORIES[e.category].module].label : e.category,
   tags: (e.data.tags ?? []).join(" "),
   body: e.body.replace(/<[^>]+>/g, " ").replace(/[#*`>|【】]/g, " "),
 }));
 
+// 每一种药单独成一条索引：搜「泰诺林」要命中那一行，不是命中一整张表。
+const drugDocs = [];
+for (const e of entries) {
+  for (const d of Array.isArray(e.data.drugs) ? e.data.drugs : []) {
+    const anchor = drugAnchor(d.name);
+    drugDocs.push({
+      id: `${e.category}/${e.data.slug}#${anchor}`,
+      url: `${config.base}${e.category}/${e.data.slug}/#${anchor}`,
+      title: d.name,
+      summary: d.effect,
+      category: "药品速查",
+      tags: [...(d.aliases ?? []), ...(d.brands ?? [])].join(" "),
+      body: [d.effect, ...(d.aliases ?? []), ...(d.brands ?? [])].join(" "),
+    });
+  }
+}
+
 const mini = new MiniSearch(SEARCH_OPTIONS);
-mini.addAll(docs);
+mini.addAll([...entryDocs, ...drugDocs]);
 
 put("search-index.json", JSON.stringify(mini.toJSON()));
-put(
-  "assets/triage-rules.json",
-  JSON.stringify({
-    generatedFrom: "各条目的 triage 字段",
-    total: [...triageGroups.values()].reduce((n, g) => n + g.options.length, 0),
-  }),
-);
 
 /* ---------------------------------------------------- 4. 样式与字体 */
 put("styles.css", await buildStyles({ root, stylesDir: join(root, "src", "styles"), base: config.base, readFile }));
@@ -196,7 +273,6 @@ const clientAssets = [
   [join(root, "src", "client", "tokenize.js"), "tokenize.js"],
   [join(root, "src", "client", "search-core.js"), "search-core.js"],
   [join(root, "src", "client", "search.js"), "search.js"],
-  [join(root, "src", "client", "triage.js"), "triage.js"],
   [join(root, "node_modules", "minisearch", "dist", "es", "index.js"), "minisearch.js"],
   [join(root, "node_modules", "minisearch", "dist", "es", "SearchableMap.js"), "SearchableMap.js"],
 ];
@@ -219,7 +295,8 @@ for (const rel of files.keys()) {
 console.log(`\n=== 产物（${outDir}）===`);
 console.log(`  页面      ${htmlCount}`);
 console.log(`  HTML 合计 ${(bytes / 1024).toFixed(1)} KiB`);
-console.log(`  索引       ${(JSON.stringify(mini.toJSON()).length / 1024).toFixed(1)} KiB`);
-console.log(`  速查条目   ${quickItems.length}`);
-console.log(`  自测选项   ${[...triageGroups.values()].reduce((n, g) => n + g.options.length, 0)}`);
+console.log(`  索引       ${(JSON.stringify(mini.toJSON()).length / 1024).toFixed(1)} KiB（${entryDocs.length} 条内容 + ${drugDocs.length} 种药）`);
+for (const m of moduleSummaries) console.log(`  模块       ${m.title}：${m.count}`);
+console.log(`  隐藏分类   ${HIDDEN_CATEGORIES.map((k) => `${CATEGORIES[k].label}(${entriesOf(k).length})`).join(" ")}`);
+console.log(`  旧地址存根 ${STUBS.map((s) => s.from).join(" ")}`);
 console.log(`\n预览：node scripts/serve.mjs`);

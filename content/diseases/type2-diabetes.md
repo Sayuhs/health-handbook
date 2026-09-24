@@ -3,33 +3,11 @@ title: 2 型糖尿病
 category: diseases
 slug: type2-diabetes
 summary: 2 型糖尿病早期常无症状；HbA1c ≥6.5% 或空腹血糖 ≥126 mg/dL 即达诊断切点。
-severity: see-doctor
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [adult, older]
 tags: [2 型糖尿病, 血糖, HbA1c, 空腹血糖, 糖尿病前期]
-quickref:
-  - situation: 出现恶心、呕吐或呼吸急促
-    action: 立即就医
-    detail: WHO 提示这可能是极高血糖的表现。
-    level: 1
-triage:
-  - group: 代谢与体检
-    label: 体检发现 HbA1c ≥6.5%、空腹血糖 ≥126 mg/dL 或 OGTT 2 小时血糖 ≥200 mg/dL
-    level: 3
-  - group: 代谢与体检
-    label: HbA1c 在 5.7–6.4%，或空腹血糖在 100–125 mg/dL
-    level: 3
-  - group: 全身与意识
-    label: 异常口渴、排尿次数明显增多、视物模糊、持续疲倦或体重无意减轻
-    level: 3
-  - group: 全身与意识
-    label: 出现恶心、呕吐或呼吸急促
-    level: 1
-  - group: 代谢与体检
-    label: 已确诊糖尿病，出现足部伤口不愈、视力变化或肢体麻木
-    level: 3
 sources:
   - label: 美国 CDC — Diabetes Testing（糖尿病的检测）
     url: https://www.cdc.gov/diabetes/diabetes-testing/index.html
@@ -69,18 +47,6 @@ sources:
 - 记下体检报告上的 HbA1c、空腹血糖具体数值与检测日期，便于纵向对比 [1]。
 - 自己对照切点读报告：HbA1c 5.7–6.4% 或空腹血糖 100–125 mg/dL 落在糖尿病前期范围，需要就医咨询 [1]。
 - 不要用家用尿糖试纸代替血糖或 HbA1c 检测来自行判断。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下任一情况，立即就医或尽快就诊</p>
-<ul>
-<li>出现恶心、呕吐或呼吸急促——WHO 提示这可能是极高血糖的表现，<strong>立即就医</strong> [2]。</li>
-<li>体检发现 HbA1c ≥6.5%、空腹血糖 ≥126 mg/dL 或 OGTT 2 小时血糖 ≥200 mg/dL——尽快就诊确认 [1]。</li>
-<li>出现极度口渴、明显多尿、视物模糊或不明原因的体重下降——尽快就诊 [3]。</li>
-<li>已确诊者出现足部伤口不愈、视力变化、肢体麻木等并发症线索——复诊 [3]。</li>
-</ul>
-</div>
 
 ## 常见误区
 

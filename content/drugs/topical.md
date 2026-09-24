@@ -3,7 +3,6 @@ title: 皮肤外用类
 category: drugs
 slug: topical
 summary: 18 种常见皮肤外用药物的成分、主要作用与常见商品名对照。
-severity: routine
 evidence: moderate
 updated: 2026-09-24
 review_due: 2027-09-24
@@ -18,47 +17,81 @@ sources:
   - label: "世界卫生组织 WHO — Medicines"
     url: https://www.who.int/health-topics/medicines
     year: 2026
+drugs:
+  - name: "氢化可的松乳膏"
+    aliases: []
+    effect: "糖皮质激素，抗炎止痒"
+    brands: ["氢化可的松乳膏", "Hydrocortisone"]
+  - name: "地奈德乳膏"
+    aliases: []
+    effect: "糖皮质激素，温和抗炎"
+    brands: ["力言卓", "Desonide"]
+  - name: "糠酸莫米松乳膏"
+    aliases: []
+    effect: "糖皮质激素，中效抗炎"
+    brands: ["艾洛松", "Eloson"]
+  - name: "丁酸氢化可的松"
+    aliases: []
+    effect: "糖皮质激素"
+    brands: ["尤卓尔", "Locoid"]
+  - name: "卤米松乳膏"
+    aliases: []
+    effect: "糖皮质激素，强效"
+    brands: ["适确得", "Halovate"]
+  - name: "益康唑/曲安奈德"
+    aliases: []
+    effect: "抗真菌+激素复方"
+    brands: ["派瑞松", "Pevisone"]
+  - name: "酮康唑乳膏"
+    aliases: []
+    effect: "抗真菌"
+    brands: ["金达克宁", "Nizoral"]
+  - name: "咪康唑乳膏"
+    aliases: ["达克宁"]
+    effect: "抗真菌"
+    brands: ["Daktarin"]
+  - name: "特比萘芬乳膏"
+    aliases: []
+    effect: "抗真菌"
+    brands: ["兰美抒", "Lamisil"]
+  - name: "阿昔洛韦乳膏"
+    aliases: []
+    effect: "抗病毒（疱疹）"
+    brands: ["Zovirax", "阿昔洛韦乳膏"]
+  - name: "莫匹罗星软膏"
+    aliases: ["百多邦"]
+    effect: "外用抗生素"
+    brands: ["Bactroban"]
+  - name: "夫西地酸乳膏"
+    aliases: []
+    effect: "外用抗生素"
+    brands: ["立思丁", "Fucidin"]
+  - name: "红霉素软膏"
+    aliases: []
+    effect: "外用抗生素"
+    brands: ["红霉素软膏", "Erythromycin"]
+  - name: "过氧苯甲酰"
+    aliases: []
+    effect: "抗菌，治疗痤疮"
+    brands: ["班赛", "Benzac"]
+  - name: "阿达帕林凝胶"
+    aliases: []
+    effect: "维A酸类，治疗痤疮"
+    brands: ["达芙文", "Differin"]
+  - name: "维A酸乳膏"
+    aliases: []
+    effect: "维A酸类，治疗痤疮/角化"
+    brands: ["迪维霜", "Retin-A"]
+  - name: "炉甘石洗剂"
+    aliases: []
+    effect: "收敛止痒"
+    brands: ["炉甘石洗剂", "Calamine"]
+  - name: "他克莫司软膏"
+    aliases: []
+    effect: "免疫抑制剂，治疗特应性皮炎"
+    brands: ["普特彼", "Protopic"]
+verified: false
+verification_note: "名称、主要作用、常见商品名三栏整理自一份自制的参考表，尚未逐条核到原始来源；「俗名」一栏是整理结果，没有权威清单可依。"
 ---
 
-很多人拿着药盒，认得商品名，却不知道里面到底是什么成分。这张表要打通的就是这一步：**先认成分，再看它通常是做什么用的，然后你才知道自己在吃什么。**
-
-## 对照表
-
-| 药物成分 | 主要作用 | 常见商品名 |
-| --- | --- | --- |
-| 氢化可的松乳膏 | 糖皮质激素，抗炎止痒 | 氢化可的松乳膏、Hydrocortisone |
-| 地奈德乳膏 | 糖皮质激素，温和抗炎 | 力言卓、Desonide |
-| 糠酸莫米松乳膏 | 糖皮质激素，中效抗炎 | 艾洛松、Eloson |
-| 丁酸氢化可的松 | 糖皮质激素 | 尤卓尔、Locoid |
-| 卤米松乳膏 | 糖皮质激素，强效 | 适确得、Halovate |
-| 益康唑/曲安奈德 | 抗真菌+激素复方 | 派瑞松、Pevisone |
-| 酮康唑乳膏 | 抗真菌 | 金达克宁、Nizoral |
-| 咪康唑乳膏 | 抗真菌 | 达克宁、Daktarin |
-| 特比萘芬乳膏 | 抗真菌 | 兰美抒、Lamisil |
-| 阿昔洛韦乳膏 | 抗病毒（疱疹） | Zovirax、阿昔洛韦乳膏 |
-| 莫匹罗星软膏 | 外用抗生素 | 百多邦、Bactroban |
-| 夫西地酸乳膏 | 外用抗生素 | 立思丁、Fucidin |
-| 红霉素软膏 | 外用抗生素 | 红霉素软膏、Erythromycin |
-| 过氧苯甲酰 | 抗菌，治疗痤疮 | 班赛、Benzac |
-| 阿达帕林凝胶 | 维A酸类，治疗痤疮 | 达芙文、Differin |
-| 维A酸乳膏 | 维A酸类，治疗痤疮/角化 | 迪维霜、Retin-A |
-| 炉甘石洗剂 | 收敛止痒 | 炉甘石洗剂、Calamine |
-| 他克莫司软膏 | 免疫抑制剂，治疗特应性皮炎 | 普特彼、Protopic |
-
-## 使用这张表要注意的
-
-- **商品名会变，成分不会。** 同一个成分有几十个厂家、几十个品牌，不同地区、不同年份的商品名都可能不一样。所以**永远以药盒上标注的「通用名」为准**——这张表只是帮你认它。
-- **个别条目本身是复方制剂的名字，不是单一成分。** 比如表中「散利痛」「复方甲氧那明」列在成分栏，实际是复方制剂；买药时务必看说明书上的成分表，别把它当成单一成分去叠加。
-- **不要凭这张表自行用药、停药或换药。** 这里只说「这个成分通常是做什么用的」，不含剂量，也不判断它适不适合你——同一个成分在不同人身上的禁忌不同。
-- **同时吃多种药时尤其要小心。** 不同商品名可能含同一个成分，叠加服用会超量。最省事的办法是把正在吃的药全部拿给药师看一遍。
-- **表里的分类只是习惯叫法。** 很多药横跨多个类别（例如阿司匹林既是解热镇痛也是抗血小板药），分类不代表它只能用于那一类。
-
-## 什么时候该问医生药师
-
-- 你要同时吃两种以上药物（包括中成药与保健品）时。
-- 吃药后出现皮疹、呼吸困难、面部或嘴唇肿胀、黑便、尿量明显减少。
-- 你怀孕、备孕或哺乳。
-- 你有肝病、肾病、胃溃疡史、哮喘，或者正在用抗凝药。
-- 你不确定两个不同商品名是不是同一个成分。
-
-以上任何一条，**把药盒带去问药师，比在网上查更快也更准。**
+<!--DRUGS_TABLE-->

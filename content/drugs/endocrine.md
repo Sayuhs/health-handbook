@@ -3,7 +3,6 @@ title: 内分泌类
 category: drugs
 slug: endocrine
 summary: 15 种常见内分泌药物的成分、主要作用与常见商品名对照。
-severity: routine
 evidence: moderate
 updated: 2026-09-24
 review_due: 2027-09-24
@@ -18,44 +17,69 @@ sources:
   - label: "世界卫生组织 WHO — Medicines"
     url: https://www.who.int/health-topics/medicines
     year: 2026
+drugs:
+  - name: "二甲双胍"
+    aliases: []
+    effect: "双胍类降糖，改善胰岛素抵抗"
+    brands: ["格华止", "Glucophage", "美迪康"]
+  - name: "格列本脲"
+    aliases: ["优降糖"]
+    effect: "磺脲类促泌剂"
+    brands: ["Glibenclamide"]
+  - name: "格列美脲"
+    aliases: []
+    effect: "磺脲类促泌剂"
+    brands: ["亚莫利", "Amaryl"]
+  - name: "格列齐特"
+    aliases: []
+    effect: "磺脲类促泌剂"
+    brands: ["达美康", "Diamicron"]
+  - name: "瑞格列奈"
+    aliases: []
+    effect: "非磺脲类促泌剂"
+    brands: ["诺和龙", "Repaglinide"]
+  - name: "阿卡波糖"
+    aliases: []
+    effect: "α-糖苷酶抑制剂"
+    brands: ["拜唐苹", "Glucobay"]
+  - name: "罗格列酮"
+    aliases: []
+    effect: "胰岛素增敏剂（噻唑烷二酮）"
+    brands: ["文迪雅", "Avandia"]
+  - name: "西格列汀"
+    aliases: []
+    effect: "DPP-4抑制剂"
+    brands: ["捷诺维", "Januvia"]
+  - name: "恩格列净"
+    aliases: []
+    effect: "SGLT-2抑制剂"
+    brands: ["恩净", "Jardiance"]
+  - name: "达格列净"
+    aliases: []
+    effect: "SGLT-2抑制剂"
+    brands: ["安达唐", "Farxiga"]
+  - name: "利拉鲁肽"
+    aliases: []
+    effect: "GLP-1受体激动剂"
+    brands: ["诺和力", "Victoza"]
+  - name: "胰岛素（短效）"
+    aliases: []
+    effect: "补充胰岛素"
+    brands: ["诺和灵R", "优泌林R", "Regular"]
+  - name: "甘精胰岛素"
+    aliases: []
+    effect: "长效胰岛素类似物"
+    brands: ["来得时", "Lantus"]
+  - name: "左甲状腺素钠"
+    aliases: ["优甲乐"]
+    effect: "甲状腺激素替代"
+    brands: ["Euthyrox", "雷替斯"]
+  - name: "甲巯咪唑"
+    aliases: []
+    effect: "抗甲状腺，抑制甲状腺素合成"
+    brands: ["赛治", "Tapazole"]
+verified: false
+verification_note: "名称、主要作用、常见商品名三栏整理自一份自制的参考表，尚未逐条核到原始来源；「俗名」一栏是整理结果，没有权威清单可依。"
 ---
 
-很多人拿着药盒，认得商品名，却不知道里面到底是什么成分。这张表要打通的就是这一步：**先认成分，再看它通常是做什么用的，然后你才知道自己在吃什么。**
-
-## 对照表
-
-| 药物成分 | 主要作用 | 常见商品名 |
-| --- | --- | --- |
-| 二甲双胍 | 双胍类降糖，改善胰岛素抵抗 | 格华止、Glucophage、美迪康 |
-| 格列本脲 | 磺脲类促泌剂 | 优降糖、Glibenclamide |
-| 格列美脲 | 磺脲类促泌剂 | 亚莫利、Amaryl |
-| 格列齐特 | 磺脲类促泌剂 | 达美康、Diamicron |
-| 瑞格列奈 | 非磺脲类促泌剂 | 诺和龙、Repaglinide |
-| 阿卡波糖 | α-糖苷酶抑制剂 | 拜唐苹、Glucobay |
-| 罗格列酮 | 胰岛素增敏剂（噻唑烷二酮） | 文迪雅、Avandia |
-| 西格列汀 | DPP-4抑制剂 | 捷诺维、Januvia |
-| 恩格列净 | SGLT-2抑制剂 | 恩净、Jardiance |
-| 达格列净 | SGLT-2抑制剂 | 安达唐、Farxiga |
-| 利拉鲁肽 | GLP-1受体激动剂 | 诺和力、Victoza |
-| 胰岛素（短效） | 补充胰岛素 | 诺和灵R、优泌林R、Regular |
-| 甘精胰岛素 | 长效胰岛素类似物 | 来得时、Lantus |
-| 左甲状腺素钠 | 甲状腺激素替代 | 优甲乐、Euthyrox、雷替斯 |
-| 甲巯咪唑 | 抗甲状腺，抑制甲状腺素合成 | 赛治、Tapazole |
-
-## 使用这张表要注意的
-
-- **商品名会变，成分不会。** 同一个成分有几十个厂家、几十个品牌，不同地区、不同年份的商品名都可能不一样。所以**永远以药盒上标注的「通用名」为准**——这张表只是帮你认它。
-- **个别条目本身是复方制剂的名字，不是单一成分。** 比如表中「散利痛」「复方甲氧那明」列在成分栏，实际是复方制剂；买药时务必看说明书上的成分表，别把它当成单一成分去叠加。
-- **不要凭这张表自行用药、停药或换药。** 这里只说「这个成分通常是做什么用的」，不含剂量，也不判断它适不适合你——同一个成分在不同人身上的禁忌不同。
-- **同时吃多种药时尤其要小心。** 不同商品名可能含同一个成分，叠加服用会超量。最省事的办法是把正在吃的药全部拿给药师看一遍。
-- **表里的分类只是习惯叫法。** 很多药横跨多个类别（例如阿司匹林既是解热镇痛也是抗血小板药），分类不代表它只能用于那一类。
-
-## 什么时候该问医生药师
-
-- 你要同时吃两种以上药物（包括中成药与保健品）时。
-- 吃药后出现皮疹、呼吸困难、面部或嘴唇肿胀、黑便、尿量明显减少。
-- 你怀孕、备孕或哺乳。
-- 你有肝病、肾病、胃溃疡史、哮喘，或者正在用抗凝药。
-- 你不确定两个不同商品名是不是同一个成分。
-
-以上任何一条，**把药盒带去问药师，比在网上查更快也更准。**
+<!--DRUGS_TABLE-->

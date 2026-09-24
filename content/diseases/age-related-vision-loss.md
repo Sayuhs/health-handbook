@@ -3,54 +3,11 @@ title: 中老年视力下降与眼底检查
 category: diseases
 slug: age-related-vision-loss
 summary: 中老年视力下降多与白内障和屈光不正有关；糖尿病患者需按期筛查眼底。
-severity: urgent
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [adult, older]
 tags: [视力下降, 白内障, 青光眼, 糖尿病视网膜病变, 眼底检查, 老花]
-quickref:
-  - situation: 红眼、看灯光出现彩虹色光圈、视力突然模糊
-    action: 立即拨打 120 或前往急诊
-    detail: 这些症状突然出现，可能是急性闭角型青光眼。
-    level: 1
-  - situation: 突发视力丧失，或视野出现缺损、眼前黑影如「窗帘」样遮挡
-    action: 立即拨打 120 或前往急诊
-    level: 1
-  - situation: 眼部外伤或化学伤
-    action: 立即拨打 120 或前往急诊
-    level: 1
-triage:
-  - group: 眼睛
-    label: 红眼、看灯光出现彩虹色光圈、视力突然模糊，且突然出现
-    level: 1
-  - group: 眼睛
-    label: 突发视力丧失，或视野缺损、眼前黑影如「窗帘」样遮挡
-    level: 1
-  - group: 眼睛
-    label: 眼部外伤或化学伤
-    level: 1
-  - group: 眼睛
-    label: 糖尿病患者出现眼前飘浮物、闪光或视物变形
-    level: 2
-  - group: 眼睛
-    label: 视野出现缺损或遮挡感
-    level: 2
-  - group: 眼睛
-    label: 糖尿病且已到筛查周期（12 岁及以上每 1–2 年一次眼底拍照）
-    level: 3
-  - group: 眼睛
-    label: 视力逐渐下降、视物模糊，尤其 60 岁及以上
-    level: 3
-  - group: 眼睛
-    label: 颜色变淡发黄、夜间视力变差或怕眩光
-    level: 3
-  - group: 眼睛
-    label: 阅读时需要越拿越远才能看清
-    level: 4
-  - group: 眼睛
-    label: 有青光眼家族史
-    level: 4
 sources:
   - label: WHO — Blindness and visual impairment fact sheet
     url: https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment
@@ -102,25 +59,6 @@ WHO 的数据把原因说得很清楚：全球造成视力损害与失明的**�
 - 视野是否出现**缺损、遮挡感**，或看灯光是否出现**彩虹色光圈**。
 - 是否患有糖尿病——12 岁及以上需要每 1–2 年做一次眼底筛查；40 岁及以上提倡每年至少测 1 次空腹血糖。
 - 是否有青光眼家族史。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下任一情况，立即拨打 120 或前往急诊</p>
-<ul>
-<li><strong>红眼</strong>、<strong>看灯光出现彩虹色光圈</strong>、<strong>视力突然模糊</strong>，且症状<strong>突然出现</strong>——这是急性闭角型青光眼的表现。NHS 明确指示：出现突然发作的青光眼症状，应立即拨打急救电话或前往急诊。</li>
-<li>突发视力丧失、视野缺损、眼前黑影如「窗帘」样遮挡。</li>
-<li>眼部外伤或化学伤。</li>
-</ul>
-</div>
-
-以下情况需要尽快就诊（非急症）：
-
-- 视力逐渐下降、视物模糊，尤其 60 岁及以上（NHS）。
-- 颜色变淡、夜间视力差、眩光（白内障相关）（NHS）。
-- 糖尿病患者出现**眼前飘浮物、闪光、视物变形**，或已到筛查周期（NHS）。
-- 有青光眼家族史者，需要定期检查眼压与视神经（NHS、NICE NG81）。
-- 阅读需要越拿越远、看近模糊（老花相关）（WHO）。
 
 ## 常见误区
 

@@ -3,43 +3,11 @@ title: 慢性阻塞性肺病（慢阻肺）
 category: diseases
 slug: copd
 summary: 35 岁以上吸烟者出现活动气短、慢性咳嗽、痰或喘息要怀疑慢阻肺；确诊靠支气管舒张后肺功能检查。
-severity: see-doctor
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [adult, older]
 tags: [慢阻肺, COPD, 肺功能, 吸烟, 慢性咳嗽]
-quickref:
-  - situation: 意识不清或嗜睡、口唇发绀、静息状态下也喘不上气、说话不能成句
-    action: 立即拨打 120
-    detail: 这几项属急性加重期的危险指标，需要急诊评估。
-    level: 1
-  - situation: 咯血或胸痛
-    action: 尽快就诊排查其他病因
-    detail: 胸痛与咯血在慢阻肺中并不常见，出现即需查其他病因，而不是当成慢阻肺加重处理。
-    level: 3
-triage:
-  - group: 呼吸与胸部
-    label: 意识不清或嗜睡、口唇发绀、静息时也喘不上气、说话不能成句
-    level: 1
-  - group: 呼吸与胸部
-    label: 气短突然明显加重，痰量或痰色明显改变
-    level: 2
-  - group: 呼吸与胸部
-    label: 咯血或胸痛
-    level: 3
-  - group: 呼吸与胸部
-    label: 夜间因气短憋醒、踝部水肿、体重下降、活动耐量逐年下降
-    level: 3
-  - group: 呼吸与胸部
-    label: 35 岁以上、有吸烟或吸烟史，且出现活动后气短、慢性咳嗽、经常有痰、冬季反复「支气管炎」或喘息中的任一项
-    level: 3
-  - group: 呼吸与胸部
-    label: 长期接触粉尘、烟尘、化学气体，或长期用生物质燃料做饭取暖
-    level: 4
-  - group: 呼吸与胸部
-    label: 反复「感冒后咳嗽很久」，爬楼或走路越来越吃力
-    level: 4
 sources:
   - label: "WHO — Chronic obstructive pulmonary disease (COPD)（实况报道，页面自标 2026-06-10）"
     url: https://www.who.int/news-room/fact-sheets/detail/chronic-obstructive-pulmonary-disease-(copd)
@@ -86,19 +54,6 @@ sources:
 - 是否反复「感冒后咳嗽很久」、每年冬季明显加重、爬楼或走路的活动耐量逐年下降 [4][5]。
 - 是否夜间会被气短憋醒，或出现踝部水肿、体重下降、咯血 [4]。
 - 工作是否长期接触粉尘、烟尘、化学气体（职业暴露），或长期使用生物质燃料做饭取暖（家庭空气污染）[1][3]。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下任一情况，立即拨打 120 或立即就医</p>
-<ul>
-<li><strong>意识不清或嗜睡、口唇发绀、静息状态下也喘不上气、说话不能成句</strong>——NICE 把意识受损、发绀、SaO₂ &lt; 90% 列为加重期危险指标，属需急诊评估 [4]。</li>
-<li><strong>气短突然明显加重，痰量或痰色明显改变</strong>——这是急性加重的典型形式，常持续数天并需要额外用药 [1][5]。</li>
-<li><strong>咯血或胸痛</strong>——NICE 明确指出这两者在 COPD 中不常见，需要排查其他病因 [4]。</li>
-<li><strong>首次出现活动后气短、慢性咳嗽、经常有痰或喘息，且年龄 ≥35 岁、有吸烟史</strong>——就诊安排肺功能检查，而不是自行判断为「气管炎」[4]。</li>
-</ul>
-<p>本页只写检查门槛与来源，不构成诊断结论；是否达到慢阻肺、处在哪一期，由医生结合支气管舒张后肺功能结果判断。</p>
-</div>
 
 ## 常见误区
 

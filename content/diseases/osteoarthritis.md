@@ -3,39 +3,11 @@ title: 骨关节炎
 category: diseases
 slug: osteoarthritis
 summary: 骨关节炎的核心治疗是治疗性运动与体重管理；超重者减 10% 体重可能优于减 5%。
-severity: see-doctor
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [adult, older]
 tags: [骨关节炎, 关节, 膝关节, 运动, 体重管理]
-quickref:
-  - situation: 关节明显红、肿、热，尤其伴发热
-    action: 立即就医（按急症处理）
-    detail: 关节内感染与痛风急性发作可表现为同样的红肿热痛，伴发热即为危险信号。
-    level: 1
-triage:
-  - group: 关节与骨骼
-    label: 关节明显红、肿、热，尤其伴发热
-    level: 1
-  - group: 关节与骨骼
-    label: 关节突然剧烈疼痛、无法负重
-    level: 2
-  - group: 关节与骨骼
-    label: 关节活动明显受限、影响日常生活
-    level: 3
-  - group: 关节与骨骼
-    label: 夜间静息痛持续加重
-    level: 3
-  - group: 关节与骨骼
-    label: 上下楼梯、久站、蹲起时膝或髋疼痛，休息后减轻
-    level: 4
-  - group: 关节与骨骼
-    label: 早晨关节僵硬短暂（不到 30 分钟）或没有
-    level: 4
-  - group: 关节与骨骼
-    label: 近期体重明显增加
-    level: 4
 sources:
   - label: "NICE NG226 — Osteoarthritis in over 16s: diagnosis and management（2022，取代 2014 年旧版指南）"
     url: https://www.nice.org.uk/guidance/ng226/chapter/Recommendations
@@ -71,20 +43,6 @@ sources:
 - 是否有过关节外伤或既往关节疾病。
 
 其中「痛随使用加重」与「晨僵很短或没有」这两条，是把它和类风湿关节炎区分开的主要线索：**晨僵持续时间很长（超过 30 分钟）更提示类风湿关节炎**（NHS）。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下任一情况，立即就医</p>
-<ul>
-<li>关节明显红、肿、热，尤其同时有发热——须按急症处理。关节内感染（化脓性关节炎）与痛风急性发作可以表现为一模一样的红肿热痛，单凭外观无法区分。</li>
-<li>关节突然剧烈疼痛、无法负重。</li>
-<li>关节活动明显受限、影响日常生活。</li>
-<li>夜间静息痛持续加重。</li>
-</ul>
-</div>
-
-症状加重时需要就诊，评估是否加用止痛药、物理治疗或手术（NHS）。**手术不是骨关节炎的必然终点**：只有少数症状严重或治疗无效的人需要手术（NHS）。
 
 ## 生活方式要点
 

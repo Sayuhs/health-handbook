@@ -3,48 +3,11 @@ title: 抗生素的常见误区
 category: medications
 slug: antibiotics-misconceptions
 summary: 抗生素只对部分细菌感染有效，对感冒、流感等病毒感染无效；误用会催生耐药并带来副作用。
-severity: see-doctor
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [child, adult, older]
 tags: [抗生素, 耐药, 感冒, 流感, 儿童]
-quickref:
-  - situation: 服抗生素期间出现喉舌肿胀、呼吸困难
-    action: 立即就医（按急症处理）
-    detail: 抗生素可引起严重且危及生命的过敏反应，属需要急诊处理的副作用。
-    level: 1
-triage:
-  - group: 用药安全
-    label: 服抗生素期间喉舌肿胀、呼吸困难
-    level: 1
-  - group: 用药安全
-    label: 服抗生素期间出现严重腹泻（艰难梭菌感染可能）
-    level: 2
-  - group: 用药安全
-    label: 持续高热不退
-    level: 2
-  - group: 用药安全
-    label: 呼吸频率明显加快，甚至出现呼吸困难
-    level: 2
-  - group: 用药安全
-    label: 精神状态极差；小婴儿拒奶或尿量明显减少
-    level: 2
-  - group: 用药安全
-    label: 原有慢性基础病（哮喘、心脑血管疾病）加重
-    level: 3
-  - group: 用药安全
-    label: 服药期间出现皮疹、头晕、恶心、腹泻、真菌感染等副作用
-    level: 3
-  - group: 用药安全
-    label: 感冒、流鼻涕（即使黏稠发黄发绿）、多数咽痛，想用抗生素
-    level: 4
-  - group: 用药安全
-    label: 未患病时想「先吃点药垫底」
-    level: 4
-  - group: 用药安全
-    label: 家里留着上次没吃完的抗生素
-    level: 4
 sources:
   - label: "WHO —《抗微生物药物耐药性》实况报道（中文；页面未标注明确发布或更新日期，页脚标注 © 2026）"
     url: https://www.who.int/zh/news-room/fact-sheets/detail/antimicrobial-resistance
@@ -86,21 +49,6 @@ sources:
 - 剩余或过期的抗生素按药品回收渠道或规范方式处理，**不留给下次生病吃**：用错药可能延误正确治疗并带来严重副作用（美国 CDC，2025）。
 - 需要改变用法用量时，先问医生或药师，不自行调整（美国 CDC，2025）。
 - 本站按规则不列出任何剂量与疗程；用法用量按说明书或遵医嘱。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下任一情况，必须就医或必须问医生</p>
-<ul>
-<li>持续高热不退。</li>
-<li>呼吸频率明显加快，甚至出现呼吸困难。</li>
-<li>精神状态极差；小婴儿出现拒奶或尿量明显减少。</li>
-<li>原有慢性基础病（如哮喘、心脑血管疾病）加重。</li>
-<li>服用抗生素期间出现任何副作用（皮疹、腹泻等），儿童尤其要留意。</li>
-<li>出现严重过敏征象（<strong>喉舌肿胀、呼吸困难</strong>）或严重腹泻（艰难梭菌感染的可能）——属严重副作用范畴，按急症处理。</li>
-</ul>
-<p>上面前四条取自中国疾控中心对呼吸道疾病的就医提示（2026），后两条取自美国 CDC 对抗生素副作用的说明（2025）。</p>
-</div>
 
 ## 常见误区
 

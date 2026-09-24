@@ -3,34 +3,11 @@ title: 肾功能
 category: labs
 slug: kidney-function
 summary: 肌酐受肌肉量、饮食、年龄影响，单独测不够；肾功能须看 eGFR 与尿 ACR，以本人化验单为准。
-severity: see-doctor
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [adult, older]
 tags: [肌酐, eGFR, 尿蛋白, ACR, 肾功能, 体检]
-triage:
-  - group: 代谢与体检
-    label: eGFR 低于 15 ml/min/1.73 m²（G5，原文称为肾衰竭）
-    level: 2
-  - group: 代谢与体检
-    label: eGFR 低于 60 ml/min/1.73 m²，还没有间隔至少 90 天的第二次结果
-    level: 3
-  - group: 代谢与体检
-    label: 尿 ACR 升高（至少 3 mg/mmol，或尿白蛋白超过 30 mg/g），还没有复查晨尿确认
-    level: 3
-  - group: 代谢与体检
-    label: 正在长期服用锂、环孢素或他克莫司，或长期使用 NSAIDs（含非处方止痛药），从未测过 GFR
-    level: 3
-  - group: 代谢与体检
-    label: 脱水、发热或急性病期间需要止痛，打算自己吃布洛芬等非处方 NSAIDs
-    level: 3
-  - group: 代谢与体检
-    label: 化验单上出现蛋白尿或血尿提示
-    level: 3
-  - group: 代谢与体检
-    label: 有糖尿病、高血压、心血管病、急性肾损伤史、痛风、反复肾结石或肾病家族史，从未查过 eGFR 与尿 ACR
-    level: 4
 sources:
   - label: "NICE NG203 — Chronic kidney disease: assessment and management（Recommendations 章节，2021-08-25 发布，2021-11-24 更新）"
     url: https://www.nice.org.uk/guidance/ng203/chapter/Recommendations
@@ -184,21 +161,6 @@ CDC：`More than 1 in 7 American adults has chronic kidney disease (CKD), and as
 - 有糖尿病、高血压、心血管病、急性肾损伤史、痛风、反复肾结石、肾病家族史等任一项的成人，定期做 eGFR 加 ACR 检查（NICE NG203，2021）。
 - 长期服用锂、环孢素或他克莫司、长期使用 NSAIDs（含非处方止痛药）的人，**至少每年监测一次 GFR**；已有 CKD 的人避免自行服用布洛芬等非处方 NSAIDs（NICE NG203，2021；英国 NHS，2023）。
 - **以本人化验单上的参考区间与单位为准。** 不同医院、不同检测方法、不同单位会造成区间不一致；单位看不懂时直接问开单医生，本页不做单位换算（NICE NG203，2021；英国 NHS，2023）。
-
-## 什么时候该问医生
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下任一情况，需要问医生或就诊</p>
-<ul>
-<li><strong>eGFR 低于 60 ml/min/1.73 m²</strong>——原文要求按至少 2 次、间隔 90 天以上复测确认，并由医生评估（NICE NG203，2021）。</li>
-<li><strong>eGFR 低于 15（G5，原文称为肾衰竭）</strong>——原文指出多数人需要透析或肾移植，应尽快就医讨论治疗方案（NICE NG203，2021；美国 NIDDK，2016）。</li>
-<li><strong>尿 ACR 升高</strong>（3 mg/mmol 及以上，或尿白蛋白超过 30 mg/g）——按原文需复查确认并由医生评估（NICE NG203，2021；美国 NIDDK，2016）。</li>
-<li><strong>正在或需要长期使用可能影响肾功能的药物</strong>（锂、环孢素或他克莫司、长期 NSAIDs）——按原文至少每年监测一次 GFR，是否调整用药由医生判断（NICE NG203，2021；英国 NHS，2023）。</li>
-<li><strong>脱水、发热或急性病期间需要止痛</strong>——不要自行服用 NSAIDs，这种状态下使用可致急性肾损伤，先咨询医生或药师（美国 NIDDK，2018；英国 NHS，2023）。</li>
-<li><strong>化验单出现蛋白尿或血尿提示，或医生已告知 CKD 且同时有糖尿病、高血压</strong>——需要专科随访，转诊与否由医生判断（NICE NG203，2021）。</li>
-</ul>
-<p>本页只解释数值口径与来源层级，不构成诊断结论。是否达到 CKD、是否需要治疗，由医生结合重复检测结果、尿检与其他检查判断。</p>
-</div>
 
 ## 常见误区
 

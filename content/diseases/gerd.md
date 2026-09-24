@@ -3,47 +3,11 @@ title: 胃食管反流（烧心与反酸）
 category: diseases
 slug: gerd
 summary: 反复烧心反酸即可能是胃食管反流病；胸痛必须先排除心脏问题，55 岁以上伴体重下降属癌症警示组合。
-severity: see-doctor
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [adult, older]
 tags: [胃食管反流, GORD, 烧心, 反酸, 消化不良]
-quickref:
-  - situation: 压榨性胸痛，伴气短、出汗，或放射到手臂、下颌
-    action: 立即拨打 120
-    detail: 反流与消化不良的评估必须把心脏疾病纳入鉴别，胸痛性质说不清时先按心脏问题处理。
-    level: 1
-  - situation: 呕血，或出现显著的急性消化道出血
-    action: 立即就医
-    detail: 伴显著急性消化道出血者应于同日立即转诊专科；呕血需考虑直接安排上消化道内镜。
-    level: 2
-  - situation: 吞咽困难（食物卡在喉咙里）、频繁呕吐、无原因体重下降
-    action: 尽快就诊
-    detail: 这三项是就诊界限；55 岁及以上且伴体重下降者另有疑似癌症转诊路径。
-    level: 3
-triage:
-  - group: 腹部
-    label: 胸痛性质不明，尤其压榨性、伴气短/出汗/放射到手臂或下颌
-    level: 1
-  - group: 腹部
-    label: 呕血，或出现显著的急性消化道出血
-    level: 2
-  - group: 腹部
-    label: 吞咽困难（食物卡在喉咙里）、频繁呕吐、无原因体重下降
-    level: 2
-  - group: 腹部
-    label: 55 岁及以上、有体重下降，且伴上腹痛、反流或消化不良中的任一项
-    level: 3
-  - group: 腹部
-    label: 几乎每天都有烧心，或改变生活方式与药房药物都没有帮助
-    level: 3
-  - group: 腹部
-    label: 长期服用 NSAIDs、双膦酸盐、钙拮抗剂、硝酸酯类、茶碱类或糖皮质激素
-    level: 4
-  - group: 腹部
-    label: 进食后、弯腰或平卧时加重的烧心，伴反酸、反复咳嗽或打嗝、声音嘶哑、口臭、腹胀或恶心
-    level: 4
 sources:
   - label: "NICE NG12 — Suspected cancer: recognition and referral（条目内标注 [2015, amended 2025]）"
     url: https://www.nice.org.uk/guidance/ng12/chapter/Recommendations
@@ -89,20 +53,6 @@ sources:
 - 是否几乎每天都烧心，或自行用药与生活方式调整完全无效 [3]。
 - 胸痛要分清性质：是烧灼感还是压榨性、是否与活动相关、是否放射到手臂或下颌——鉴别心脏病因是 NICE 明确要求 [2]。
 - 是否在长期服用 NSAIDs、双膦酸盐、钙拮抗剂、硝酸酯类、茶碱类、糖皮质激素——这些药可能与症状相关 [2]。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下任一情况，立即拨打 120 或立即就医</p>
-<ul>
-<li><strong>胸痛性质不能确定</strong>，尤其是压榨性、伴气短/出汗/放射痛——必须先排除心脏问题，NICE 要求把心脏疾病纳入鉴别 [2]。</li>
-<li><strong>呕血，或显著的急性消化道出血</strong>——呕血列入直接安排上消化道内镜的考虑项；伴显著急性消化道出血者应于同日立即转诊专科 [1][2]。</li>
-<li><strong>吞咽困难（食物卡住）、频繁呕吐、无原因体重下降</strong>——按 NHS 的就诊界限处理 [3]。</li>
-<li><strong>55 岁及以上、有体重下降，且伴上腹痛、反流或消化不良中任一项</strong>——按 NICE NG12 应走疑似癌症转诊路径 [1]。</li>
-<li><strong>烧心几乎每天出现，或改变生活方式与药房药物都无帮助</strong>——需要就医评估，而不是继续自行加药 [3]。</li>
-</ul>
-<p>本页只写症状门槛与转诊路径，不构成诊断结论；胸痛与消化道出血的病因判断必须由医生完成。</p>
-</div>
 
 ## 常见误区
 

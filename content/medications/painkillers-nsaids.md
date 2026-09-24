@@ -3,51 +3,11 @@ title: 止痛药与 NSAIDs
 category: medications
 slug: painkillers-nsaids
 summary: NSAIDs 可止痛、消肿、退热，但可能伤胃、伤肾并增加心血管风险，特定人群用前需问医生。
-severity: see-doctor
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [adult, older, pregnant]
 tags: [止痛药, NSAIDs, 布洛芬, 阿司匹林, 用药]
-quickref:
-  - situation: 服止痛药后呕血，或排出柏油样黑便
-    action: 立即就医（按急症处理）
-    detail: 胃溃疡或胃内出血的征象之一，不是「再观察一下」的情况。
-    level: 1
-triage:
-  - group: 用药安全
-    label: 服药后喉舌肿胀、皮疹、呼吸困难
-    level: 1
-  - group: 用药安全
-    label: 服药后呕血、柏油样黑便
-    level: 1
-  - group: 用药安全
-    label: 气短、面色苍白
-    level: 2
-  - group: 用药安全
-    label: 尿中带血、尿量减少、脚踝/足/手肿胀
-    level: 2
-  - group: 用药安全
-    label: 有胃溃疡史、哮喘或过敏、心脏/肝/肾疾病，正在考虑用止痛药
-    level: 3
-  - group: 用药安全
-    label: 怀孕、备孕或哺乳期
-    level: 3
-  - group: 用药安全
-    label: 正在服用抗凝药、类固醇、抗抑郁药、降压药或另一种 NSAID
-    level: 3
-  - group: 用药安全
-    label: 止痛药对刺痛、创伤剧痛或平滑肌绞痛无效，想自行加量
-    level: 3
-  - group: 用药安全
-    label: 头痛、痛经、扭伤拉伤的短期疼痛，想自己买药吃
-    level: 4
-  - group: 用药安全
-    label: 服药期间要大量饮酒
-    level: 4
-  - group: 用药安全
-    label: 给 16 岁以下用阿司匹林，或给 6 个月以下婴儿用布洛芬
-    level: 4
 sources:
   - label: "上海市卫健委 —《常用药的\"隐形风险\"需警惕》（页面日期 2025-09-01）"
     url: https://wsjkw.sh.gov.cn/jtyx/20250901/7e600a56366745e1b003143315bbd19f.html
@@ -101,23 +61,6 @@ NSAIDs 是非甾体抗炎药（non-steroidal anti-inflammatory drugs）的缩写
 - 服药期间避免大量饮酒（NHS，2026）。
 - 孕期、备孕、哺乳，以及有胃溃疡、哮喘或过敏、心脏/肝/肾疾病者，先问医生再决定是否使用（NHS，2025-08-27；上海市卫健委，2025-09-04）。
 - 止痛药对某一种疼痛无效时（如刺痛、创伤剧痛、平滑肌绞痛），不自行加量，而是就医查明原因（上海市卫健委，2025-09-04）。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下任一情况，必须就医或必须问医生</p>
-<ul>
-<li>胃痛、黑便、呕血、柏油样便——消化道出血的征象。</li>
-<li>气短、面色苍白。</li>
-<li>尿中带血、尿量减少、脚踝/足/手肿胀——肾损伤的征象。</li>
-<li>喉舌肿胀、皮疹、呼吸困难——过敏反应（含过敏性休克）的征象。</li>
-<li>有胃溃疡史、哮喘或过敏、心脏/肝/肾疾病者，<strong>用药前</strong>先问医生。</li>
-<li>怀孕、备孕或哺乳期，用药前先问医生。</li>
-<li>正在服用抗凝药、类固醇、抗抑郁药、降压药或另一种 NSAID，用药前先问医生或药师。</li>
-<li>儿童用药：16 岁以下不用阿司匹林；6 个月以下婴儿不用布洛芬。</li>
-</ul>
-<p>本条目按站点规则不给出任何剂量；具体用法用量一律按说明书或遵医嘱。</p>
-</div>
 
 ## 常见误区
 

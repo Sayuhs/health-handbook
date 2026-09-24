@@ -1,8 +1,8 @@
 /* ==========================================================================
-   components.css — 徽标、搜索、自测、速查卡、阅读模式控件
+   components.css — 徽标、搜索、阅读模式控件
    ========================================================================== */
 
-/* ---- 徽标：级别 / 证据强度 ---- */
+/* ---- 徽标：证据强度 ---- */
 .badge {
   display: inline-block;
   font-family: var(--font-ui);
@@ -13,19 +13,6 @@
   border-radius: var(--radius);
   color: var(--ink-faint);
   white-space: nowrap;
-}
-
-.badge--emergency {
-  color: var(--seal);
-  background: var(--danger-bg);
-}
-
-.badge--urgent {
-  color: var(--seal-soft);
-}
-
-.badge--routine {
-  color: var(--ink-faint);
 }
 
 .badge--evidence-strong {
@@ -194,75 +181,6 @@
   padding: var(--space-s) 0;
 }
 
-/* ---- 自测 ---- */
-.triage-form fieldset {
-  border: 0;
-  padding: 0;
-  margin: 0 0 var(--space-l);
-}
-
-.triage-form legend {
-  font-family: var(--font-ui);
-  font-size: var(--step-0);
-  font-weight: 600;
-  padding: 0;
-  margin-bottom: var(--space-xs);
-  color: var(--ink);
-}
-
-.triage-form legend .hint {
-  font-weight: 400;
-  font-size: var(--step--1);
-  color: var(--ink-faint);
-  margin-left: var(--space-xs);
-}
-
-.triage-options {
-  display: grid;
-  gap: var(--space-2xs);
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 40em) {
-  .triage-options--2 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.triage-option {
-  display: flex;
-  gap: var(--space-xs);
-  align-items: flex-start;
-  padding: var(--space-xs) var(--space-s);
-  border: var(--border-line);
-  background: var(--paper-raised);
-  cursor: pointer;
-  font-size: var(--step-0);
-  line-height: 1.5;
-}
-
-.triage-option:hover {
-  border-color: var(--rule-strong);
-}
-
-.triage-option input {
-  margin-top: 0.35em;
-  flex: none;
-  accent-color: var(--seal);
-}
-
-.triage-option:has(input:checked) {
-  border-color: var(--seal);
-  background: var(--danger-bg);
-}
-
-.triage-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-  margin-bottom: var(--space-l);
-}
-
 .btn {
   font-family: var(--font-ui);
   font-size: var(--step-0);
@@ -290,96 +208,6 @@
 .btn--quiet {
   border-color: var(--border);
   color: var(--ink-soft);
-}
-
-/* ---- 行动档位：自测的唯一结论形式 ---- */
-.action-level {
-  border: 1px solid var(--border);
-  border-left-width: 6px;
-  background: var(--paper-raised);
-  padding: var(--space-m);
-  margin-bottom: var(--space-m);
-}
-
-.action-level__label {
-  font-family: var(--font-ui);
-  font-size: var(--step--1);
-  letter-spacing: 0.1em;
-  color: var(--ink-faint);
-  margin: 0 0 var(--space-2xs);
-}
-
-.action-level__value {
-  font-size: var(--step-2);
-  margin: 0 0 var(--space-s);
-}
-
-.action-level[data-level="1"] {
-  border-left-color: var(--seal);
-  background: var(--danger-bg);
-}
-
-.action-level[data-level="1"] .action-level__value {
-  color: var(--seal);
-}
-
-.action-level[data-level="2"] {
-  border-left-color: var(--seal-soft);
-}
-
-.action-level[data-level="3"] {
-  border-left-color: var(--brass);
-  background: var(--warn-bg);
-}
-
-.action-level[data-level="4"] {
-  border-left-color: var(--rule-strong);
-}
-
-.action-level__reason {
-  font-size: var(--step--1);
-  color: var(--ink-soft);
-  margin: 0 0 var(--space-s);
-}
-
-.action-level__basis {
-  font-family: var(--font-ui);
-  font-size: var(--step--2);
-  color: var(--ink-faint);
-  margin: 0;
-}
-
-/* ---- 速查卡：打印时唯一必须活着的东西 ---- */
-.quickref {
-  max-width: 46rem;
-}
-
-.quickref__item {
-  border-top: var(--rule-line);
-  padding-block: var(--space-s);
-  display: grid;
-  gap: var(--space-2xs) var(--space-m);
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 48em) {
-  .quickref__item {
-    grid-template-columns: 14rem 1fr;
-  }
-}
-
-.quickref__situation {
-  font-weight: 600;
-  font-size: var(--step-0);
-}
-
-.quickref__action {
-  margin: 0;
-  color: var(--ink-soft);
-}
-
-.quickref__action strong {
-  color: var(--seal);
 }
 
 /* ---- 折叠区块（相关条目导航） ---- */
@@ -417,7 +245,6 @@ details.disclosure[open] summary {
   }
 
   .site-nav,
-  .emergency-bar,
   .controls,
   .search,
   .site-footer__grid > :not(.site-footer__disclaimer),
@@ -440,12 +267,10 @@ details.disclosure[open] summary {
     word-break: break-all;
   }
 
-  .callout,
-  .action-level {
+  .callout {
     break-inside: avoid;
   }
 
-  .quickref__item,
   .entry h2 {
     break-after: avoid;
   }

@@ -3,46 +3,11 @@ title: 幽门螺杆菌（H. pylori）
 category: diseases
 slug: h-pylori
 summary: WHO 将幽门螺杆菌列为 I 级致癌物；所有确认感染者都应治疗，成人家庭成员也属检测对象。
-severity: see-doctor
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [adult, older]
 tags: [幽门螺杆菌, 胃炎, 消化性溃疡, 胃癌, 呼气试验]
-quickref:
-  - situation: 消化道出血、持续呕吐、不明原因体重下降或缺铁
-    action: 尽快就医，评估是否需要内镜与活检
-    detail: 这类警示特征属于内镜 + 活检的指征，不能只按普通胃炎处理。
-    level: 3
-  - situation: 已确认感染幽门螺杆菌，尚未治疗或尚未复查
-    action: 就诊制定治疗方案，并按时间要求复查
-    detail: 治疗结束后至少 4 周做治愈检测；复查前 PPI 需停 2 周，铋剂和抗生素需停 4 周，以避免假阴性。
-    level: 3
-triage:
-  - group: 腹部
-    label: 消化不良并伴消化道出血、呕吐、不明原因体重下降或缺铁
-    level: 2
-  - group: 感染与免疫
-    label: 家里有人已确认幽门螺杆菌阳性（本人为成年人）
-    level: 3
-  - group: 感染与免疫
-    label: 不明原因缺铁性贫血，尚未评估幽门螺杆菌
-    level: 3
-  - group: 腹部
-    label: 既往或现在有消化性溃疡病
-    level: 3
-  - group: 腹部
-    label: 长期服用 NSAIDs，或刚开始每日服用阿司匹林
-    level: 3
-  - group: 感染与免疫
-    label: 有胃癌家族史、自身免疫性胃炎、胃部癌前病变（萎缩、肠上皮化生、异型增生）、MALT 淋巴瘤或免疫性血小板减少性紫癜（ITP）
-    level: 3
-  - group: 感染与免疫
-    label: 已确认感染，已经吃完了药，但还没做治愈检测
-    level: 3
-  - group: 感染与免疫
-    label: 来自胃癌高发地区的移民，或属于高危种族、族裔
-    level: 4
 sources:
   - label: "ACG Clinical Guideline — Treatment of Helicobacter pylori Infection 2024（指南亮点页；Am J Gastroenterol 119(9):1730-1753, September 2024）"
     url: https://gi.org/wp-content/uploads/2025/01/ACG-Hpylori-Guidelines-Highlights-2024-FINAL.pdf.pdf
@@ -88,19 +53,6 @@ sources:
 - 是否有消化不良，并同时存在警示特征（消化道出血、呕吐、不明原因体重下降、缺铁）[1]。
 - 准备检测前是否在用 PPI 或抗生素、铋剂——会影响结果，需按来源要求停药（检测前 PPI 停 2 周；治愈检测前 PPI 停 2 周、铋剂与抗生素停 4 周）[3][1]。
 - 治疗结束后是否安排了复查——ACG 与 MedlinePlus 都要求确认细菌已清除 [1][4]。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下任一情况，必须就医</p>
-<ul>
-<li><strong>消化道出血、持续呕吐、不明原因体重下降、缺铁</strong>——ACG 将这类「警示特征」列为需内镜 + 活检的情形 [1]。</li>
-<li><strong>已确认 H. pylori 感染</strong>——按原文「所有感染者都应接受治疗」，应就诊制定治疗方案 [1]。</li>
-<li><strong>治疗结束后症状不缓解，或需要确认是否根除</strong>——治愈检测应在治疗结束后至少 4 周完成 [1][4]。</li>
-<li><strong>家庭成员中有胃癌病史，或本人属于 ACG 列出的高风险人群</strong>（自身免疫性胃炎、胃部癌前病变、MALT 淋巴瘤等）——这些均属明确的检测指征 [1]。</li>
-</ul>
-<p>本页只写检测指征与时间要求，不构成诊断结论，也不提供任何用药方案与剂量；治疗方案由医生根据感染情况与既往用药史决定。</p>
-</div>
 
 ## 常见误区
 

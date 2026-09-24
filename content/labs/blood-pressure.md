@@ -3,30 +3,11 @@ title: 血压
 category: labs
 slug: blood-pressure
 summary: 一次血压偏高不等于高血压；诊室 ≥140/90、家庭 ≥135/85 都只是需要复核的信号。
-severity: see-doctor
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [adult, older]
 tags: [血压, 高血压, 心血管, 家庭自测]
-quickref:
-  - situation: 血压达到 180/120 mmHg 或更高，并出现不适症状
-    action: 立即就医（不要自行加服降压药）
-    detail: WHO 指出血压处于这一水平的人可能出现症状；药量调整应由诊室医生完成。
-    level: 1
-triage:
-  - group: 代谢与体检
-    label: 血压达到 180/120 mmHg 或更高，并出现不适症状
-    level: 1
-  - group: 代谢与体检
-    label: 家庭自测在不同日期反复 ≥135/85 mmHg
-    level: 3
-  - group: 代谢与体检
-    label: 首次发现诊室血压 ≥140/90 mmHg
-    level: 3
-  - group: 代谢与体检
-    label: 只有某一次测量偏高，还没有在另一个日期复测
-    level: 4
 sources:
   - label: "WHO — Hypertension（高血压实况报道，页面自标 2025-09-25）"
     url: https://www.who.int/zh/news-room/fact-sheets/detail/hypertension
@@ -110,21 +91,6 @@ sources:
 - 初诊或血压未达标者：每天早晚各 1 次，最好早上起床排尿后服药前、晚上临睡前，连续测量 7 天，以后以 6 天的血压平均值作为治疗参考；血压达标且稳定者：每周 1 天、早晚各 1 次 [6]。
 - 一次测量完成后静坐 1 分钟再测第 2 次，取 2 次平均值；若收缩压或舒张压相差超过 5 mmHg，1 分钟后再测，取 3 次平均值 [6]。
 - 至少测两次、间隔 1–2 分钟；把家庭自测与医疗团队的随访支持结合起来的人，更可能把血压降下来。读数偏低会带来虚假的安全感，读数偏高会导致不必要的治疗 [10]。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下任一情况，不要在家观察</p>
-<ul>
-<li><strong>血压达到「很高」档</strong>——WHO 原文写的是「通常为 180/120 或更高」的人可能出现症状 [1]。</li>
-<li><strong>家庭自测在不同日期反复 ≥135/85 mmHg</strong>——上海市卫健委明确要再去医疗机构确诊，由医生而不是自己判断 [6]。</li>
-<li><strong>首次发现诊室血压 ≥140/90 mmHg</strong>——NICE 要求下一步用 ABPM 或 HBPM 确认诊断，而不是直接自我判断 [3]。</li>
-<li><strong>不清楚自己的达标范围</strong>——心、脑、肾受损程度不同，达标值不一样，需前往医院确认 [5]。</li>
-<li><strong>存在心律不齐（如心房颤动、频发早搏）或精神焦虑，曾擅自改动治疗</strong>——上海市卫健委明确不建议这类人用电子血压计做家庭自测，应就医处理 [6]。</li>
-<li><strong>不要因为自测数值高低自行调整药量</strong>——用药调整需要由诊室医生完成 [6]。</li>
-</ul>
-<p>本页解释的是血压数值该怎么读，不构成诊断结论；是否达到高血压、目标值定在哪里，由医生结合重复测量结果、症状与总体风险判断。</p>
-</div>
 
 ## 常见误区
 

@@ -3,25 +3,11 @@ title: 久坐与运动量
 category: lifestyle
 slug: sedentary-and-activity
 summary: 成人每周至少 150 分钟中等强度有氧加每周 2 天肌力训练；65 岁以上还要练平衡。
-severity: routine
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [child, adult, older]
 tags: [身体活动, 久坐, 平衡训练, 肌力训练, 老年人]
-triage:
-  - group: 生活方式
-    label: 已有一段时间没运动，或有疾病、有顾虑，开始前需要先咨询医生
-    level: 3
-  - group: 生活方式
-    label: 每周中等强度有氧活动不足 150 分钟
-    level: 4
-  - group: 生活方式
-    label: 每周肌力训练不足 2 天
-    level: 4
-  - group: 生活方式
-    label: 每天长时间坐着或躺着，很少中断
-    level: 4
 sources:
   - label: "美国 CDC — Adult Activity: An Overview（页面日期 2023-12-20）"
     url: https://www.cdc.gov/physical-activity-basics/guidelines/adults.html
@@ -87,17 +73,6 @@ sources:
 - 刻意**减少坐着或躺着的时间**，用活动打断长时间不动（NHS，2024）。
 - 疲倦时也可以靠活动解决：**单次 15 分钟**步行就能带来精力提升，目标逐步累积到**每周 2 小时 30 分钟**中等强度有氧，比如骑车、快走（NHS，2023）。
 - 用**疲劳与精神状态**做反馈：规律运动长期会让人**更不累**，而不是更累（NHS，2023）。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下情况，先咨询医生再开始</p>
-<ul>
-<li>已经有一段时间没有运动。</li>
-<li>有疾病或顾虑，需要确认活动的类型与强度是否适合当前的体能。</li>
-</ul>
-<p>本轮取得的身体活动类原文<strong>没有给出运动过程中必须立即急诊的判断标准</strong>（胸痛、晕厥这类情形在其原文中未涉及），因此这里不列急诊门槛。原文同时提醒：居家练习不等于安全无风险，起步时循序渐进地增加次数。</p>
-</div>
 
 ## 常见误区
 

@@ -3,68 +3,89 @@
  *
  * 内容的加载与校验。零依赖（除 yaml 这个纯 JS 解析器）。
  * 校验不过 = 构建失败，这是刻意的：医学内容宁可不上线，也不能少来源。
+ *
+ * 「模块」= 导航上的一格；「分类」= 内容目录。一个模块可以含多个分类
+ * （养生 = foods + lifestyle），一个分类只属于一个模块。
+ * 隐藏分类仍然构建、仍然可被站内搜索到，只是不进导航、并加 noindex。
  */
 import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { parse as parseYaml } from "yaml";
 
-export const CATEGORIES = {
-  symptoms: {
-    label: "常见症状自查",
-    order: 1,
-    description: "哪些常见不适可以先观察，哪些不能等。不写诊断，只写门槛。",
-  },
-  redflags: {
-    label: "红旗警示",
-    order: 2,
-    pinned: true,
-    note: "必须立即就医的情况",
-    description: "会要命的情况。这一类不是知识，是必须记住的动作。",
-  },
-  diseases: {
-    label: "常见疾病常识",
-    order: 3,
-    description: "家里最常出现的那些诊断：是什么、怎么看、什么情况下要升级处理。",
-  },
-  medications: {
-    label: "用药与检查常识",
-    order: 4,
-    description: "吃药、体检、看化验单之前该知道的事——以及最常见的误解。",
-  },
+export const MODULES = {
   drugs: {
-    label: "常见药物速查",
-    order: 5,
+    label: "药品速查",
+    order: 1,
     note: "认成分与商品名",
-    description: "拿着药盒认不出是什么？先认成分。这里不给剂量，也不判断适不适合你。",
+    description: "拿着药盒认不出是什么？先认成分。这里不写剂量，也不判断它适不适合你。",
+    categories: ["drugs"],
   },
   labs: {
-    label: "体检指标解读",
-    order: 6,
-    description: "报告单上的箭头到底意味着什么，哪些需要管，哪些可以再看一年。",
+    label: "体检指标速查",
+    order: 2,
+    note: "看数值、看体系",
+    description:
+      "报告单上的箭头意味着什么，哪些需要管，哪些可以再看一年。数值以中国标准为准；中国没有对应标准的，会标明是哪一套体系。",
+    categories: ["labs"],
+  },
+  wellness: {
+    label: "养生",
+    order: 3,
+    note: "吃什么、怎么生活",
+    description:
+      "没有单一「最养生」的食物。这里说的是长期吃什么、怎么生活，以及哪些流行说法其实站不住。",
+    categories: ["foods", "lifestyle"],
+  },
+};
+
+export const CATEGORIES = {
+  drugs: {
+    module: "drugs",
+    label: "药品速查",
+    order: 1,
+    description: "同一种成分有几十个商品名。永远以药盒上印的「通用名」为准。",
+  },
+  labs: {
+    module: "labs",
+    label: "体检指标速查",
+    order: 2,
+    description: "不同医院、不同检测方法的参考区间不同——以你本人化验单上印的为准。",
   },
   foods: {
-    label: "食物选择",
-    order: 7,
-    note: "吃什么、少买什么",
-    description: "没有单一「最养生」的食物。这里说的是长期吃什么，以及哪些其实不必买。",
+    module: "wellness",
+    section: "吃什么",
+    label: "吃什么",
+    order: 3,
+    description: "长期吃的方向，以及哪些东西其实不必买。",
   },
   lifestyle: {
-    label: "养生",
-    order: 8,
+    module: "wellness",
+    section: "怎么生活",
+    label: "怎么生活",
+    order: 4,
     description: "有证据支持的生活方式，以及被证据否定的流行说法。",
+  },
+  diseases: {
+    hidden: true,
+    label: "常见疾病常识",
+    order: 5,
+    description: "家里最常出现的那些诊断：是什么、怎么看。",
+  },
+  medications: {
+    hidden: true,
+    label: "用药与检查常识",
+    order: 6,
+    description: "吃药、体检、看化验单之前该知道的事——以及最常见的误解。",
   },
 };
 
-export const SEVERITIES = ["routine", "see-doctor", "urgent", "emergency"];
+/** 隐藏分类：仍然构建、仍然可搜、老 URL 仍然可开，只是不进导航并加 noindex */
+export const HIDDEN_CATEGORIES = Object.entries(CATEGORIES)
+  .filter(([, meta]) => meta.hidden)
+  .map(([key]) => key);
+
 export const EVIDENCE_LEVELS = ["strong", "moderate", "limited", "none"];
 export const AGE_GROUPS = ["child", "adult", "older", "pregnant"];
-
-export const SEVERITY_LABEL = {
-  routine: "常规",
-  "see-doctor": "建议就诊",
-  urgent: "尽快就医",
-  emergency: "紧急",
-};
 
 export const EVIDENCE_LABEL = {
   strong: "证据充分",
@@ -73,8 +94,47 @@ export const EVIDENCE_LABEL = {
   none: "无可靠证据",
 };
 
-/** 正文字段：emergency 级条目必须出现在「何时必须就医」 */
-export const REQUIRED_SECTION = "何时必须就医";
+/**
+ * 剂量守卫。
+ *
+ * 本站不收录剂量，这条规则以前靠人自觉，现在靠机器兜住：
+ * 药品条目的结构化字段里出现任何疑似剂量的字样，构建直接失败。
+ * 只作用于结构化字段（好核对、来源单一），不作用于说明性正文——
+ * 正文里出现「你一次吃两种药」这类句子是正常的。
+ *
+ * 三条规则的边界是踩出来的，改动前先看懂为什么：
+ *
+ * 1. 数字 + 真单位（mg / g / ml / IU…）。**这里故意不包括「片」「粒」**——
+ *    「维生素B1片」「维生素B12片」里也有数字加片，那是药名不是剂量。
+ * 2. 数字 + 剂型量词，但**数字前面不能紧跟拉丁字母**，同样是为了放过
+ *    「维生素B1片」这类命名。真实剂量写法（「吃2片」「2片」）前面是汉字或行首，照样命中。
+ * 3. 剂量字眼（每日 / 每次 / 一次 / 剂量 / 用法…）。**这里不包括「口服」「外用」「含服」**——
+ *    那三个是给药途径，不是剂量；药品的「主要作用」里写「外用抗生素」是完全正常的。
+ */
+const DOSAGE_PATTERNS = [
+  /\d+\s*(?:mg|μg|ug|mcg|g|kg|ml|mL|IU|U)(?![A-Za-z])/i,
+  /(?<![A-Za-z0-9])\d+\s*(?:片|粒|丸|袋|支|滴|喷|贴|次|日|天|周|小时)/,
+  /(?:每日|每天|每次|一天|一日|一次|用量|剂量|用法|顿服|首剂|维持量|极量)/,
+];
+
+/** 给定一段文字，返回第一个命中的疑似剂量片段；没有则返回 null */
+export function findDosage(text) {
+  for (const re of DOSAGE_PATTERNS) {
+    const m = re.exec(String(text ?? ""));
+    if (m) return m[0];
+  }
+  return null;
+}
+
+/** 通用名 → 锚点 id。同一份数据在构建端与索引端共用，避免两端漂移。 */
+export function drugAnchor(name) {
+  const s = String(name ?? "")
+    .normalize("NFKC")
+    .replace(/[^\p{Script=Han}\p{L}\p{N}]+/gu, "-")
+    .replace(/^-+|-+$/g, "")
+    .toLowerCase();
+  return s || "drug";
+}
 
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -110,7 +170,7 @@ export function validateEntry({ data, body, relPath }) {
   }
 
   // ---- 必填字符串 ----
-  for (const key of ["title", "slug", "summary", "severity", "evidence", "updated", "review_due"]) {
+  for (const key of ["title", "slug", "summary", "evidence", "updated", "review_due"]) {
     if (typeof data[key] !== "string" || data[key].trim() === "") {
       err(key, `必填字段缺失或不是字符串`);
     }
@@ -125,9 +185,6 @@ export function validateEntry({ data, body, relPath }) {
   }
 
   // ---- 枚举 ----
-  if (data.severity && !SEVERITIES.includes(data.severity)) {
-    err("severity", `"${data.severity}" 不在允许值内：${SEVERITIES.join(" | ")}`);
-  }
   if (data.evidence && !EVIDENCE_LEVELS.includes(data.evidence)) {
     err("evidence", `"${data.evidence}" 不在允许值内：${EVIDENCE_LEVELS.join(" | ")}`);
   }
@@ -193,66 +250,96 @@ export function validateEntry({ data, body, relPath }) {
     });
   }
 
-  // ---- triage：自测用的勾选项（可选，但一旦出現就必须合法） ----
-  if (data.triage !== undefined) {
-    if (!Array.isArray(data.triage)) err("triage", "必须是数组");
-    else {
-      data.triage.forEach((t, i) => {
-        if (!t || typeof t !== "object") {
-          err(`triage[${i}]`, "必须是 { label, level, group } 对象");
-          return;
-        }
-        if (typeof t.label !== "string" || !t.label.trim()) err(`triage[${i}].label`, "缺少勾选项文字");
-        if (![1, 2, 3, 4].includes(t.level)) {
-          err(`triage[${i}].level`, `level 必须是 1（立即 120）/ 2（24 小时内就医）/ 3（尽快就诊）/ 4（可先观察）`);
-        }
-        if (typeof t.group !== "string" || !t.group.trim()) err(`triage[${i}].group`, "缺少分组名");
-      });
+  // ---- verified: false 必须交代清楚 ----
+  // 用于「来源并不真正支撑这批数据」的内容：可以留在站上，但必须标明，
+  // 而且必须留下说明。宁可难看，不可含糊。
+  if (data.verified === false) {
+    if (typeof data.verification_note !== "string" || !data.verification_note.trim()) {
+      err("verification_note", "verified: false 时必须写明 verification_note，说明哪里没核过");
     }
+    // 这里**不**发警告：页面已经会显著标出来，而这个状态会长期存在，
+    // 每次都刷一条警告只会让警告通道变得没人看。留 error 就够了。
+  } else if (data.verified !== undefined && data.verified !== true) {
+    err("verified", "只能是 true 或 false");
   }
 
-  // ---- quickref ----
-  if (data.quickref !== undefined) {
-    if (!Array.isArray(data.quickref)) err("quickref", "必须是数组");
-    else {
-      data.quickref.forEach((q, i) => {
-        if (!q || typeof q !== "object" || !q.situation || !q.action) {
-          err(`quickref[${i}]`, "每条需要 situation 与 action");
-        }
-      });
-    }
+  // ---- 药品：结构化数据 ----
+  if (data.drugs !== undefined || dirCategory === "drugs") {
+    validateDrugItems({ data, err, warn });
   }
 
-  // ---- emergency 级必须有「何时必须就医」段 ----
-  // 接受若干等价标题：药物速查类说「什么时候该问医生药师」比「何时必须就医」准确得多，
-  // 不该为了迁就校验器去写一句不自然的话。
-  const SECTION_ALIASES = [
-    REQUIRED_SECTION,
-    "什么时候该问医生药师",
-    "什么时候该问医生或营养师",
-    "什么时候该寻求专业帮助",
-    "什么时候该问医生",
-    "何时该问医生药师",
-    "何时该问医生",
-    "何时必须问医生",
-  ];
-  const hasSection = SECTION_ALIASES.some((alias) =>
-    new RegExp(`^##\\s*${alias}\\s*$`, "m").test(body ?? ""),
-  );
-  if (data.severity === "emergency" && !hasSection) {
-    err("body", `severity 为 emergency 的条目必须在正文里包含「## ${REQUIRED_SECTION}」或等价标题`);
-  }
-  if (!hasSection) {
-    warn("body", `正文里没有「## ${REQUIRED_SECTION}」或等价标题，建议补上`);
+  // ---- 药品：正文必须留一个表格占位标记 ----
+  // 对照表由 frontmatter 的数据渲染出来，不是手写在 markdown 里的。
+  // 留个显式标记，位置才可控，也不会有人以为表格被误删了。
+  if (dirCategory === "drugs" && !/<!--\s*DRUGS_TABLE\s*-->/.test(body ?? "")) {
+    err(
+      "body",
+      "药品条目的正文里必须有 <!--DRUGS_TABLE--> 占位标记（对照表从 frontmatter 的 drugs 数据渲染）",
+    );
   }
 
   // ---- 正文长度兜底 ----
+  // 药品条目的实质内容在 frontmatter 的结构化数据里，正文只剩一个表格占位标记，
+  // 所以这一类不按字数算，按「有没有那批药」算。
   const plain = String(body ?? "").replace(/<[^>]+>/g, "").replace(/\s+/g, "");
-  if (charLength(plain) < 150) {
-    warn("body", `正文只有 ${charLength(plain)} 字，可能还没写完`);
+  const plainLength = charLength(plain);
+  const hasStructuredDrugs = Array.isArray(data.drugs) && data.drugs.length > 0;
+  if (plainLength < 150 && !hasStructuredDrugs) {
+    warn("body", `正文只有 ${plainLength} 字，可能还没写完`);
   }
 
   return { errors, warnings };
+}
+
+/** 药品条目里那批结构化数据。字段少、来源单一，所以每条都能校。 */
+function validateDrugItems({ data, err, warn }) {
+  if (data.drugs === undefined) {
+    err("drugs", "药品分类必须带 drugs 结构化列表（通用名 / 俗名 / 主要作用 / 常见商品名）");
+    return;
+  }
+  if (!Array.isArray(data.drugs) || data.drugs.length === 0) {
+    err("drugs", "drugs 必须是至少含一条的非空数组");
+    return;
+  }
+
+  data.drugs.forEach((d, i) => {
+    const at = `drugs[${i}]`;
+    if (!d || typeof d !== "object" || Array.isArray(d)) {
+      err(at, "必须是 { name, aliases, effect, brands } 对象");
+      return;
+    }
+    for (const key of ["name", "effect"]) {
+      if (typeof d[key] !== "string" || !d[key].trim()) err(`${at}.${key}`, "必填字段缺失或不是字符串");
+    }
+    for (const key of ["aliases", "brands"]) {
+      if (d[key] === undefined) continue;
+      if (!Array.isArray(d[key])) {
+        err(`${at}.${key}`, "必须是数组");
+        continue;
+      }
+      d[key].forEach((v) => {
+        if (typeof v !== "string" || !v.trim()) err(`${at}.${key}`, "元素必须是非空字符串");
+      });
+    }
+    if (!d.brands || (Array.isArray(d.brands) && d.brands.length === 0)) {
+      warn(`${at}.brands`, `「${d.name ?? "?"}」没有常见商品名，确认是漏了还是确实没有`);
+    }
+
+    // 剂量守卫：只扫结构化字段
+    const fields = [["name", d.name], ["effect", d.effect]];
+    for (const key of ["aliases", "brands"]) {
+      for (const v of Array.isArray(d[key]) ? d[key] : []) fields.push([key, v]);
+    }
+    for (const [key, value] of fields) {
+      const hit = findDosage(value);
+      if (hit) {
+        err(`${at}.${key}`, `出现疑似剂量的字样「${hit}」。本站不收录剂量，请改写`);
+      }
+    }
+    if (typeof d.name === "string" && d.name.length > 30) {
+      warn(`${at}.name`, `通用名 ${d.name.length} 字，偏长，确认没有把说明写进名字里`);
+    }
+  });
 }
 
 const posix = (p) => p.split("\\").join("/");
@@ -272,6 +359,8 @@ export async function loadContent(contentDir) {
     }
     for (const d of dirents) {
       const full = join(dir, d.name);
+      // 以 `_` 开头的目录与文件不是条目：`content/_modules/` 放的是模块级共享说明。
+      if (d.name.startsWith("_")) continue;
       if (d.isDirectory()) await walk(full);
       else if (d.name.endsWith(".md") && d.name !== "README.md") {
         const raw = await readFile(full, "utf8");
@@ -293,7 +382,7 @@ export async function loadContent(contentDir) {
 
   await walk(contentDir);
 
-  // ---- 跨文件：slug 唯一 ----
+  // ---- 跨文件：条目 slug 唯一 ----
   const seen = new Map();
   for (const e of entries) {
     const key = `${e.category}/${e.data.slug}`;
@@ -305,6 +394,23 @@ export async function loadContent(contentDir) {
       });
     } else {
       seen.set(key, e.relPath);
+    }
+  }
+
+  // ---- 跨文件：药品通用名唯一（锚点会撞车，搜索结果会指错行） ----
+  const drugNames = new Map();
+  for (const e of entries) {
+    for (const d of Array.isArray(e.data?.drugs) ? e.data.drugs : []) {
+      const anchor = drugAnchor(d?.name);
+      if (drugNames.has(anchor)) {
+        errors.push({
+          file: e.relPath,
+          field: "drugs[].name",
+          msg: `通用名「${d?.name}」与 ${drugNames.get(anchor)} 里的同名条目撞锚点（${anchor}）`,
+        });
+      } else {
+        drugNames.set(anchor, e.relPath);
+      }
     }
   }
 

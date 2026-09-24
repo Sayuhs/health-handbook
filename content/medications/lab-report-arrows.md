@@ -3,37 +3,11 @@ title: 化验单上的「箭头」怎么看
 category: medications
 slug: lab-report-arrows
 summary: 箭头只表示偏离本实验室参考区间；区间取自健康人中间 95%，区间内外都不等于有无疾病。
-severity: see-doctor
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [child, adult, older]
 tags: [化验单, 参考区间, 血常规, 肝功能, 肿瘤标志物]
-triage:
-  - group: 代谢与体检
-    label: 结果超出参考区间，并伴有相关症状
-    level: 3
-  - group: 代谢与体检
-    label: 肝功能单项轻度异常，原因不明
-    level: 3
-  - group: 代谢与体检
-    label: 胆红素明显升高
-    level: 3
-  - group: 代谢与体检
-    label: 发现肿瘤标志物异常
-    level: 3
-  - group: 代谢与体检
-    label: 长期无诱因的血小板增多
-    level: 3
-  - group: 代谢与体检
-    label: 月经期以外的不规则阴道流血
-    level: 3
-  - group: 代谢与体检
-    label: 单次轻度异常，但没有任何症状
-    level: 4
-  - group: 代谢与体检
-    label: 想拿别家医院的参考区间来对自己的结果
-    level: 4
 sources:
   - label: "北京市卫健委 —《【清华长庚科普】检验报告里的\"小箭头\"简析》（北京清华长庚医院，页面日期 2024-08-01）"
     url: https://wjw.beijing.gov.cn/bmfw_20143/jkzs/jksh/202408/t20240801_3764136.html
@@ -86,21 +60,6 @@ sources:
 - 复查时尽量在同一家实验室做，否则趋势无法比较（MedlinePlus，2025-09-04）。
 - 报告交给医生，结合病史、体格检查和其他结果综合判断，不自己「对号入座」（北京市卫健委，2024-08-01；2025-11-20）。
 - 本站未取到「单次异常应间隔多久复查」的具体时间窗原文，原文表述是**定期随访、定期复查并观察变化趋势**，因此这里不写复查间隔。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下情况，必须就医或必须问医生</p>
-<ul>
-<li>结果超出参考区间<strong>并伴有症状</strong>时。</li>
-<li>肝功能单项轻度异常且原因不明——应尽可能在早期排除乙肝、自身免疫性肝病等常见原因。</li>
-<li>胆红素明显升高，常提示可能存在肝胆疾病，应尽早去医院就诊。</li>
-<li>发现肿瘤标志物异常——不要惊慌，也不可忽视，应前往医院查清升高原因。</li>
-<li>长期无诱因的血小板增多，要及时到医院就医，医生会根据情况考虑进一步检查。</li>
-<li>月经期以外的<strong>不规则阴道流血</strong>，不要等血止再查。</li>
-</ul>
-<p>本条目解释的是报告单上的数值该怎么读，不构成任何诊断结论；具体判断由医生结合病史、体格检查与其他检查结果作出。</p>
-</div>
 
 ## 常见误区
 

@@ -3,28 +3,11 @@ title: 体重管理
 category: lifestyle
 slug: weight-management
 summary: 成人 BMI 达到 25 为超重、达到 30 为肥胖；每周减 0.5–1 kg 更易长期保持。
-severity: see-doctor
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [child, adult, older]
 tags: [体重, BMI, 腰围, 减重, 肥胖]
-triage:
-  - group: 生活方式
-    label: BMI 处于超重或肥胖区间，且腰围超过身高的一半
-    level: 3
-  - group: 生活方式
-    label: 已有糖尿病前期、糖尿病、高血压、关节痛、高胆固醇、睡眠呼吸暂停或心血管疾病
-    level: 3
-  - group: 生活方式
-    label: 有肥胖家族史，或有、怀疑有进食障碍（如暴食）
-    level: 3
-  - group: 生活方式
-    label: 体重可能由疾病或药物引起（如多囊卵巢综合征、甲状腺功能低下、库欣综合征，或服用某些类固醇、抗抑郁药、β 受体阻滞剂）
-    level: 3
-  - group: 生活方式
-    label: BMI 与腰围都在参考范围内，体重稳定
-    level: 4
 sources:
   - label: "WHO — Obesity and overweight fact sheet（页面日期 2025-12-08）"
     url: https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight
@@ -74,20 +57,6 @@ WHO 的成人分界是：**超重 = BMI 达到 25；肥胖 = BMI 达到 30**（W
 - 同时记录**营养、身体活动与睡眠**三项，并把想减重的「为什么」写在每天能看到的地方（美国 CDC，2025）。
 - 一次只聚焦**两到三个**具体、现实的目标，例如「第一周每天快走 15 分钟、每周 3 天」，而不是「多运动」（美国 CDC，2025）。
 - 寻求支持：家人朋友、同事邻居、体重管理项目或营养师；并请医生安排随访以监测体重与相关健康指标（美国 CDC，2025；NHS，2026）。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下情况，应看医生</p>
-<ul>
-<li>BMI 处于**超重或肥胖**区间，且腰围**超过身高的一半**。</li>
-<li>已有糖尿病前期、糖尿病、高血压、关节痛、高胆固醇、睡眠呼吸暂停或心血管疾病。</li>
-<li>有肥胖家族史。</li>
-<li>有或怀疑有**进食障碍**（如暴食）。</li>
-<li>体重可能由疾病或药物引起（如多囊卵巢综合征、甲状腺功能低下、库欣综合征；或服用某些类固醇、抗抑郁药、β 受体阻滞剂）。</li>
-</ul>
-<p>本轮取得的体重管理原文<strong>没有给出「因体重问题必须立即急诊」的标准</strong>，因此这里不列急诊门槛。另有两条与风险直接相关的说明：肥胖可能使预期寿命<strong>降低 2 到 10 年</strong>（NHS，2026）；减重手术的门槛是 BMI 达到 <strong>40</strong>，或 BMI 达到 <strong>35</strong> 并有可因减重改善的健康问题（如 2 型糖尿病、高血压）——上述特定族裔背景者为 BMI 达到 <strong>37.5</strong>，或 BMI 在 <strong>32.5–37.4</strong> 并有相关健康问题（NHS，2026）。减重手术后 2 年内需要定期复查，以确保饮食健康、规律活动（同上）。</p>
-</div>
 
 ## 常见误区
 

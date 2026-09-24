@@ -3,48 +3,11 @@ title: 用眼疲劳与干眼
 category: diseases
 slug: eye-strain-dry-eye
 summary: 长时间看屏减少眨眼会引起干眼；定时休息、屏幕略低于眼平线、加湿可缓解。
-severity: see-doctor
 evidence: moderate
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [adult]
 tags: [干眼, 视疲劳, 屏幕, 用眼卫生, 睑板腺]
-quickref:
-  - situation: 眼睛疼痛且发红
-    action: 尽快就医
-    level: 2
-  - situation: 戴隐形眼镜且出现眼红
-    action: 尽快就医
-    detail: 可能为眼部感染。
-    level: 2
-triage:
-  - group: 眼睛
-    label: 眼睛疼痛且发红
-    level: 2
-  - group: 眼睛
-    label: 戴隐形眼镜时出现眼红
-    level: 2
-  - group: 眼睛
-    label: 干眼症状伴有明显发红、疼痛或视力变化
-    level: 2
-  - group: 眼睛
-    label: 家庭护理数周后干眼仍不缓解
-    level: 3
-  - group: 眼睛
-    label: 干眼症状持续存在、逐渐加重或影响日常活动
-    level: 3
-  - group: 眼睛
-    label: 使用非处方润滑滴眼液无效
-    level: 3
-  - group: 眼睛
-    label: 眼睑形状发生变化
-    level: 3
-  - group: 眼睛
-    label: 症状在下午或长时间用屏后加重
-    level: 4
-  - group: 眼睛
-    label: 所处环境干燥，或有空调、暖气直吹
-    level: 4
 sources:
   - label: NHS — Dry eyes
     url: https://www.nhs.uk/conditions/dry-eyes/
@@ -78,24 +41,6 @@ sources:
 - 所处环境是否干燥，或有空调、暖气直吹。
 - 是否佩戴隐形眼镜——佩戴者出现眼红需要特别注意。
 - 是否用过人工泪液，使用后是否缓解。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下任一情况，尽快获得医疗帮助</p>
-<ul>
-<li>眼睛疼痛且发红。</li>
-<li>戴隐形眼镜且出现眼红——<strong>可能为眼部感染</strong>。</li>
-</ul>
-</div>
-
-以下情况需要就诊验光师或全科医生（非紧急）：
-
-- 尝试家庭护理**数周后**干眼仍不缓解。
-- **眼睑形状发生变化**。
-- 验光师或全科医生找不到原因时，可能转诊**眼科专科医生**。
-
-属于眼科就诊范围的情况还包括（AAO）：干眼症状**持续存在、逐渐加重、影响日常活动、使用非处方润滑滴眼液无效**，或**伴有明显发红、疼痛或视力变化**。慢性干眼有时提示眼睑疾病、自身免疫性疾病或其他需要医学评估的潜在问题。
 
 ## 常见误区
 

@@ -3,32 +3,11 @@ title: 脂肪肝（含 ALT/AST 异常）
 category: diseases
 slug: fatty-liver
 summary: 脂肪肝是肝内脂肪堆积的常见情况，通常没有症状，多在做其他检查时被发现；常与超重相关。
-severity: see-doctor
 evidence: moderate
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [adult, older]
 tags: [脂肪肝, MASLD, NAFLD, 肝酶, ALT, AST, 体检]
-quickref:
-  - situation: 脂肪肝患者出现黄疸、腹胀、下肢水肿或意识改变
-    action: 立即就医
-    level: 1
-triage:
-  - group: 代谢与体检
-    label: 体检化验单上 ALT 或 AST 被标注为异常
-    level: 3
-  - group: 代谢与体检
-    label: 腹部超声等影像报告里出现「脂肪肝」的描述
-    level: 3
-  - group: 代谢与体检
-    label: 医生提到存在肝纤维化风险，需要按专科路径随访
-    level: 3
-  - group: 全身与意识
-    label: 持续疲倦、全身不适，或右上腹（肋骨下方）疼痛不适
-    level: 3
-  - group: 全身与意识
-    label: 出现黄疸、腹胀、下肢水肿或意识改变
-    level: 1
 sources:
   - label: 英国 NHS — Non-alcoholic fatty liver disease (NAFLD)（非酒精性脂肪性肝病，现称 MASLD）
     url: https://www.nhs.uk/conditions/non-alcoholic-fatty-liver-disease/
@@ -42,7 +21,7 @@ sources:
 
 它最容易被漏掉的地方是：**通常没有任何症状**，很多人患病而不自知，往往是因其他原因做血液检查或扫描、结果提示肝脏问题时才被发现 [1]。少部分人会出现非常疲倦、全身不适，或者右上腹（肋骨下方）的肝区疼痛与不适 [1]。
 
-本页的行动档位是「建议就诊」：脂肪肝本身属于门诊评估与随访的范围；一旦出现黄疸、腹胀、下肢水肿、意识改变这类表现，就不是门诊的节奏了。
+脂肪肝本身属于门诊评估与随访的范围；一旦出现黄疸、腹胀、下肢水肿、意识改变这类表现，就不是门诊的节奏了。
 
 ## 关键事实与数值
 
@@ -61,18 +40,6 @@ sources:
 - 查看体检化验单上 ALT、AST 等肝酶项目是否被标注异常，并保留原始数值与日期（判读标准见上节说明）[1]。
 - 查看腹部超声等影像报告里是否有「脂肪肝」的描述 [1]。
 - 已被提示存在肝纤维化风险的，按 NICE NG49 的路径就诊评估，而不是自行观察 [2]。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下情况，必须就医</p>
-<ul>
-<li>体检发现肝酶（ALT、AST）异常，或影像提示脂肪肝——就诊明确原因，并排除酒精相关肝病与其他肝病 [1]。</li>
-<li>出现持续疲倦、全身不适、腹部右上区疼痛或不适——就诊 [1]。</li>
-<li>已被评估为存在进展性肝纤维化风险——按专科随访（NICE NG49 针对的正是这一人群）[2]。</li>
-<li>出现黄疸、腹胀、下肢水肿、意识改变等表现——<strong>立即就医</strong>。</li>
-</ul>
-</div>
 
 ## 常见误区
 

@@ -3,25 +3,11 @@ title: 膳食指南（盐、油、糖）
 category: lifestyle
 slug: dietary-guidelines
 summary: 成人每天食盐少于 5 g、游离糖与饱和脂肪各低于总能量 10%，并以蔬果、全谷物、豆类为主。
-severity: routine
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [child, adult, older]
 tags: [膳食, 盐, 糖, 脂肪, 蔬果]
-triage:
-  - group: 生活方式
-    label: 糖尿病等慢性病患者，计划大幅调整饮食习惯
-    level: 3
-  - group: 生活方式
-    label: 平时不查看食品标签上的盐含量，或常吃加工食品、外卖与商业酱料
-    level: 4
-  - group: 生活方式
-    label: 每天蔬果不足 5 份
-    level: 4
-  - group: 生活方式
-    label: 常喝果汁、含糖饮料，或把果汁当作水果的替代
-    level: 4
 sources:
   - label: "WHO — Healthy diet fact sheet（页面日期 2026-01-26）"
     url: https://www.who.int/news-room/fact-sheets/detail/healthy-diet
@@ -81,19 +67,6 @@ NHS 给出的日常对照值（NHS《8 tips for healthy eating》，2022）：�
 - 每天**至少 5 份**蔬果：1 份按新鲜蔬果 **80 g**、干果 **30 g** 理解；果汁每天**最多 1 杯（150 ml）**，尽量用完整水果替代（NHS，2022；WHO，2026）。
 - 把主食换成**高纤维或全谷物**版本（全麦面、糙米、带皮土豆）；烹饪时留意加入的油、黄油和奶油酱（NHS，2022）。
 - 用**蒸煮代替油炸**；用富含多不饱和脂肪的植物油替代黄油、猪油、酥油；选低脂乳制品与瘦肉，并去掉可见脂肪（WHO，2026）。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">以下情况需要先联系医生，不要自行开始</p>
-<ul>
-<li><strong>糖尿病患者</strong>在大幅调整饮食习惯前，应咨询其医疗团队，并遵循医疗团队推荐的饮食方案。</li>
-<li><strong>严格限制热量或食物种类</strong>的饮食通常不能带来持久减重，而且可能无法提供你需要的全部营养。</li>
-<li>「排毒」项目中常见的**轻泻剂可致腹泻**，急性腹泻可导致脱水与吸收不良；连续数天只喝大量水和草本茶而不进食，可导致**危险的电解质紊乱**。</li>
-<li><strong>1 岁以下</strong>每天盐摄入需**少于 1 g**，因为婴儿肾脏未发育完全、无法处理盐。</li>
-</ul>
-<p>本轮取得的膳食指南类原文以公共卫生建议为主，<strong>没有给出「因饮食问题必须立即急诊」的判断标准</strong>，因此这里不列急诊门槛，只列需要先联系医生的情形。</p>
-</div>
 
 ## 常见误区
 

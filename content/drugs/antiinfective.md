@@ -3,7 +3,6 @@ title: 抗感染类
 category: drugs
 slug: antiinfective
 summary: 15 种常见抗感染药物的成分、主要作用与常见商品名对照。
-severity: routine
 evidence: moderate
 updated: 2026-09-24
 review_due: 2027-09-24
@@ -18,44 +17,69 @@ sources:
   - label: "世界卫生组织 WHO — Medicines"
     url: https://www.who.int/health-topics/medicines
     year: 2026
+drugs:
+  - name: "阿莫西林"
+    aliases: []
+    effect: "青霉素类抗生素，广谱"
+    brands: ["阿莫仙", "Amoxil", "弗莱莫星"]
+  - name: "阿莫西林克拉维酸钾"
+    aliases: []
+    effect: "青霉素+酶抑制剂"
+    brands: ["力百汀", "Augmentin", "安灭菌"]
+  - name: "头孢氨苄"
+    aliases: []
+    effect: "第一代头孢菌素"
+    brands: ["先锋Ⅳ号", "Keflex"]
+  - name: "头孢克洛"
+    aliases: []
+    effect: "第二代头孢菌素"
+    brands: ["希刻劳", "Ceclor"]
+  - name: "头孢克肟"
+    aliases: []
+    effect: "第三代头孢菌素"
+    brands: ["世福素", "Cefixime"]
+  - name: "青霉素V钾"
+    aliases: []
+    effect: "青霉素类"
+    brands: ["Pen-VK", "青霉素V"]
+  - name: "阿奇霉素"
+    aliases: []
+    effect: "大环内酯类抗生素"
+    brands: ["希舒美", "Zithromax", "泰力特"]
+  - name: "克拉霉素"
+    aliases: []
+    effect: "大环内酯类抗生素"
+    brands: ["克拉仙", "Klacid"]
+  - name: "左氧氟沙星"
+    aliases: []
+    effect: "氟喹诺酮类抗生素"
+    brands: ["可乐必妥", "Levofloxacin", "来立信"]
+  - name: "莫西沙星"
+    aliases: []
+    effect: "氟喹诺酮类抗生素"
+    brands: ["拜复乐", "Avelox"]
+  - name: "甲硝唑"
+    aliases: ["灭滴灵"]
+    effect: "抗厌氧菌"
+    brands: ["Flagyl"]
+  - name: "阿昔洛韦"
+    aliases: []
+    effect: "抗病毒（疱疹）"
+    brands: ["Zovirax", "阿昔洛韦"]
+  - name: "奥司他韦"
+    aliases: []
+    effect: "抗流感病毒"
+    brands: ["达菲", "Tamiflu"]
+  - name: "氟康唑"
+    aliases: []
+    effect: "抗真菌"
+    brands: ["大扶康", "Diflucan"]
+  - name: "特比萘芬"
+    aliases: []
+    effect: "抗真菌"
+    brands: ["兰美抒", "Lamisil"]
+verified: false
+verification_note: "名称、主要作用、常见商品名三栏整理自一份自制的参考表，尚未逐条核到原始来源；「俗名」一栏是整理结果，没有权威清单可依。"
 ---
 
-很多人拿着药盒，认得商品名，却不知道里面到底是什么成分。这张表要打通的就是这一步：**先认成分，再看它通常是做什么用的，然后你才知道自己在吃什么。**
-
-## 对照表
-
-| 药物成分 | 主要作用 | 常见商品名 |
-| --- | --- | --- |
-| 阿莫西林 | 青霉素类抗生素，广谱 | 阿莫仙、Amoxil、弗莱莫星 |
-| 阿莫西林克拉维酸钾 | 青霉素+酶抑制剂 | 力百汀、Augmentin、安灭菌 |
-| 头孢氨苄 | 第一代头孢菌素 | 先锋Ⅳ号、Keflex |
-| 头孢克洛 | 第二代头孢菌素 | 希刻劳、Ceclor |
-| 头孢克肟 | 第三代头孢菌素 | 世福素、Cefixime |
-| 青霉素V钾 | 青霉素类 | Pen-VK、青霉素V |
-| 阿奇霉素 | 大环内酯类抗生素 | 希舒美、Zithromax、泰力特 |
-| 克拉霉素 | 大环内酯类抗生素 | 克拉仙、Klacid |
-| 左氧氟沙星 | 氟喹诺酮类抗生素 | 可乐必妥、Levofloxacin、来立信 |
-| 莫西沙星 | 氟喹诺酮类抗生素 | 拜复乐、Avelox |
-| 甲硝唑 | 抗厌氧菌 | 灭滴灵、Flagyl |
-| 阿昔洛韦 | 抗病毒（疱疹） | Zovirax、阿昔洛韦 |
-| 奥司他韦 | 抗流感病毒 | 达菲、Tamiflu |
-| 氟康唑 | 抗真菌 | 大扶康、Diflucan |
-| 特比萘芬 | 抗真菌 | 兰美抒、Lamisil |
-
-## 使用这张表要注意的
-
-- **商品名会变，成分不会。** 同一个成分有几十个厂家、几十个品牌，不同地区、不同年份的商品名都可能不一样。所以**永远以药盒上标注的「通用名」为准**——这张表只是帮你认它。
-- **个别条目本身是复方制剂的名字，不是单一成分。** 比如表中「散利痛」「复方甲氧那明」列在成分栏，实际是复方制剂；买药时务必看说明书上的成分表，别把它当成单一成分去叠加。
-- **不要凭这张表自行用药、停药或换药。** 这里只说「这个成分通常是做什么用的」，不含剂量，也不判断它适不适合你——同一个成分在不同人身上的禁忌不同。
-- **同时吃多种药时尤其要小心。** 不同商品名可能含同一个成分，叠加服用会超量。最省事的办法是把正在吃的药全部拿给药师看一遍。
-- **表里的分类只是习惯叫法。** 很多药横跨多个类别（例如阿司匹林既是解热镇痛也是抗血小板药），分类不代表它只能用于那一类。
-
-## 什么时候该问医生药师
-
-- 你要同时吃两种以上药物（包括中成药与保健品）时。
-- 吃药后出现皮疹、呼吸困难、面部或嘴唇肿胀、黑便、尿量明显减少。
-- 你怀孕、备孕或哺乳。
-- 你有肝病、肾病、胃溃疡史、哮喘，或者正在用抗凝药。
-- 你不确定两个不同商品名是不是同一个成分。
-
-以上任何一条，**把药盒带去问药师，比在网上查更快也更准。**
+<!--DRUGS_TABLE-->

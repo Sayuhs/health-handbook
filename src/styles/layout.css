@@ -1,5 +1,5 @@
 /* ==========================================================================
-   layout.css — 页面外壳：页头、页脚、容器、全站常驻的紧急速查入口
+   layout.css — 页面外壳：页头、页脚、容器
    ========================================================================== */
 
 .wrap {
@@ -70,11 +70,6 @@
   padding-block: var(--space-l) var(--space-xl);
 }
 
-.main--with-sticky-bar {
-  /* 给手机底部的紧急速查条留出空间 */
-  padding-bottom: calc(var(--space-2xl) + env(safe-area-inset-bottom, 0px));
-}
-
 /* ---- 页脚 ---- */
 .site-footer {
   border-top: 3px double var(--rule);
@@ -122,48 +117,6 @@
   border-left: 2px solid var(--seal);
   padding-left: var(--space-s);
   color: var(--ink-soft);
-}
-
-/* ---- 紧急速查：全站常驻。安静，但绝不藏起来 ---- */
-.emergency-bar {
-  position: fixed;
-  inset-inline: 0;
-  bottom: 0;
-  z-index: 40;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--space-xs);
-  min-height: 2.75rem;
-  padding: var(--space-xs) var(--space-m) calc(var(--space-xs) + env(safe-area-inset-bottom, 0px));
-  background: var(--paper-raised);
-  border-top: 2px solid var(--seal);
-  font-family: var(--font-ui);
-  font-size: var(--step--1);
-  letter-spacing: 0.06em;
-  color: var(--seal);
-  text-decoration: none;
-}
-
-.emergency-bar:hover {
-  background: var(--danger-bg);
-}
-
-.emergency-bar__mark {
-  font-family: var(--font-display);
-  font-weight: 600;
-}
-
-@media (min-width: 48em) {
-  .emergency-bar {
-    inset-inline: auto;
-    right: var(--space-m);
-    bottom: var(--space-m);
-    min-height: 0;
-    padding: var(--space-xs) var(--space-m);
-    border: 1px solid var(--seal);
-    box-shadow: var(--shadow-pop);
-  }
 }
 
 /* ---- 通用区块 ---- */

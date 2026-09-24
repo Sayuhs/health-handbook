@@ -3,48 +3,11 @@ title: 甲状腺结节与 TI-RADS 分级
 category: diseases
 slug: thyroid-nodules
 summary: 多数甲状腺结节不是癌；TI-RADS 级别越高，需要穿刺或随访的结节尺寸越小。
-severity: see-doctor
 evidence: moderate
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [adult, older]
 tags: [甲状腺结节, 甲状腺, 超声, TI-RADS, 细针穿刺]
-quickref:
-  - situation: 颈部迅速肿大，并伴呼吸困难
-    action: 立即拨打 120 或前往急诊
-    detail: 颈部迅速肿大伴呼吸困难属紧急状态。
-    level: 1
-triage:
-  - group: 代谢与体检
-    label: 颈部迅速肿大，并伴呼吸困难
-    level: 1
-  - group: 代谢与体检
-    label: 出现声音嘶哑或吞咽困难
-    level: 2
-  - group: 代谢与体检
-    label: 颈部肿块快速增大
-    level: 3
-  - group: 代谢与体检
-    label: 结节伴明显疼痛，或颈部淋巴结肿大
-    level: 3
-  - group: 代谢与体检
-    label: 报告为 TR3 且结节 ≥ 2.5 cm
-    level: 3
-  - group: 代谢与体检
-    label: 报告为 TR4 且结节 ≥ 1.5 cm
-    level: 3
-  - group: 代谢与体检
-    label: 报告为 TR5 且结节 ≥ 1.0 cm
-    level: 3
-  - group: 代谢与体检
-    label: 报告为 TR3 ≥ 1.5 cm、TR4 ≥ 1.0 cm 或 TR5 ≥ 0.5 cm
-    level: 4
-  - group: 代谢与体检
-    label: 报告为良性结节，或结节太小无法穿刺
-    level: 4
-  - group: 代谢与体检
-    label: 出现心悸、怕热多汗、消瘦，或明显乏力怕冷
-    level: 3
 sources:
   - label: ACR — TI-RADS Assessment Categories（Alternative Chart，PDF；原始发表于 JACR 2017）
     url: https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/TI-RADS/TI-RADS-Assessment-Categories-Alternative-chart.pdf
@@ -91,23 +54,6 @@ sources:
 - 是否有心悸、怕热多汗、消瘦，或明显乏力怕冷等甲状腺功能异常相关表现。
 - 是否有甲状腺癌家族史，或颈部放射线暴露史。
 - 复查报告里，**TI-RADS 级别与结节大小是否变化**。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下任一情况，立即拨打 120 或前往急诊</p>
-<ul>
-<li>颈部迅速肿大，并伴呼吸困难——这属于紧急状态。</li>
-</ul>
-</div>
-
-以下情况需要尽快就诊：
-
-- 颈部肿块**快速增大**。
-- 出现**声音嘶哑、吞咽困难或呼吸困难**。
-- 结节伴明显疼痛，或颈部淋巴结肿大。
-- 报告给出的结论是：**TR3 且 ≥ 2.5 cm、TR4 且 ≥ 1.5 cm、TR5 且 ≥ 1.0 cm**——按分级表建议进一步做 FNA。
-- 出现甲亢或甲减相关症状，需要评估甲功。
 
 ## 常见误区
 

@@ -3,7 +3,6 @@ title: 心血管类
 category: drugs
 slug: cardiovascular
 summary: 18 种常见心血管药物的成分、主要作用与常见商品名对照。
-severity: routine
 evidence: moderate
 updated: 2026-09-24
 review_due: 2027-09-24
@@ -18,47 +17,81 @@ sources:
   - label: "世界卫生组织 WHO — Medicines"
     url: https://www.who.int/health-topics/medicines
     year: 2026
+drugs:
+  - name: "氨氯地平"
+    aliases: []
+    effect: "钙通道阻滞剂，降压"
+    brands: ["络活喜", "Norvasc", "压氏达"]
+  - name: "硝苯地平"
+    aliases: ["心痛定"]
+    effect: "钙通道阻滞剂，降压"
+    brands: ["拜新同", "Adalat"]
+  - name: "贝那普利"
+    aliases: []
+    effect: "ACEI类降压"
+    brands: ["洛丁新", "Lotensin"]
+  - name: "依那普利"
+    aliases: []
+    effect: "ACEI类降压"
+    brands: ["悦宁定", "Renitec"]
+  - name: "缬沙坦"
+    aliases: []
+    effect: "ARB类降压"
+    brands: ["代文", "Diovan"]
+  - name: "氯沙坦"
+    aliases: []
+    effect: "ARB类降压"
+    brands: ["科素亚", "Cozaar"]
+  - name: "厄贝沙坦"
+    aliases: []
+    effect: "ARB类降压"
+    brands: ["安博维", "Aprovel"]
+  - name: "替米沙坦"
+    aliases: []
+    effect: "ARB类降压"
+    brands: ["美卡素", "Micardis"]
+  - name: "美托洛尔"
+    aliases: []
+    effect: "β受体阻滞剂，降压减慢心率"
+    brands: ["倍他乐克", "Betaloc"]
+  - name: "比索洛尔"
+    aliases: []
+    effect: "β受体阻滞剂"
+    brands: ["康忻", "Concor"]
+  - name: "氢氯噻嗪"
+    aliases: []
+    effect: "利尿剂，降压"
+    brands: ["双氢克尿塞", "HCTZ"]
+  - name: "呋塞米"
+    aliases: ["速尿"]
+    effect: "袢利尿剂"
+    brands: ["Lasix"]
+  - name: "螺内酯"
+    aliases: ["安体舒通"]
+    effect: "保钾利尿剂"
+    brands: ["Spironolactone"]
+  - name: "地高辛"
+    aliases: []
+    effect: "强心苷，治疗心衰"
+    brands: ["Lanoxin", "地高辛"]
+  - name: "硝酸甘油"
+    aliases: []
+    effect: "扩张血管，缓解心绞痛"
+    brands: ["Nitroglycerin", "硝酸甘油"]
+  - name: "单硝酸异山梨酯"
+    aliases: []
+    effect: "长效硝酸酯类"
+    brands: ["欣康", "异乐定", "Imdur"]
+  - name: "阿托伐他汀"
+    aliases: []
+    effect: "他汀类降脂"
+    brands: ["立普妥", "Lipitor"]
+  - name: "瑞舒伐他汀"
+    aliases: []
+    effect: "他汀类降脂"
+    brands: ["可定", "Crestor"]
+verified: false
+verification_note: "名称、主要作用、常见商品名三栏整理自一份自制的参考表，尚未逐条核到原始来源；「俗名」一栏是整理结果，没有权威清单可依。"
 ---
 
-很多人拿着药盒，认得商品名，却不知道里面到底是什么成分。这张表要打通的就是这一步：**先认成分，再看它通常是做什么用的，然后你才知道自己在吃什么。**
-
-## 对照表
-
-| 药物成分 | 主要作用 | 常见商品名 |
-| --- | --- | --- |
-| 氨氯地平 | 钙通道阻滞剂，降压 | 络活喜、Norvasc、压氏达 |
-| 硝苯地平 | 钙通道阻滞剂，降压 | 拜新同、心痛定、Adalat |
-| 贝那普利 | ACEI类降压 | 洛丁新、Lotensin |
-| 依那普利 | ACEI类降压 | 悦宁定、Renitec |
-| 缬沙坦 | ARB类降压 | 代文、Diovan |
-| 氯沙坦 | ARB类降压 | 科素亚、Cozaar |
-| 厄贝沙坦 | ARB类降压 | 安博维、Aprovel |
-| 替米沙坦 | ARB类降压 | 美卡素、Micardis |
-| 美托洛尔 | β受体阻滞剂，降压减慢心率 | 倍他乐克、Betaloc |
-| 比索洛尔 | β受体阻滞剂 | 康忻、Concor |
-| 氢氯噻嗪 | 利尿剂，降压 | 双氢克尿塞、HCTZ |
-| 呋塞米 | 袢利尿剂 | 速尿、Lasix |
-| 螺内酯 | 保钾利尿剂 | 安体舒通、Spironolactone |
-| 地高辛 | 强心苷，治疗心衰 | Lanoxin、地高辛 |
-| 硝酸甘油 | 扩张血管，缓解心绞痛 | Nitroglycerin、硝酸甘油 |
-| 单硝酸异山梨酯 | 长效硝酸酯类 | 欣康、异乐定、Imdur |
-| 阿托伐他汀 | 他汀类降脂 | 立普妥、Lipitor |
-| 瑞舒伐他汀 | 他汀类降脂 | 可定、Crestor |
-
-## 使用这张表要注意的
-
-- **商品名会变，成分不会。** 同一个成分有几十个厂家、几十个品牌，不同地区、不同年份的商品名都可能不一样。所以**永远以药盒上标注的「通用名」为准**——这张表只是帮你认它。
-- **个别条目本身是复方制剂的名字，不是单一成分。** 比如表中「散利痛」「复方甲氧那明」列在成分栏，实际是复方制剂；买药时务必看说明书上的成分表，别把它当成单一成分去叠加。
-- **不要凭这张表自行用药、停药或换药。** 这里只说「这个成分通常是做什么用的」，不含剂量，也不判断它适不适合你——同一个成分在不同人身上的禁忌不同。
-- **同时吃多种药时尤其要小心。** 不同商品名可能含同一个成分，叠加服用会超量。最省事的办法是把正在吃的药全部拿给药师看一遍。
-- **表里的分类只是习惯叫法。** 很多药横跨多个类别（例如阿司匹林既是解热镇痛也是抗血小板药），分类不代表它只能用于那一类。
-
-## 什么时候该问医生药师
-
-- 你要同时吃两种以上药物（包括中成药与保健品）时。
-- 吃药后出现皮疹、呼吸困难、面部或嘴唇肿胀、黑便、尿量明显减少。
-- 你怀孕、备孕或哺乳。
-- 你有肝病、肾病、胃溃疡史、哮喘，或者正在用抗凝药。
-- 你不确定两个不同商品名是不是同一个成分。
-
-以上任何一条，**把药盒带去问药师，比在网上查更快也更准。**
+<!--DRUGS_TABLE-->

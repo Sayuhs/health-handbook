@@ -6,8 +6,9 @@
   "description": "医学自查手册：常见医学常识与养生参考。静态站点，部署于 GitHub Pages。",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "build:check": "node scripts/validate-content.mjs && node scripts/build.mjs",
+    "build:check": "node scripts/validate-content.mjs && node scripts/build.mjs && node scripts/check-search.mjs",
     "validate": "node scripts/validate-content.mjs",
+    "check-search": "node scripts/check-search.mjs",
     "dev": "node scripts/serve.mjs",
     "fonts": "node scripts/fetch-fonts.mjs"
   },

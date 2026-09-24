@@ -3,7 +3,6 @@ title: 维生素/营养类
 category: drugs
 slug: vitamins
 summary: 15 种常见维生素/营养药物的成分、主要作用与常见商品名对照。
-severity: routine
 evidence: moderate
 updated: 2026-09-24
 review_due: 2027-09-24
@@ -18,44 +17,69 @@ sources:
   - label: "世界卫生组织 WHO — Medicines"
     url: https://www.who.int/health-topics/medicines
     year: 2026
+drugs:
+  - name: "维生素A"
+    aliases: []
+    effect: "维持视力、皮肤和黏膜健康"
+    brands: ["维生素A胶丸", "Vitamin A"]
+  - name: "维生素B1"
+    aliases: []
+    effect: "维持神经和心脏功能"
+    brands: ["维生素B1片", "Thiamine"]
+  - name: "维生素B6"
+    aliases: []
+    effect: "参与氨基酸代谢"
+    brands: ["维生素B6片", "Pyridoxine"]
+  - name: "维生素B12"
+    aliases: []
+    effect: "造血，神经功能"
+    brands: ["维生素B12片", "Cyanocobalamin"]
+  - name: "甲钴胺"
+    aliases: []
+    effect: "维生素B12活性形式，神经修复"
+    brands: ["弥可保", "Methycobal"]
+  - name: "复合维生素B"
+    aliases: []
+    effect: "B族维生素复合"
+    brands: ["复合维生素B片", "Vitamin B Complex"]
+  - name: "维生素C"
+    aliases: []
+    effect: "抗氧化，增强免疫"
+    brands: ["维生素C片", "Vitamin C", "力度伸"]
+  - name: "维生素D3"
+    aliases: []
+    effect: "促进钙吸收，骨骼健康"
+    brands: ["维生素D3", "Cholecalciferol", "罗盖"]
+  - name: "维生素E"
+    aliases: []
+    effect: "抗氧化，保护细胞膜"
+    brands: ["维生素E胶丸", "Vitamin E"]
+  - name: "叶酸"
+    aliases: []
+    effect: "造血，胎儿神经管发育"
+    brands: ["叶酸片", "Folic Acid", "斯利安"]
+  - name: "葡萄糖酸锌"
+    aliases: []
+    effect: "补锌"
+    brands: ["葡萄糖酸锌", "Zinc Gluconate"]
+  - name: "葡萄糖酸钙"
+    aliases: []
+    effect: "补钙"
+    brands: ["葡萄糖酸钙", "Calcium Gluconate"]
+  - name: "碳酸钙"
+    aliases: []
+    effect: "补钙"
+    brands: ["碳酸钙", "Calcium Carbonate"]
+  - name: "琥珀酸亚铁"
+    aliases: []
+    effect: "补铁"
+    brands: ["速力菲", "Ferrous Succinate"]
+  - name: "硫酸亚铁"
+    aliases: []
+    effect: "补铁"
+    brands: ["硫酸亚铁", "Ferrous Sulfate"]
+verified: false
+verification_note: "名称、主要作用、常见商品名三栏整理自一份自制的参考表，尚未逐条核到原始来源；「俗名」一栏是整理结果，没有权威清单可依。"
 ---
 
-很多人拿着药盒，认得商品名，却不知道里面到底是什么成分。这张表要打通的就是这一步：**先认成分，再看它通常是做什么用的，然后你才知道自己在吃什么。**
-
-## 对照表
-
-| 药物成分 | 主要作用 | 常见商品名 |
-| --- | --- | --- |
-| 维生素A | 维持视力、皮肤和黏膜健康 | 维生素A胶丸、Vitamin A |
-| 维生素B1 | 维持神经和心脏功能 | 维生素B1片、Thiamine |
-| 维生素B6 | 参与氨基酸代谢 | 维生素B6片、Pyridoxine |
-| 维生素B12 | 造血，神经功能 | 维生素B12片、Cyanocobalamin |
-| 甲钴胺 | 维生素B12活性形式，神经修复 | 弥可保、Methycobal |
-| 复合维生素B | B族维生素复合 | 复合维生素B片、Vitamin B Complex |
-| 维生素C | 抗氧化，增强免疫 | 维生素C片、Vitamin C、力度伸 |
-| 维生素D3 | 促进钙吸收，骨骼健康 | 维生素D3、Cholecalciferol、罗盖 |
-| 维生素E | 抗氧化，保护细胞膜 | 维生素E胶丸、Vitamin E |
-| 叶酸 | 造血，胎儿神经管发育 | 叶酸片、Folic Acid、斯利安 |
-| 葡萄糖酸锌 | 补锌 | 葡萄糖酸锌、Zinc Gluconate |
-| 葡萄糖酸钙 | 补钙 | 葡萄糖酸钙、Calcium Gluconate |
-| 碳酸钙 | 补钙 | 碳酸钙、Calcium Carbonate |
-| 琥珀酸亚铁 | 补铁 | 速力菲、Ferrous Succinate |
-| 硫酸亚铁 | 补铁 | 硫酸亚铁、Ferrous Sulfate |
-
-## 使用这张表要注意的
-
-- **商品名会变，成分不会。** 同一个成分有几十个厂家、几十个品牌，不同地区、不同年份的商品名都可能不一样。所以**永远以药盒上标注的「通用名」为准**——这张表只是帮你认它。
-- **个别条目本身是复方制剂的名字，不是单一成分。** 比如表中「散利痛」「复方甲氧那明」列在成分栏，实际是复方制剂；买药时务必看说明书上的成分表，别把它当成单一成分去叠加。
-- **不要凭这张表自行用药、停药或换药。** 这里只说「这个成分通常是做什么用的」，不含剂量，也不判断它适不适合你——同一个成分在不同人身上的禁忌不同。
-- **同时吃多种药时尤其要小心。** 不同商品名可能含同一个成分，叠加服用会超量。最省事的办法是把正在吃的药全部拿给药师看一遍。
-- **表里的分类只是习惯叫法。** 很多药横跨多个类别（例如阿司匹林既是解热镇痛也是抗血小板药），分类不代表它只能用于那一类。
-
-## 什么时候该问医生药师
-
-- 你要同时吃两种以上药物（包括中成药与保健品）时。
-- 吃药后出现皮疹、呼吸困难、面部或嘴唇肿胀、黑便、尿量明显减少。
-- 你怀孕、备孕或哺乳。
-- 你有肝病、肾病、胃溃疡史、哮喘，或者正在用抗凝药。
-- 你不确定两个不同商品名是不是同一个成分。
-
-以上任何一条，**把药盒带去问药师，比在网上查更快也更准。**
+<!--DRUGS_TABLE-->

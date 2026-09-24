@@ -76,10 +76,15 @@
   color: var(--seal);
 }
 
+/* 来源标注不完整：要显眼，但不该像危险一样喊叫 */
 .callout--warn {
   background: var(--warn-bg);
   border-color: var(--brass-soft);
   border-left-width: 4px;
+}
+
+.callout--warn .callout__title {
+  color: var(--brass);
 }
 
 .callout--note {
@@ -99,6 +104,69 @@
   margin: var(--space-2xs) 0 0;
   padding-left: var(--space-m);
   color: var(--ink-soft);
+}
+
+/* ---- 药品对照表：一行一种药的长表，行高必须收得住 ---- */
+.table-scroll {
+  /* 窄屏横向滚动，别让三列把整页撑破 */
+  overflow-x: auto;
+  margin: 0 0 var(--space-m);
+}
+
+.drug-table {
+  /* 内容够宽就横滑，不够宽就填满容器：不写死列宽，交给内容决定 */
+  width: auto;
+  min-width: 100%;
+  margin: 0;
+  font-size: var(--step--1);
+}
+
+.drug-table th,
+.drug-table td {
+  /* 长表：纵向内边距比基础表格收紧一档 */
+  padding: var(--space-2xs) var(--space-s);
+}
+
+.drug-table thead th {
+  border-bottom-color: var(--rule-strong);
+}
+
+.drug-table tbody th {
+  /* 基础样式给 th 加了 nowrap，但行头是「通用名 + 俗名」两行，必须能换行 */
+  white-space: normal;
+}
+
+.drug__name {
+  display: block;
+  color: var(--ink);
+}
+
+.drug__alias {
+  display: block;
+  margin-top: var(--space-3xs);
+  font-family: var(--font-ui);
+  font-weight: 400;
+  font-size: var(--step--2);
+  color: var(--ink-faint);
+}
+
+.drug__effect {
+  color: var(--ink-soft);
+}
+
+.drug__brands {
+  font-family: var(--font-ui);
+  font-size: var(--step--2);
+  color: var(--ink-faint);
+}
+
+/* ---- 从搜索结果跳进来的那一行：一眼认出「就是这一行」 ---- */
+.drug-table tbody tr:target {
+  background: var(--warn-bg);
+}
+
+.drug-table tbody tr:target .drug__name {
+  color: var(--brass);
 }
 
 /* ---- 来源列表 ---- */

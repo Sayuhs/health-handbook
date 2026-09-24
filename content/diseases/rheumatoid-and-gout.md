@@ -3,53 +3,11 @@ title: 类风湿关节炎与痛风性关节炎
 category: diseases
 slug: rheumatoid-and-gout
 summary: 类风湿是自身免疫病，痛风是尿酸盐结晶性炎症；关节红肿热痛伴高热须立即就医。
-severity: urgent
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [adult, older]
 tags: [类风湿关节炎, 痛风, 尿酸, 关节炎, 关节, 高尿酸血症]
-quickref:
-  - situation: 关节突发疼痛与肿胀，且疼痛持续加重
-    action: 立即就医（急诊）
-    detail: 可能意味着关节内感染，需要紧急医疗救助。
-    level: 1
-  - situation: 关节突发疼痛与肿胀，伴高热、发热或寒战
-    action: 立即就医（急诊）
-    detail: 可能意味着关节内感染，需要紧急医疗救助。
-    level: 1
-  - situation: 关节突发疼痛与肿胀，伴恶心或无法进食
-    action: 立即就医（急诊）
-    detail: 可能意味着关节内感染，需要紧急医疗救助。
-    level: 1
-  - situation: 首次出现疑似痛风发作（大脚趾等关节突发剧痛、红肿热）
-    action: 尽快就诊
-    level: 3
-triage:
-  - group: 关节与骨骼
-    label: 关节突发疼痛肿胀，伴高热、发热或寒战
-    level: 1
-  - group: 关节与骨骼
-    label: 关节突发疼痛肿胀，且疼痛持续加重
-    level: 1
-  - group: 关节与骨骼
-    label: 关节突发疼痛肿胀，伴恶心或无法进食
-    level: 1
-  - group: 关节与骨骼
-    label: 首次出现大脚趾等关节的突发剧痛、红肿热
-    level: 3
-  - group: 关节与骨骼
-    label: 手、足、腕小关节双侧对称肿痛，晨僵持续超过 30 分钟
-    level: 3
-  - group: 关节与骨骼
-    label: 耳、手指、肘部皮下出现硬结（痛风石）
-    level: 3
-  - group: 关节与骨骼
-    label: 已确诊痛风，常规治疗无效或反复发作
-    level: 3
-  - group: 关节与骨骼
-    label: 近期饮酒过量、暴食或饮水不足
-    level: 4
 sources:
   - label: "NICE NG219 — Gout: diagnosis and management（2022）"
     url: https://www.nice.org.uk/guidance/ng219/chapter/Recommendations
@@ -97,28 +55,6 @@ sources:
 - 是否**双侧对称**的手、足小关节肿痛——更倾向类风湿。
 - 近期是否饮酒、暴食或饮水不足。
 - 皮下（耳、手指、肘）是否出现硬结，也就是痛风石。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下任一情况，立即就医（急诊）</p>
-<ul>
-<li>关节<strong>突发疼痛与肿胀</strong>，并出现<strong>疼痛持续加重</strong>。</li>
-<li>关节突发疼痛与肿胀，并出现<strong>高热（或发热、寒战、发冷）</strong>。</li>
-<li>关节突发疼痛与肿胀，并出现<strong>恶心或无法进食</strong>。</li>
-</ul>
-<p>原文明确定义：这些症状<strong>可能意味着关节内感染，需要紧急医疗救助</strong>。怀疑化脓性关节炎时，须按当地诊疗路径立即转诊；NICE 要求对所有疼痛、发红、肿胀的关节评估化脓性关节炎、焦磷酸钙结晶沉积与炎症性关节炎的可能。</p>
-</div>
-
-**痛风急性发作与化脓性关节炎可以表现为同样的红、肿、热、痛，单凭外观无法区分。伴发热即为危险信号。**
-
-以下情况需要尽快就诊（不属于急症）：
-
-- **首次**出现疑似痛风症状（NHS）。
-- 疑似类风湿关节炎的症状，例如关节肿痛、晨僵——早期诊断与治疗可减少关节损害（NHS）。
-- 已确诊痛风，但常规治疗无效（NHS）。
-- 反复发作，或已经出现痛风石（NHS）。
-- 降尿酸治疗期间需要调整剂量，用月度血尿酸指导加量至达标（NICE NG219，2022）。
 
 ## 常见误区
 

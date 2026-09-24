@@ -3,36 +3,11 @@ title: 慢性肾脏病
 category: diseases
 slug: chronic-kidney-disease
 summary: CKD 早期几乎无症状，靠 eGFR 与尿白蛋白发现；两次相隔 ≥90 天 eGFR<60 即提示存在 CKD。
-severity: see-doctor
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [adult, older]
 tags: [慢性肾脏病, CKD, eGFR, 尿白蛋白, 肌酐]
-quickref:
-  - situation: 正在服用 NSAIDs、锂剂或环孢素/他克莫司，且肾功能指标出现变化
-    action: 立即联系医生调整用药，不要自行停药或继续吃
-    detail: 服用这几类药物者需要至少每年监测一次 GFR；NSAIDs 在肾功能已受损时会进一步损害肾脏。
-    level: 2
-triage:
-  - group: 代谢与体检
-    label: 下肢或眼睑水肿、气短、恶心呕吐、极度乏力、皮肤瘙痒或肌肉痉挛
-    level: 2
-  - group: 代谢与体检
-    label: 检查发现白蛋白尿（ACR > 3 mg/mmol / 30 mg/g）
-    level: 3
-  - group: 代谢与体检
-    label: 首次发现 eGFR 低于 60，尚未按相隔 ≥90 天复测确认
-    level: 3
-  - group: 代谢与体检
-    label: 正在服用 NSAIDs、锂剂、环孢素或他克莫司，从未查过 GFR
-    level: 3
-  - group: 代谢与体检
-    label: 有糖尿病、高血压、心血管病、既往急性肾损伤史或肾脏病家族史，没查过 eGFR 与尿 ACR
-    level: 4
-  - group: 代谢与体检
-    label: 尿中出现不易消散的泡沫
-    level: 4
 sources:
   - label: "WHO — Kidney disease（实况报道，页面自标 2026-04-20）"
     url: https://www.who.int/news-room/fact-sheets/detail/kidney-disease
@@ -83,19 +58,6 @@ sources:
 - 尿中是否出现不易消散的泡沫——白蛋白尿是 CKD 的诊断依据之一 [1][2]。
 - 是否有下肢或眼睑水肿、夜尿增多、乏力、皮肤瘙痒——这些属晚期表现，出现即说明已非早期 [1][5]。
 - 是否把「血肌酐正常」当成「肾没问题」——单次血肌酐正常并不能排除 CKD，需要 eGFR 与尿 ACR 共同判断；把肌酐和参考区间做单一比对不是诊断依据 [1][2][6]。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下任一情况，必须就医或必须问医生</p>
-<ul>
-<li><strong>体检发现 eGFR 偏低</strong>——CKD 的诊断标准本身要求两次相隔至少 90 天的复测，单次偏低需要按这个间隔确认，而不是当次就下结论、也不是不管它 [1][2]。</li>
-<li><strong>尿检发现白蛋白尿（ACR &gt; 3 mg/mmol / 30 mg/g）</strong>——属于肾脏损伤的证据，需要就诊评估 [1]。</li>
-<li><strong>出现水肿、气短、恶心呕吐、极度乏力、皮肤瘙痒、肌肉痉挛</strong>——这些是晚期或重症阶段可能出现的表现，不能继续等 [1][5]。</li>
-<li><strong>正在服用 NSAIDs、锂剂或钙调神经磷酸酶抑制剂，且肾功能指标出现变化</strong>——需要立即联系医生调整用药，而不是自行停药或继续吃 [3][5]。</li>
-</ul>
-<p>本页只写检查门槛与来源，不构成诊断结论；是否达到 CKD、是否需要调整用药，由医生结合重复检测结果与用药情况判断。</p>
-</div>
 
 ## 常见误区
 

@@ -3,39 +3,11 @@ title: 骨质疏松
 category: diseases
 slug: osteoporosis
 summary: 骨质疏松常在骨折前无症状；T 值 ≤ −2.5（DXA）是操作性诊断标准，骨折风险不只看骨密度。
-severity: see-doctor
 evidence: moderate
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [adult, older]
 tags: [骨质疏松, 骨密度, T值, 骨折, 跌倒]
-quickref:
-  - situation: 严重背痛、身高变矮或驼背，或发生站立高度跌倒、咳嗽或喷嚏导致的骨折
-    action: 尽快就医
-    detail: 这几项提示可能存在椎体骨折或脆性骨折，骨折风险需要重新评估，而不是当成普通扭伤。
-    level: 3
-triage:
-  - group: 关节与骨骼
-    label: 严重背痛、身高变矮或驼背（提示可能存在椎体骨折）
-    level: 3
-  - group: 关节与骨骼
-    label: 曾因站立高度跌倒，或因咳嗽、喷嚏就发生骨折
-    level: 3
-  - group: 关节与骨骼
-    label: 连续 3 个月以上使用大剂量类固醇片剂
-    level: 3
-  - group: 关节与骨骼
-    label: 绝经后女性（尤其 45 岁前绝经或已切除卵巢）、50 岁以上男性，从未评估过骨折风险
-    level: 3
-  - group: 关节与骨骼
-    label: 近期有跌倒，或正在服用可能引起头晕或嗜睡的药物
-    level: 3
-  - group: 关节与骨骼
-    label: 父母有髋部骨折史、BMI 偏低、吸烟、大量饮酒、不规律运动
-    level: 4
-  - group: 关节与骨骼
-    label: 有进食障碍史，或炎症性疾病、激素相关疾病、吸收不良问题
-    level: 4
 sources:
   - label: "NIAMS/NIH — Osteoporosis: Causes, Risk Factors, & Symptoms"
     url: https://www.niams.nih.gov/health-topics/osteoporosis
@@ -77,20 +49,6 @@ sources:
 - 是否曾因站立高度跌倒、或因咳嗽、喷嚏就发生骨折（脆弱性骨折）[1][2]。
 - 是否有进食障碍史、炎症性疾病、激素相关疾病或吸收不良问题 [2]。
 - 是否每年做眼科检查、是否在服用可能引起头晕或嗜睡的药物——这两项直接影响跌倒风险 [5]。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下任一情况，必须就医</p>
-<ul>
-<li><strong>出现疑似椎体骨折的表现：严重背痛、身高变矮、驼背</strong>[1]。</li>
-<li><strong>发生低能量创伤骨折</strong>（站立高度跌倒、咳嗽或喷嚏导致的骨折）——这本身就是按骨质疏松评估的理由 [1][2][3]。</li>
-<li><strong>属于高危人群且从未评估过骨折风险</strong>——NHS 明确医生可用 FRAX 或 Q-Fracture 评估骨折风险，并转诊 DEXA 扫描 [2]。</li>
-<li><strong>长期（超过 3 个月）使用大剂量类固醇</strong>——这是 NHS 列出的明确风险因素，需要主动向医生说明 [2]。</li>
-<li><strong>近期有跌倒，或正在服用可能引起头晕、嗜睡的药物</strong>——请医生或药师复核用药 [5]。</li>
-</ul>
-<p>本页只写风险因素与检查门槛，不构成诊断结论；是否达到骨质疏松、是否需要治疗，由医生结合骨密度结果、既往骨折史与 FRAX 评估判断。</p>
-</div>
 
 ## 常见误区
 

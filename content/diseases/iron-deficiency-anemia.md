@@ -3,43 +3,11 @@ title: 缺铁性贫血
 category: diseases
 slug: iron-deficiency-anemia
 summary: 缺铁性贫血最常见；成人（尤其绝经后）要查出失血来源，只补铁会掩盖消化道出血或肿瘤。
-severity: see-doctor
 evidence: moderate
 updated: 2026-09-24
 review_due: 2027-09-24
 age_group: [adult, older, pregnant]
 tags: [缺铁性贫血, 贫血, 铁蛋白, 铁, 消化道出血]
-quickref:
-  - situation: 大便颜色变黑、带血，或呕血
-    action: 立即就医
-    detail: 胃和肠道的出血是缺铁性贫血的常见原因之一，需要查明出血部位。
-    level: 2
-  - situation: 吞咽困难、匙状甲（勺状甲）、异食（想吃纸、冰等非食物）
-    action: 尽快就诊
-    detail: 这些是缺铁较特异的表现，需要检查确认并追查缺铁的原因。
-    level: 3
-triage:
-  - group: 代谢与体检
-    label: 大便颜色变黑、带血，或呕血
-    level: 2
-  - group: 代谢与体检
-    label: 吞咽困难、口角溃疡、匙状甲、异食、脱发或不宁腿综合征
-    level: 3
-  - group: 代谢与体检
-    label: 已经开始补铁，但血红蛋白没有回升，或原因不明
-    level: 3
-  - group: 代谢与体检
-    label: 怀孕期间确诊或怀疑贫血
-    level: 3
-  - group: 代谢与体检
-    label: 长期服用 NSAIDs（布洛芬、阿司匹林），或有胃溃疡、消化道炎症、痔疮病史
-    level: 3
-  - group: 代谢与体检
-    label: 月经过多，或处于孕期、产后
-    level: 4
-  - group: 代谢与体检
-    label: 乏力、活动后气短、明显的心跳感、面色比平时苍白、头痛
-    level: 4
 sources:
   - label: "NHS — Iron deficiency anaemia（页尾自标 Page last reviewed: 2024-01-26）"
     url: https://www.nhs.uk/conditions/iron-deficiency-anaemia/
@@ -84,20 +52,6 @@ sources:
 - 是否长期服用 NSAIDs（布洛芬、阿司匹林）——这是消化道失血的可查原因之一 [1]。
 - 是否有胃溃疡病史、消化道炎症、痔疮，或**大便颜色变黑、带血**（提示消化道出血）[1]。
 - 是否只吃铁剂却从未查过失血来源——NHS 列出的病因清单本身就是「必须查因」的理由 [1]。
-
-## 何时必须就医
-
-<div class="callout callout--danger">
-<p class="callout__title">出现以下任一情况，必须就医</p>
-<ul>
-<li><strong>怀疑自己有缺铁性贫血</strong>——NHS 原文的就诊建议即为「如果你认为自己可能有缺铁性贫血，去看全科医生」[1]。</li>
-<li><strong>出现吞咽困难、匙状甲、异食等较特异的缺铁表现</strong>[1]。</li>
-<li><strong>同时有消化道出血迹象（呕血、黑便、便血）</strong>——需要查明出血部位 [1]。</li>
-<li><strong>已经开始补铁但血红蛋白不回升，或原因不明</strong>——需要继续追查失血来源，尤其是消化道 [1]。</li>
-<li><strong>怀孕期间确诊或怀疑贫血</strong>——NHS 明确孕期贫血会增加分娩前后的并发症风险 [1]。</li>
-</ul>
-<p>本页只写症状与病因线索，不构成诊断结论，也不给血红蛋白界值；是否达到贫血、缺铁到什么程度，由医生结合血常规与铁代谢检查判断。</p>
-</div>
 
 ## 常见误区
 

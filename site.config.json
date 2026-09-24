@@ -8,9 +8,12 @@
   "emergencyNumber": "120",
   "nav": [
     { "href": "", "label": "首页" },
-    { "href": "quickref/", "label": "紧急速查" },
-    { "href": "check/", "label": "自测" },
-    { "href": "search/", "label": "搜索" },
+    { "href": "drugs/", "label": "药品速查" },
+    { "href": "labs/", "label": "体检指标速查" },
+    { "href": "wellness/", "label": "养生" },
+    { "href": "search/", "label": "搜索" }
+  ],
+  "footerNav": [
     { "href": "disclaimer/", "label": "免责与许可" }
   ],
   "license": {
