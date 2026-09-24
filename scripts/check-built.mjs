@@ -78,8 +78,8 @@ const STUB_PATHS = new Set(LEGACY_STUBS.map((s) => `${s.from}index.html`));
 for (const p of pageNames) {
   const cat = p.split("/")[0];
   if (!CATEGORIES[cat] || CATEGORIES[cat].hidden) continue;
-  // 免责页和旧地址存根本来就该 noindex（跳转页不该被收录）
-  if (p === "disclaimer/index.html" || STUB_PATHS.has(p)) continue;
+  // 旧地址存根本来就该 noindex（跳转页不该被收录）
+  if (STUB_PATHS.has(p)) continue;
   ok(`${p} 不该有 noindex`, !/name="robots" content="noindex/.test(pages.get(p)));
 }
 
@@ -128,13 +128,12 @@ ok(
   `这些页面里的 <del> 找不到出处（多半是某个 ~ 被当成删除线了）：${delPages.slice(0, 5).join(", ")}`,
 );
 
-/* ------------------------- 4. 急症提示全站只留一行，且在免责页 */
+/* ------------------------- 4. 急症提示：全站一处都不留 -------------------------
+ * 免责页已经整页删掉（站主：我自己用，天天搞这些干嘛），那一行「急症请拨 120」
+ * 跟着一起没了。所以这里不再是「只允许出现在免责页」，而是**全站不许出现**。
+ */
 const emergencyPages = pageNames.filter((p) => pages.get(p).includes("立即拨打"));
-ok(
-  "「立即拨打」只出现在免责页",
-  emergencyPages.length === 1 && emergencyPages[0] === "disclaimer/index.html",
-  `实际出现在：${emergencyPages.join(", ") || "（无）"}`,
-);
+ok("全站不含急症提示", emergencyPages.length === 0, `出现在：${emergencyPages.join(", ") || "（无）"}`);
 
 /* ------------------------------------------------------ 5. 旧地址存根 */
 for (const stub of LEGACY_STUBS) {

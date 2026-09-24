@@ -90,7 +90,7 @@ ${body}
     <div class="site-footer__grid">
       <div class="site-footer__disclaimer">
         <h2>关于本手册</h2>
-        <p class="disclaimer-short">本站是个人整理的医学常识参考，<strong>不构成诊断或治疗建议</strong>，也不能替代面诊。</p>
+        <p class="disclaimer-short">本站是个人整理的医学常识参考，<strong>不构成诊断或治疗建议</strong>，也不能替代面诊。<strong>内容可能出错，也可能过期——以原始来源为准。</strong></p>
       </div>
       <div>
         <h2>导航</h2>
@@ -336,36 +336,6 @@ ${relatedList}`;
     return layout({ title: "搜索", description: "站内全文搜索", path: "search/", body, active: "search/" });
   }
 
-  /* -------------------------------------------------------- 免责声明页 */
-  function disclaimerPage() {
-    const body = `${breadcrumb([{ label: config.title, href: url() }, { label: "免责与许可" }])}
-<article class="entry">
-  <h1>免责与许可</h1>
-
-  <h2>这不是医疗建议</h2>
-  <p>本站是个人整理的医学常识参考，<strong>不是诊断、不是处方、不能替代面诊</strong>。任何关于用药、停药的决定，都必须由给你看病的医生做出。本站刻意不提供个体化的诊断结论，也不提供任何「患病可能性」的估算——因为没有查体与化验，那种数字只是编出来的。</p>
-
-  <h2>唯一的紧急提示</h2>
-  <p>本站不处理急症，也没有任何急症分诊功能。<strong>如果你或身边的人正在出现急症，请立即拨打 ${esc(config.emergencyNumber)}</strong>，不要在这里查。</p>
-
-  <h2>内容可能出错，也可能过期</h2>
-  <p>每条内容都标了来源与最后复核日期，并设有下次复核日期。但医学指南会更新，转述会有偏差。请以原始来源为准；发现错误请到仓库提 issue。如果页脚显示「已过期，请谨慎参考」，请优先信任你的医生。</p>
-  <p>少数内容的来源标注是<strong>不完整</strong>的——这类条目页面上会显著标出来，并写明缺的是哪一环。这比标一个好看但撑不住的来源诚实。</p>
-
-  <h2>数值的体系</h2>
-  <p>体检指标与生活方式里的量化建议，<strong>以中国标准为准</strong>。中国没有对应标准的数值，会保留国际来源并<strong>标明是哪一套体系</strong>（例如 WHO、NICE、美国 CDC）——它们不能混着看，也不能互相换算。</p>
-
-  <h2>许可</h2>
-  <p>本站内容采用 <a href="${esc(config.license.contentUrl)}" rel="license noopener">${esc(config.license.content)}</a> 许可：可以转载，须署名、非商业用途、<strong>不得删改后重新发布</strong>。最后这一条是刻意加的——医学内容被删掉上下文再传播，是会害人的。</p>
-  <p>站点代码采用 ${esc(config.license.code)} 许可。</p>
-
-  <h2>图片来源</h2>
-  <p>本站不使用来源不明的图片。凡使用历史资料的公有领域图像，均在 <code>docs/ATTRIBUTION.md</code> 中逐件登记来源与许可状态。</p>
-</article>`;
-
-    return layout({ title: "免责与许可", description: "本站不是医疗建议", path: "disclaimer/", body, active: "" });
-  }
-
   /* ------------------------------------------------------------ 跳转存根 */
   /** 旧地址不 404：一个自动跳转的存根，比一片空白好。 */
   function stubPage({ fromLabel, to, toLabel, note }) {
@@ -402,7 +372,6 @@ ${relatedList}`;
     drugTable,
     injectDrugTable,
     searchPage,
-    disclaimerPage,
     stubPage,
   };
 }

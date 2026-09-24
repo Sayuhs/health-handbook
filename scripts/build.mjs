@@ -187,8 +187,7 @@ for (const key of HIDDEN_CATEGORIES) {
 const hiddenCount = HIDDEN_CATEGORIES.reduce((n, key) => n + entriesOf(key).length, 0);
 put("index.html", renderer.homePage({ cards: moduleSummaries, total: entries.length, hiddenCount }));
 
-// ---- 免责声明页 / 搜索页 ----
-put("disclaimer/index.html", renderer.disclaimerPage());
+// ---- 搜索页 ----
 put("search/index.html", renderer.searchPage());
 
 // ---- 旧地址存根：不 404 ----
@@ -281,7 +280,13 @@ for (const rel of files.keys()) {
 console.log(`\n=== 产物（${outDir}）===`);
 console.log(`  页面      ${htmlCount}`);
 console.log(`  HTML 合计 ${(bytes / 1024).toFixed(1)} KiB`);
-console.log(`  索引       ${(JSON.stringify(mini.toJSON()).length / 1024).toFixed(1)} KiB（${entryDocs.length} 条内容 + ${drugDocs.length} 种药）`);
+// 用 byteLength，不是 .length：后者数的是**字符**，而这份 JSON 里全是中文
+// （一个汉字在 UTF-8 里占 3 字节），所以标成 KiB 会少报三倍左右。
+// 这个数之前一直是错的——我拿它和文件实际字节数对不上才发现。
+const indexJson = JSON.stringify(mini.toJSON());
+console.log(
+  `  索引       ${(Buffer.byteLength(indexJson, "utf8") / 1024).toFixed(1)} KiB（${entryDocs.length} 条内容 + ${drugDocs.length} 种药）`,
+);
 for (const m of moduleSummaries) console.log(`  模块       ${m.title}：${m.count}`);
 console.log(`  隐藏分类   ${HIDDEN_CATEGORIES.map((k) => `${CATEGORIES[k].label}(${entriesOf(k).length})`).join(" ")}`);
 console.log(`  旧地址存根 ${LEGACY_STUBS.map((s) => s.from).join(" ")}`);

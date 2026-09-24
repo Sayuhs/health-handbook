@@ -5,16 +5,12 @@
   "title": "医学自查手册",
   "tagline": "常见医学知识与养生参考 · 不能替代就医",
   "author": "Sayuhs",
-  "emergencyNumber": "120",
   "nav": [
     { "href": "", "label": "首页" },
     { "href": "drugs/", "label": "药品速查" },
     { "href": "labs/", "label": "体检指标速查" },
     { "href": "wellness/", "label": "养生" },
     { "href": "search/", "label": "搜索" }
-  ],
-  "footerNav": [
-    { "href": "disclaimer/", "label": "免责与许可" }
   ],
   "license": {
     "content": "CC BY-NC-ND 4.0",
