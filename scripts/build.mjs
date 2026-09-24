@@ -22,7 +22,6 @@ import {
   MODULES,
   HIDDEN_CATEGORIES,
   LEGACY_STUBS,
-  EVIDENCE_LABEL,
   drugAnchor,
   loadContent,
   splitFrontmatter,
@@ -81,7 +80,6 @@ const renderMarkdown = (markdown) => marked.parse(escapeLoneTildes(markdown));
 const renderer = createRenderer({
   config,
   categories: CATEGORIES,
-  evidenceLabel: EVIDENCE_LABEL,
 });
 
 const files = new Map(); // 相对路径 → 内容

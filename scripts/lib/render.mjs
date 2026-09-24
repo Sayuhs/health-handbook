@@ -17,20 +17,17 @@ export function esc(value) {
   })[c]);
 }
 
-/** 首屏前执行：决定主题、字号、对比度，避免闪白 */
+/** 首屏前执行：决定主题，避免闪白。（字号与对比度两档控件已删，这里也不再读它们） */
 const THEME_BOOT = `(function(){try{
 var e=document.documentElement;
 var t=localStorage.getItem("hh-theme")||"auto";
 var d=window.matchMedia("(prefers-color-scheme: dark)").matches;
 e.dataset.theme=(t==="auto")?(d?"dark":"light"):t;
-e.style.setProperty("--reading-scale",localStorage.getItem("hh-scale")||"1");
-e.dataset.contrast=localStorage.getItem("hh-contrast")||"normal";
 }catch(_){}})();`;
 
-export function createRenderer({ config, categories, evidenceLabel }) {
+export function createRenderer({ config, categories }) {
   const base = config.base;
   const url = (p = "") => base + p;
-  const footerNav = [...(config.nav ?? []), ...(config.footerNav ?? [])];
 
   /* ---------------------------------------------------------------- 外壳 */
   function layout({ title, description, path = "", body, active = "", noindex = false }) {
@@ -73,6 +70,7 @@ ${noindex ? '<meta name="robots" content="noindex, follow">' : ""}
 <a class="skip-link" href="#main">跳到主要内容</a>
 <header class="site-header">
   <div class="wrap site-header__inner">
+    <button class="theme-toggle" type="button" data-toggle-theme aria-label="切换主题"></button>
     <p class="site-title"><a href="${url()}">${esc(config.title)}</a></p>
     <p class="site-tagline">${esc(config.tagline)}</p>
     <nav class="site-nav" aria-label="主导航">
@@ -85,35 +83,6 @@ ${noindex ? '<meta name="robots" content="noindex, follow">' : ""}
 ${body}
 </div>
 </main>
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="site-footer__grid">
-      <div class="site-footer__disclaimer">
-        <h2>关于本手册</h2>
-        <p class="disclaimer-short">本站是个人整理的医学常识参考，<strong>不构成诊断或治疗建议</strong>，也不能替代面诊。<strong>内容可能出错，也可能过期——以原始来源为准。</strong></p>
-      </div>
-      <div>
-        <h2>导航</h2>
-        <ul>
-          ${footerNav.map((i) => `<li><a href="${url(i.href)}">${esc(i.label)}</a></li>`).join("\n          ")}
-        </ul>
-      </div>
-      <div>
-        <h2>许可</h2>
-        <ul>
-          <li>内容：<a href="${esc(config.license.contentUrl)}" rel="license noopener">${esc(config.license.content)}</a></li>
-          <li>代码：${esc(config.license.code)}</li>
-        </ul>
-        <div class="controls" style="margin-top:var(--space-s)">
-          <button class="control" type="button" data-scale="-1" aria-label="缩小字号">A−</button>
-          <button class="control" type="button" data-scale="1" aria-label="放大字号">A+</button>
-          <button class="control" type="button" data-toggle-contrast aria-pressed="false">高对比</button>
-          <button class="control" type="button" data-toggle-theme>深色</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
 <script type="module" src="${url("assets/controls.js")}"></script>
 </body>
 </html>`;
@@ -260,14 +229,6 @@ ${rows}
     const d = entry.data;
     const meta = categories[entry.category];
     const noindex = Boolean(meta?.hidden);
-    const stale = d.review_due && d.review_due < new Date().toISOString().slice(0, 10);
-
-    const sources = (d.sources ?? [])
-      .map(
-        (s) => `<li><span class="sources__label">${esc(s.label)}${s.year ? `（${esc(s.year)}）` : ""}</span>
-<span class="sources__url">${esc(s.url)}</span></li>`,
-      )
-      .join("\n");
 
     const relatedList = related.length
       ? `<section class="section">
@@ -276,14 +237,6 @@ ${rows}
 </section>`
       : "";
 
-    const unverified =
-      d.verified === false
-        ? `<div class="callout callout--warn">
-  <p class="callout__title">这批数据的来源标注不完整</p>
-  <p>${esc(d.verification_note ?? "")}</p>
-</div>`
-        : "";
-
     const body = `${breadcrumb([
       { label: config.title, href: url() },
       { label: meta?.label ?? entry.category, href: meta?.hidden ? undefined : url(`${entry.category}/`) },
@@ -291,20 +244,11 @@ ${rows}
     ])}
 <article class="entry">
   <header class="entry-head">
-    <p class="entry-head__eyebrow">${esc(meta?.label ?? entry.category)} · <span class="badge badge--evidence-${esc(d.evidence)}">${esc(evidenceLabel[d.evidence] ?? d.evidence)}</span></p>
+    <p class="entry-head__eyebrow">${esc(meta?.label ?? entry.category)}</p>
     <h1>${esc(d.title)}</h1>
   </header>
   <p class="entry__lead">${esc(d.summary)}</p>
-  ${unverified}
   ${bodyHtml}
-  <footer class="entry-meta">
-    <span class="entry-meta__item"><span class="entry-meta__label">最后复核</span><span class="entry-meta__value">${esc(d.updated)}</span></span>
-    <span class="entry-meta__item"><span class="entry-meta__label">下次复核</span><span class="entry-meta__value${stale ? " entry-meta__stale" : ""}">${esc(d.review_due)}${stale ? "（已过期，请谨慎参考）" : ""}</span></span>
-  </footer>
-  <h2>来源</h2>
-  <ol class="sources">
-${sources}
-  </ol>
 </article>
 ${relatedList}`;
 

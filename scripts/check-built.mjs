@@ -173,11 +173,24 @@ if (shared) {
   }
 }
 
-/* --------------------------------------- 8. 每个条目页都带得出来源 */
+/* ------------------- 8. 条目页不再显示来源、日期与证据强度 -------------------
+ * 站主的要求：页面上不要这些。**但数据里还留着**（frontmatter 的 sources /
+ * updated / review_due / evidence 仍然由内容体检强制要求）——那是「这个数字是哪来的」
+ * 的唯一把手，不是给人看的花边。所以这几条断言是反向的：显示出来反而算错。
+ */
 const entryPages = pageNames.filter((p) => p.split("/").length === 3 && p.endsWith("/index.html"));
-for (const p of entryPages) {
-  ok(`${p} 列出了来源链接`, /class="sources"/.test(pages.get(p)) && /https?:\/\//.test(pages.get(p)));
-}
+const withSources = entryPages.filter((p) => /class="sources"|sources__url/.test(pages.get(p)));
+ok("条目页不再显示来源列表", withSources.length === 0, withSources.slice(0, 3).join(", "));
+const withMeta = entryPages.filter((p) => /entry-meta__/.test(pages.get(p)));
+ok("条目页不再显示复核日期", withMeta.length === 0, withMeta.slice(0, 3).join(", "));
+const withBadge = entryPages.filter((p) => /badge--evidence/.test(pages.get(p)));
+ok("条目页不再显示证据强度徽章", withBadge.length === 0, withBadge.slice(0, 3).join(", "));
+const withWarn = entryPages.filter((p) => /callout--warn/.test(pages.get(p)));
+ok("条目页不再显示「来源标注不完整」提示", withWarn.length === 0, withWarn.slice(0, 3).join(", "));
+const withFooter = pageNames.filter((p) => /site-footer|entry-meta|disclaimer-short/.test(pages.get(p)));
+ok("全站不再有页脚", withFooter.length === 0, withFooter.slice(0, 3).join(", "));
+const withControls = pageNames.filter((p) => /data-scale|data-toggle-contrast/.test(pages.get(p)));
+ok("全站只留主题开关，没有字号/对比度控件", withControls.length === 0, withControls.slice(0, 3).join(", "));
 
 /* ------------------------------------------------------ 9. 静态资源 */
 for (const asset of ["styles.css", "og.png", "fonts/ebgaramond-latin-400-normal.woff2", "assets/search.js", "assets/controls.js"]) {
