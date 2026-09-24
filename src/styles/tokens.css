@@ -10,7 +10,6 @@
   /* ---- 主题选择器：浅色为默认值 ---- */
   --paper: #f5f0e4;
   --paper-raised: #fbf7ee;
-  --paper-sunken: #ebe3d2;
   --ink: #221d17;
   --ink-soft: #4d443a;
   --ink-faint: #786c5d;
@@ -19,12 +18,9 @@
   --border: #ded2b9;
   --brass: #8a6a1c;
   --brass-soft: #b09250;
-  --seal: #7d2026; /* 封蜡红：仅用于紧急与红旗 */
-  --seal-soft: #a8453f;
   --link: #2f5044;
   --link-visited: #4a3a5c;
   --focus: #8a6a1c;
-  --danger-bg: #f6e7e3;
   --warn-bg: #f7efdc;
 
   /* ---- 字体：拉丁衬线自托管，中文回落到系统宋体 ---- */
@@ -42,7 +38,6 @@
   --step-1: 1.25rem;
   --step-2: 1.5rem;
   --step-3: 1.875rem;
-  --step-4: 2.5rem;
 
   /* ---- 行高与行宽 ---- */
   --leading-tight: 1.3;
@@ -57,22 +52,16 @@
   --space-m: 1.25rem;
   --space-l: 2rem;
   --space-xl: 3.25rem;
-  --space-2xl: 5rem;
 
   /* ---- 组件尺寸 ---- */
   /* 页头右上角那条通道的宽度：主题开关钉在那里，按钮宽度跟着它的文字走，
      这里只保证左侧的标题与导航不会挤到它身上。 */
   --theme-toggle-reserve: 6.5rem;
 
-  /* ---- 线条与直角：维多利亚风靠细线而非圆角 ---- */
-  --radius: 2px;
+  /* ---- 线条：维多利亚风靠细线而非圆角 ---- */
   --hairline: 1px;
   --rule-line: var(--hairline) solid var(--rule);
   --border-line: var(--hairline) solid var(--border);
-
-  /* ---- 阴影：极克制，仅用于浮层 ---- */
-  --shadow-pop: 0 6px 24px rgba(34, 29, 23, 0.16);
-  --shadow-sink: inset 0 1px 0 rgba(255, 255, 255, 0.5);
 
   color-scheme: light;
 }
@@ -80,7 +69,6 @@
 html[data-theme="dark"] {
   --paper: #17130e;
   --paper-raised: #1f1a13;
-  --paper-sunken: #120f0b;
   --ink: #e9dcc2;
   --ink-soft: #c3b498;
   --ink-faint: #8d8069;
@@ -89,12 +77,9 @@ html[data-theme="dark"] {
   --border: #332a1d;
   --brass: #c9a227;
   --brass-soft: #8e7526;
-  --seal: #b8433c;
-  --seal-soft: #8d322d;
   --link: #9dc4a8;
   --link-visited: #b9a8cc;
   --focus: #c9a227;
-  --danger-bg: #2a1715;
   --warn-bg: #2a2314;
 
   color-scheme: dark;

@@ -137,7 +137,6 @@
   :root {
     --paper: #fff;
     --paper-raised: #fff;
-    --paper-sunken: #fff;
     --ink: #000;
     --ink-soft: #222;
     --ink-faint: #444;
@@ -164,10 +163,6 @@
     font-size: 0.8em;
     color: #555;
     word-break: break-all;
-  }
-
-  .callout {
-    break-inside: avoid;
   }
 
   .entry h2 {

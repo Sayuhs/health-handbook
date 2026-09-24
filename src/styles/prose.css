@@ -1,6 +1,7 @@
 /* ==========================================================================
-   prose.css — 条目正文：固定的四段结构
-   一句话结论 / 自查要点 / 何时必须就医 / 常见误区
+   prose.css — 条目正文排版
+   结构由各条目自己决定，没有固定模板；每页统一出现的只有「一句话结论」
+   （.entry__lead，由 frontmatter 的 summary 渲染）
    ========================================================================== */
 
 .entry {
@@ -44,50 +45,6 @@
 
 .entry li + li {
   margin-top: var(--space-xs);
-}
-
-/* ---- 何时必须就医：唯一允许「响亮」的区块 ---- */
-.callout {
-  border: var(--hairline) solid var(--border);
-  background: var(--paper-raised);
-  padding: var(--space-m) var(--space-m) var(--space-xs);
-  margin: var(--space-m) 0;
-}
-
-.callout > :last-child {
-  margin-bottom: var(--space-s);
-}
-
-.callout__title {
-  font-family: var(--font-ui);
-  font-size: var(--step-0);
-  font-weight: 600;
-  margin: 0 0 var(--space-xs);
-  letter-spacing: 0.02em;
-}
-
-.callout--danger {
-  background: var(--danger-bg);
-  border-color: var(--seal);
-  border-left-width: 4px;
-}
-
-.callout--danger .callout__title {
-  color: var(--seal);
-}
-
-/* ---- 常见误区：一组被否定的说法 ---- */
-.misconceptions dt {
-  font-family: var(--font-ui);
-  font-weight: 600;
-  color: var(--ink);
-  margin-top: var(--space-s);
-}
-
-.misconceptions dd {
-  margin: var(--space-2xs) 0 0;
-  padding-left: var(--space-m);
-  color: var(--ink-soft);
 }
 
 /* ---- 药品对照表：一行一种药的长表，行高必须收得住 ---- */
