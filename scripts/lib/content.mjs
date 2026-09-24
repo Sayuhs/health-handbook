@@ -316,6 +316,38 @@ export function validateEntry({ data, body, relPath }) {
     );
   }
 
+  // ---- 正文里的 [N] 引用必须能落到某个来源上 ----
+  //
+  // 站上有两套编号约定（见 content/README.md）：
+  //   · foods：编号直接写在 label 开头（"[23] 中国营养学会 — …"），跨条目统一编号
+  //   · 其余：`[N]` 指 sources 数组里第 N 条（从 1 开始）
+  //
+  // 后者是很脆的：只要有人重排 sources、插一条、删一条，正文里的编号就**静默错位**——
+  // 构建不报错，页面上「来源」那一栏和正文里的 [3] 对不上，而且没人看得出来。
+  // 所以在这里拦住。只认 1~2 位数字，免得把 [2022] 这类当引用。
+  if (Array.isArray(data.sources) && data.sources.length) {
+    const labelled = new Set();
+    for (const s of data.sources) {
+      const m = typeof s?.label === "string" ? s.label.match(/^\s*\[(\d+)\]/) : null;
+      if (m) labelled.add(Number(m[1]));
+    }
+    const refs = [...String(body ?? "").matchAll(/\[(\d{1,2})\]/g)].map((m) => Number(m[1]));
+    const uniq = [...new Set(refs)];
+    const bad = uniq.filter((n) =>
+      labelled.size ? !labelled.has(n) : !(n >= 1 && n <= data.sources.length),
+    );
+    if (bad.length) {
+      err(
+        "body",
+        `正文引用了 [${bad.join("] [")}]，但${
+          labelled.size
+            ? "没有任何来源的 label 以这个编号开头"
+            : `sources 只有 ${data.sources.length} 条（正文里用的是数组序号）`
+        }。重排或增删 sources 会让引用静默错位，页面上看不出来`,
+      );
+    }
+  }
+
   // ---- 正文长度兜底 ----
   // 药品条目的实质内容在 frontmatter 的结构化数据里，正文只剩一个表格占位标记，
   // 所以这一类不按字数算，按「有没有那批药」算。
