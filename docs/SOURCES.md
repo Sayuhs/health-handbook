@@ -35,7 +35,7 @@ https://sousuo.www.gov.cn/search-gov/data?t=zhengce&q=<关键词>
 
 | 入口 | 能拿到什么 | 用法 |
 | --- | --- | --- |
-| `hbba.sacinfo.org.cn` | **卫生行业标准（WS/T）全文**，免登录 | 检索 `POST /stdQueryList`（form: `current,size,key`，返回 `code/chName/pk`）→ 详情页 → `在线预览 /attachment/onlineRead/<pk>`、`下载 /portal/download/<pk>` |
+| `hbba.sacinfo.org.cn` | **卫生行业标准（WS/T）全文**，免登录 | 检索 `POST /stdQueryList`（form: `current,size,key`，返回 `code/chName/pk`）→ 详情页 → `在线预览 /attachment/onlineRead/<pk>`、`下载 /portal/download/<pk>`。⚠️ **`key` 只认标准全称里的字，用俗称查不到**：查「尿常规」`total=0`、查「尿液」`total=41`；查「同型半胱氨酸」只命中一份**试剂盒标准**（`YY/T 1258-2015`）。**查不到不等于不存在——换关键词再试。** 详情页 HTML 是空壳，结果全靠这个 AJAX 接口 |
 | `std.samr.gov.cn/hb/search/stdHBDetailed?id=<pk>` | 标准详情页 | 与上一行同一套体系 |
 | `dg.cnsoc.org` | 《中国居民膳食指南（2022）》八准则数值 | 中国营养学会，正文可读 |
 | `html.rhhz.net` | 中华流行病学杂志等期刊正文 | 《中国人群身体活动指南（2021）》从这里拿到 |
@@ -88,6 +88,11 @@ https://sousuo.www.gov.cn/search-gov/data?t=zhengce&q=<关键词>
 | 「LDL-C 分 5 档」 | 中国血脂管理指南（2023 年）是 **4 档**（低危／中·高危／极高危／超高危），中危与高危同目标 |
 | 「中国改良 CKD-EPI ／瑞金方程」 | 《中国慢性肾脏病早期评价与管理指南》（2023）**只讲 KDIGO 2012 + CKD-EPIcr**，没有推荐任何中国专用公式——这两个名字在指南里找不到 |
 | 「高尿酸血症男女参考区间不同」 | 中国指南的口径是**无论男女**、非同日 2 次 > 420 μmol/L，**没有分性别的上限** |
+| `medlineplus.gov/lab-tests/urinalysis/`、`/lab-tests/urine-test/`、`/lab-tests/electrolytes/` | 全部 **404**。MedlinePlus 没有这些 lab-test 页；尿常规要走健康主题页 `/urinalysis.html` |
+| `medlineplus.gov/ency/article/003425.htm` | **200**，但内容是「**Urine 24-hour volume**」，不是尿常规——**差点被 200 骗了** |
+| `nccih.nih.gov/health/vitamin-d` | **404**，但返回的是一个 **481 KB 的 404 页面**（体积正常、状态码才是真话） |
+| `ods.od.nih.gov/factsheets/VitaminD-Consumer/` | **403 Cloudflare** |
+| `cdc.gov/nutrition/.../vitamin-d.html`、`cdc.gov/nutrition/vitamin-d/` | 两个都 **404** |
 
 ### 三条核对纪律
 
