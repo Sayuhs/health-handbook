@@ -98,6 +98,36 @@ for (const [needle, why] of FORBIDDEN) {
   ok(`全站不含 ${needle}`, hit.length === 0, `${why}；出现在 ${hit.slice(0, 5).join(", ")}`);
 }
 
+/* ------------------- 4. 数值范围没被当成删除线切掉 -------------------
+ * marked 的删除线分词器把**单个 `~`** 也当分隔符，于是「18.5~23.9」会被渲染成
+ * `18.5<del>23.9</del>` —— 数字还在，中间的文字被划掉了，而且构建不报错、页面上
+ * 也不显眼。这个站通篇是数值范围，所以踩得很整齐。
+ *
+ * 构建端现在会把落单的 `~` 转义掉（scripts/build.mjs 的 escapeLoneTildes）。
+ * 这里守住它：产物里出现的每一个 `<del>`，都必须在**源文件里真的写过 `~~`**。
+ */
+const entryPageRe = /^([^/]+)\/([^/]+)\/index\.html$/;
+const sourceHasTildes = async (page) => {
+  const m = entryPageRe.exec(page);
+  const src = m
+    ? await readFile(join(contentDir, m[1], `${m[2]}.md`), "utf8").catch(() => null)
+    : m === null && page.endsWith("/index.html") && page.split("/").length === 2
+      ? await readFile(join(contentDir, "_modules", `${page.split("/")[0]}.md`), "utf8").catch(() => null)
+      : null;
+  return src !== null && src.includes("~~");
+};
+
+const delPages = [];
+for (const p of pageNames) {
+  if (!pages.get(p).includes("<del>")) continue;
+  if (!(await sourceHasTildes(p))) delPages.push(p);
+}
+ok(
+  "产物里的 <del> 都来自源文件里真写过的 ~~",
+  delPages.length === 0,
+  `这些页面里的 <del> 找不到出处（多半是某个 ~ 被当成删除线了）：${delPages.slice(0, 5).join(", ")}`,
+);
+
 /* ------------------------- 4. 急症提示全站只留一行，且在免责页 */
 const emergencyPages = pageNames.filter((p) => pages.get(p).includes("立即拨打"));
 ok(

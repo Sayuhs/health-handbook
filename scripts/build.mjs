@@ -63,6 +63,21 @@ console.log(`✓ 内容校验通过，共 ${entries.length} 条`);
 /* ---------------------------------------------------- 2. 渲染 */
 marked.setOptions({ gfm: true, breaks: false });
 
+/**
+ * marked 的删除线分词器把**单个 `~`** 也当成分隔符（正则里捕获的是 `~` 或 `~~`），
+ * 于是「18.5~23.9」「140~159」这类范围会被渲染成 `18.5<del>23.9</del>`——
+ * 数字还在，但它们之间的文字全被划掉了，而且**构建不报错、颜色上也不显眼**。
+ * 这个站通篇是数值范围，所以必须在这里挡住。
+ *
+ * 只转义落单的 `~`；成对的 `~~`（真的想用删除线）原样保留。
+ * 交替顺序很重要：`~~` 必须排在 `~` 前面，否则成对的会被拆开。
+ */
+function escapeLoneTildes(markdown) {
+  return String(markdown ?? "").replace(/~~|~/g, (m) => (m === "~~" ? "~~" : "\\~"));
+}
+
+const renderMarkdown = (markdown) => marked.parse(escapeLoneTildes(markdown));
+
 const renderer = createRenderer({
   config,
   categories: CATEGORIES,
@@ -76,7 +91,7 @@ const entriesOf = (key) => entries.filter((e) => e.category === key);
 
 // ---- 条目页 ----
 for (const entry of entries) {
-  let bodyHtml = marked.parse(entry.body);
+  let bodyHtml = renderMarkdown(entry.body);
 
   // 药品的对照表来自 frontmatter 的结构化数据
   if (Array.isArray(entry.data.drugs) && entry.data.drugs.length) {
@@ -108,7 +123,7 @@ async function moduleIntro(moduleKey) {
   try {
     const raw = await readFile(join(contentDir, "_modules", `${moduleKey}.md`), "utf8");
     const { body } = splitFrontmatter(raw);
-    return `<div class="entry">${marked.parse(body)}</div>`;
+    return `<div class="entry">${renderMarkdown(body)}</div>`;
   } catch {
     return "";
   }
