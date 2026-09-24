@@ -27,6 +27,7 @@
 ```
 node scripts/validate-content.mjs   →  内容体检（CI 第一道门禁）
 node scripts/build.mjs              →  渲染 + 索引 + 样式 → dist/
+node scripts/check-built.mjs        →  产物自检（有断言：该有的页面在不在、不该有的字样有没有）
 node scripts/check-search.mjs       →  搜索实测（有断言，零命中会退出 1）
 node scripts/serve.mjs              →  本地预览（模拟 base path）
 ```

@@ -84,6 +84,44 @@ export const HIDDEN_CATEGORIES = Object.entries(CATEGORIES)
   .filter(([, meta]) => meta.hidden)
   .map(([key]) => key);
 
+/**
+ * 旧地址存根。
+ *
+ * 重构前的页面地址不能直接 404——收藏过的人、搜索引擎里的旧链接都还指着它们。
+ * 所以每个旧地址留一个自动跳转的存根，并加 noindex（跳转页不该被收录）。
+ * 构建与产物自检共用这一份清单，避免两边各写一份然后漂移。
+ */
+export const LEGACY_STUBS = [
+  {
+    from: "quickref/",
+    fromLabel: "紧急速查",
+    to: "",
+    toLabel: "首页",
+    note: "这个站不再提供急症分诊。真出现急症，请直接拨打 120，不要在这里查。",
+  },
+  {
+    from: "check/",
+    fromLabel: "自测",
+    to: "",
+    toLabel: "首页",
+    note: "这个站不再提供按症状勾选的行动档位判定。",
+  },
+  {
+    from: "foods/",
+    fromLabel: "食物选择",
+    to: "wellness/",
+    toLabel: "养生",
+    note: "「吃什么」和「怎么生活」现在合成一个模块了。",
+  },
+  {
+    from: "lifestyle/",
+    fromLabel: "养生",
+    to: "wellness/",
+    toLabel: "养生",
+    note: "「吃什么」和「怎么生活」现在合成一个模块了。",
+  },
+];
+
 export const EVIDENCE_LEVELS = ["strong", "moderate", "limited", "none"];
 export const AGE_GROUPS = ["child", "adult", "older", "pregnant"];
 

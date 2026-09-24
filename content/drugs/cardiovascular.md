@@ -59,9 +59,9 @@ drugs:
     effect: "β受体阻滞剂"
     brands: ["康忻", "Concor"]
   - name: "氢氯噻嗪"
-    aliases: []
+    aliases: ["双氢克尿塞"]
     effect: "利尿剂，降压"
-    brands: ["双氢克尿塞", "HCTZ"]
+    brands: ["HCTZ"]
   - name: "呋塞米"
     aliases: ["速尿"]
     effect: "袢利尿剂"

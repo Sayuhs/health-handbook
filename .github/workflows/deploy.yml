@@ -43,6 +43,11 @@ jobs:
       - name: 构建站点
         run: node scripts/build.mjs
 
+      # 产物自检：哪些页面该存在、哪些字样不该出现、锚点数与索引是否一致、
+      # 隐藏分类是否真的被 noindex。构建成功不等于产物正确。
+      - name: 产物自检
+        run: node scripts/check-built.mjs
+
       # 搜索是三个模块之外唯一的入口。索引退化必须拦住，
       # 不能靠人「看一眼觉得还行」——这个脚本有断言，零命中就退出 1。
       - name: 搜索实测

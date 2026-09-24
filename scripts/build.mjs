@@ -21,6 +21,7 @@ import {
   CATEGORIES,
   MODULES,
   HIDDEN_CATEGORIES,
+  LEGACY_STUBS,
   EVIDENCE_LABEL,
   drugAnchor,
   loadContent,
@@ -176,37 +177,7 @@ put("disclaimer/index.html", renderer.disclaimerPage());
 put("search/index.html", renderer.searchPage());
 
 // ---- 旧地址存根：不 404 ----
-const STUBS = [
-  {
-    from: "quickref/",
-    fromLabel: "紧急速查",
-    to: "",
-    toLabel: "首页",
-    note: "这个站不再提供急症分诊。真出现急症，请直接拨打 120，不要在这里查。",
-  },
-  {
-    from: "check/",
-    fromLabel: "自测",
-    to: "",
-    toLabel: "首页",
-    note: "这个站不再提供按症状勾选的行动档位判定。",
-  },
-  {
-    from: "foods/",
-    fromLabel: "食物选择",
-    to: "wellness/",
-    toLabel: "养生",
-    note: "「吃什么」和「怎么生活」现在合成一个模块了。",
-  },
-  {
-    from: "lifestyle/",
-    fromLabel: "养生",
-    to: "wellness/",
-    toLabel: "养生",
-    note: "「吃什么」和「怎么生活」现在合成一个模块了。",
-  },
-];
-for (const s of STUBS) {
+for (const s of LEGACY_STUBS) {
   put(s.from + "index.html", renderer.stubPage(s));
 }
 
@@ -298,5 +269,5 @@ console.log(`  HTML 合计 ${(bytes / 1024).toFixed(1)} KiB`);
 console.log(`  索引       ${(JSON.stringify(mini.toJSON()).length / 1024).toFixed(1)} KiB（${entryDocs.length} 条内容 + ${drugDocs.length} 种药）`);
 for (const m of moduleSummaries) console.log(`  模块       ${m.title}：${m.count}`);
 console.log(`  隐藏分类   ${HIDDEN_CATEGORIES.map((k) => `${CATEGORIES[k].label}(${entriesOf(k).length})`).join(" ")}`);
-console.log(`  旧地址存根 ${STUBS.map((s) => s.from).join(" ")}`);
+console.log(`  旧地址存根 ${LEGACY_STUBS.map((s) => s.from).join(" ")}`);
 console.log(`\n预览：node scripts/serve.mjs`);

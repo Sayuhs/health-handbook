@@ -39,9 +39,9 @@ drugs:
     effect: "糖皮质激素，强效"
     brands: ["适确得", "Halovate"]
   - name: "益康唑/曲安奈德"
-    aliases: []
+    aliases: ["派瑞松"]
     effect: "抗真菌+激素复方"
-    brands: ["派瑞松", "Pevisone"]
+    brands: ["Pevisone"]
   - name: "酮康唑乳膏"
     aliases: []
     effect: "抗真菌"
