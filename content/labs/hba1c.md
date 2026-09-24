@@ -9,7 +9,7 @@ review_due: 2027-06-15
 age_group: [adult, older, pregnant]
 tags: [糖化血红蛋白, HbA1c, 血糖, 糖尿病, 体检]
 sources:
-  - label: "卫生行业标准 WS/T 461—2024《糖化血红蛋白检测指南》（2024-05-09 发布，2024-11-01 实施，代替 WS/T 461—2015；PDF 含文本层，已实测可访问）"
+  - label: "卫生行业标准 WS/T 461—2024《糖化血红蛋白检测指南》（2024-05-09 发布，2024-11-01 实施，代替 WS/T 461—2015）"
     url: https://hbba.sacinfo.org.cn/portal/download/290c0d2e9f6ae3a9b3f28e66933973557d4595b196dd07aaa1232d26804119fd
     year: 2024
   - label: "《中国2型糖尿病防治指南（2020年版）》（中华医学会糖尿病学分会；含综合控制目标）"

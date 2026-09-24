@@ -198,6 +198,27 @@ for (const asset of ["styles.css", "og.png", "fonts/ebgaramond-latin-400-normal.
 }
 ok("自测脚本不该被打包", !existsSync(join(dist, "assets", "triage.js")));
 
+/* ------------------------- 10. 产物里不得出现「工程叙述」 -------------------------
+ * 站主的要求：这是一本手册，不是工程日志。页面上不该出现「我是怎么找到这个数的」
+ * （取材过程、工具失败、渠道状态），也不该出现「这本手册长什么样」（导航、索引、条数）。
+ * 下面这些词都无歧义——命中即说明写作过程又被写进了正文，而不是内容有问题。
+ */
+const NARRATION = [
+  ["取材过程", /文本层|扫描件|ToUnicode|自定义编码|图片化版式/],
+  ["工具与渠道状态", /实测可访问|已实测|抓取|全站|状态码/],
+  ["写作编年史", /本轮|此前本页|已作废|现已改正|现更正为/],
+  ["站务", /老链接|搜索得到|不进导航|复核日期/],
+  ["元评论", /必须说清楚|这不是敷衍|宁可空着/],
+];
+for (const [what, re] of NARRATION) {
+  const found = [];
+  for (const p of pageNames) {
+    const m = pages.get(p).match(new RegExp(re.source, "g"));
+    if (m) found.push(`${p}(${[...new Set(m)].join("/")})`);
+  }
+  ok(`产物里没有${what}`, found.length === 0, found.slice(0, 5).join(", "));
+}
+
 /* ------------------------------------------------------------ 报告 */
 console.log(`产物目录：${dist}`);
 console.log(`页面数：${pageNames.length}（其中条目页 ${entryPages.length}）\n`);

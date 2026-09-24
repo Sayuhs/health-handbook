@@ -9,7 +9,7 @@ review_due: 2027-02-04
 age_group: [adult, older]
 tags: [甲状腺结节, 甲状腺, 超声, TI-RADS, 细针穿刺]
 sources:
-  - label: ACR — TI-RADS Assessment Categories（Alternative Chart，PDF；原始发表于 JACR 2017）
+  - label: ACR — TI-RADS Assessment Categories（Alternative Chart；原始发表于 JACR 2017）
     url: https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/TI-RADS/TI-RADS-Assessment-Categories-Alternative-chart.pdf
     year: 2017
   - label: ACR — TI-RADS（官方页）
@@ -45,7 +45,7 @@ sources:
 - **FNA 结果的大致分布**：良性**约 80%**（复查时漏诊癌的风险一般**低于 3%**）；恶性**约 5%**；结果可疑者癌风险**50–75%**；结果不确定（indeterminate）**可达 20%**；取材不足或无法诊断**低于 5%**（超声引导下）（ATA 患者教育）。
 - **随访**：良性或太小无法穿刺的结节，仍应**每 6–12 个月超声复查**加每年体检；若持续增大或出现可疑特征，即使 FNA 结果为良性也可能建议手术（ATA 患者教育）。
 
-一项说明：ACR 官方分级表 PDF 的文本层字体编码部分损坏，**各超声特征的逐项具体分值得不到可靠提取**，因此本页只写分级与对应的尺寸阈值，不列各特征的分值。
+各超声特征的逐项具体分值未取得，因此本页只写分级与对应的尺寸阈值，不列各特征的分值。
 
 ## 自查要点
 

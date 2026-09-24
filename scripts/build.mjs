@@ -182,8 +182,7 @@ for (const key of HIDDEN_CATEGORIES) {
 }
 
 // ---- 首页 ----
-const hiddenCount = HIDDEN_CATEGORIES.reduce((n, key) => n + entriesOf(key).length, 0);
-put("index.html", renderer.homePage({ cards: moduleSummaries, total: entries.length, hiddenCount }));
+put("index.html", renderer.homePage({ cards: moduleSummaries }));
 
 // ---- 搜索页 ----
 put("search/index.html", renderer.searchPage());

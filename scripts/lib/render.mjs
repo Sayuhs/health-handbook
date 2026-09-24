@@ -115,7 +115,7 @@ ${entries
   }
 
   /* -------------------------------------------------------------- 首页 */
-  function homePage({ cards, total, hiddenCount }) {
+  function homePage({ cards }) {
     const cardHtml = cards
       .map(
         (c) => `<a class="card" href="${url(c.href)}">
@@ -128,15 +128,12 @@ ${entries
       .join("\n");
 
     const body = `<h1>${esc(config.title)}</h1>
-<p class="lede">三个模块，一个搜索框。这是给自己和家里人用的一本速查手册——<strong>不写诊断，不给可能性，只写事实与门槛</strong>。每条都标了来源与复核日期。</p>
 
 <section class="section">
   <div class="grid grid--2">
 ${cardHtml}
   </div>
-</section>
-
-<p class="lede">站上共 ${total} 条内容；另有 ${hiddenCount} 条常识（常见疾病、用药与检查）不在导航里，但<strong>搜索得到</strong>，老链接也打得开。</p>`;
+</section>`;
     return layout({ title: "", description: config.tagline, path: "", body, active: "" });
   }
 
@@ -266,13 +263,13 @@ ${relatedList}`;
   function searchPage() {
     const body = `${breadcrumb([{ label: config.title, href: url() }, { label: "搜索" }])}
 <h1>搜索</h1>
-<p class="lede">输入药品名、商品名、指标名称或身体感受。索引覆盖站上全部内容，包括不在导航里的那些条目。</p>
+<p class="lede">输入药品名、商品名、指标名称或身体感受。</p>
 
 <div class="search">
   <div class="search__field">
     <input class="search__input" type="search" id="q" placeholder="例如：泰诺林、血压、尿酸、睡眠" autocomplete="off" aria-label="搜索关键词">
   </div>
-  <p class="search__hint" id="search-hint">输入两个字以上开始搜索。索引在首次输入时才加载。</p>
+  <p class="search__hint" id="search-hint">输入两个字以上开始搜索。</p>
   <ul class="search__results" id="results" hidden></ul>
 </div>
 <script type="module" src="${url("assets/search.js")}"></script>`;

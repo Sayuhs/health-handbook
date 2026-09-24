@@ -3,7 +3,7 @@
   "base": "/health-handbook/",
   "lang": "zh-CN",
   "title": "医学自查手册",
-  "tagline": "常见医学知识与养生参考 · 不能替代就医",
+  "tagline": "常见医学知识、体检指标与养生速查",
   "author": "Sayuhs",
   "nav": [
     { "href": "", "label": "首页" },

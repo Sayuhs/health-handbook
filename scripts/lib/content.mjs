@@ -17,7 +17,7 @@ export const MODULES = {
     label: "药品速查",
     order: 1,
     note: "认成分与商品名",
-    description: "拿着药盒认不出是什么？先认成分。这里不写剂量，也不判断它适不适合你。",
+    description: "拿着药盒认不出是什么？先认成分。",
     categories: ["drugs"],
   },
   labs: {
