@@ -5,7 +5,7 @@ slug: blood-glucose
 summary: 血糖异常不等于糖尿病；空腹、餐后 2 小时与糖化血红蛋白三套指标常互不吻合。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-02-13
 age_group: [adult, older]
 tags: [血糖, 糖尿病, 糖化血红蛋白, 体检]
 sources:

@@ -5,7 +5,7 @@ slug: mood-and-stress
 summary: 长期压力可致头痛、睡眠差等躯体症状；求助门槛 2 周／6 个月／1–2 周来自上海市卫健委科普（次优）。
 evidence: moderate
 updated: 2026-09-24
-review_due: 2028-09-24
+review_due: 2028-06-21
 age_group: [adult, older]
 tags: [压力, 抑郁, 焦虑, 失眠, 心理健康]
 sources:

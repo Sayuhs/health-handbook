@@ -5,7 +5,7 @@ slug: fall-prevention-older-adults
 summary: 跌倒是可以预防的——力量与平衡训练、查视力听力、复核用药、改造居家环境。
 evidence: strong
 updated: 2026-09-24
-review_due: 2028-09-24
+review_due: 2028-04-17
 age_group: [older]
 tags: [跌倒, 防跌倒, 老年人, 平衡训练, 用药复核]
 sources:

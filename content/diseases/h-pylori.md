@@ -5,7 +5,7 @@ slug: h-pylori
 summary: WHO 将幽门螺杆菌列为 I 级致癌物；所有确认感染者都应治疗，成人家庭成员也属检测对象。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-08-19
 age_group: [adult, older]
 tags: [幽门螺杆菌, 胃炎, 消化性溃疡, 胃癌, 呼气试验]
 sources:

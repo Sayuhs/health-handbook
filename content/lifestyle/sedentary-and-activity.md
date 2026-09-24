@@ -5,7 +5,7 @@ slug: sedentary-and-activity
 summary: 中国：成人每周 150~300 分钟中等强度（或 75~150 分钟高强度）、每周至少 2 天肌力训练。
 evidence: strong
 updated: 2026-09-24
-review_due: 2028-09-24
+review_due: 2028-08-19
 age_group: [child, adult, older]
 tags: [身体活动, 久坐, 平衡训练, 肌力训练, 老年人]
 sources:

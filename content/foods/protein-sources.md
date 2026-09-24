@@ -5,7 +5,7 @@ slug: protein-sources
 summary: 优先鱼虾、豆制品、蛋、奶与禽肉；红肉与加工肉限量，平均每天不超过 70 g 熟重（NHS）。
 evidence: strong
 updated: 2026-09-24
-review_due: 2028-09-24
+review_due: 2028-07-17
 age_group: [child, adult, older, pregnant]
 tags: [蛋白质, 鱼, 红肉, 加工肉, 奶类, 豆制品]
 sources:

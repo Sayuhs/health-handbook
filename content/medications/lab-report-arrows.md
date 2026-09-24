@@ -5,7 +5,7 @@ slug: lab-report-arrows
 summary: 箭头只表示偏离本实验室参考区间；区间取自健康人中间 95%，区间内外都不等于有无疾病。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-05-13
 age_group: [child, adult, older]
 tags: [化验单, 参考区间, 血常规, 肝功能, 肿瘤标志物]
 sources:

@@ -5,7 +5,7 @@ slug: eye-strain-dry-eye
 summary: 长时间看屏减少眨眼会引起干眼；定时休息、屏幕略低于眼平线、加湿可缓解。
 evidence: moderate
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-05-19
 age_group: [adult]
 tags: [干眼, 视疲劳, 屏幕, 用眼卫生, 睑板腺]
 sources:

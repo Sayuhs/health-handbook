@@ -5,7 +5,7 @@ slug: topical
 summary: 18 种常见皮肤外用药物的成分、主要作用与常见商品名对照。
 evidence: moderate
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-09-03
 tags: [药物, 商品名, 皮肤外用]
 sources:
   - label: "默沙东诊疗手册（中文版）— 药物信息"

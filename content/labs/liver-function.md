@@ -5,7 +5,7 @@ slug: liver-function
 summary: 转氨酶升高不等于肝炎；不同实验室参考区间本就不同，以本人化验单为准。
 evidence: moderate
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-10-23
 age_group: [adult, older]
 tags: [肝功能, 转氨酶, ALT, AST, 体检]
 sources:

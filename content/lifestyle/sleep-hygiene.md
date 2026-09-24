@@ -5,7 +5,7 @@ slug: sleep-hygiene
 summary: 固定上下床时间、卧室安静偏凉偏暗；时长按体系分，中国只给儿童青少年与老年人，成人一档用国际口径。
 evidence: strong
 updated: 2026-09-24
-review_due: 2028-09-24
+review_due: 2028-10-17
 age_group: [child, adult, older]
 tags: [睡眠, 失眠, 咖啡因, 午睡]
 sources:

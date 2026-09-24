@@ -5,7 +5,7 @@ slug: copd
 summary: 35 岁以上吸烟者出现活动气短、慢性咳嗽、痰或喘息要怀疑慢阻肺；确诊靠支气管舒张后肺功能检查。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-02-19
 age_group: [adult, older]
 tags: [慢阻肺, COPD, 肺功能, 吸烟, 慢性咳嗽]
 sources:

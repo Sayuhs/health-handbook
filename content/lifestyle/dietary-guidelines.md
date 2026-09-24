@@ -5,7 +5,7 @@ slug: dietary-guidelines
 summary: 中国口径：食盐不超 5 g/天、烹调油 25~30 g、添加糖≤50 g、反式脂肪≤2 g；国际数值并列标注体系。
 evidence: strong
 updated: 2026-09-24
-review_due: 2028-09-24
+review_due: 2028-02-19
 age_group: [child, adult, older]
 tags: [膳食, 盐, 糖, 脂肪, 蔬果]
 sources:

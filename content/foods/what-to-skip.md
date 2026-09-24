@@ -5,7 +5,7 @@ slug: what-to-skip
 summary: 含糖饮料与果汁饮料少喝；超级食物、排毒、碱性饮食、补充剂替代正餐的说法均有原文否定。
 evidence: strong
 updated: 2026-09-24
-review_due: 2028-09-24
+review_due: 2028-11-19
 age_group: [child, adult, older]
 tags: [含糖饮料, 游离糖, 补充剂, 常见误区, 超加工食品]
 sources:

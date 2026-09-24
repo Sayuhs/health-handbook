@@ -5,7 +5,7 @@ slug: rheumatoid-and-gout
 summary: 类风湿是自身免疫病，痛风是尿酸盐结晶性炎症；关节红肿热痛伴高热须立即就医。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-09-18
 age_group: [adult, older]
 tags: [类风湿关节炎, 痛风, 尿酸, 关节炎, 关节, 高尿酸血症]
 sources:

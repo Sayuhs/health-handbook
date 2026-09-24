@@ -5,7 +5,7 @@ slug: age-related-vision-loss
 summary: 中老年视力下降多与白内障和屈光不正有关；糖尿病患者需按期筛查眼底。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-01-17
 age_group: [adult, older]
 tags: [视力下降, 白内障, 青光眼, 糖尿病视网膜病变, 眼底检查, 老花]
 sources:

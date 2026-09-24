@@ -5,7 +5,7 @@ slug: antibiotics-misconceptions
 summary: 抗生素只对部分细菌感染有效，对感冒、流感等病毒感染无效；误用会催生耐药并带来副作用。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-01-06
 age_group: [child, adult, older]
 tags: [抗生素, 耐药, 感冒, 流感, 儿童]
 sources:

@@ -5,7 +5,7 @@ slug: thyroid-function
 summary: TSH 升高多指向甲减、降低多指向甲亢；化验超范围不等于患病，孕期须按孕周判读。
 evidence: moderate
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-03-24
 age_group: [adult, pregnant]
 tags: [甲状腺, TSH, FT4, 甲减, 甲亢, 孕期]
 sources:

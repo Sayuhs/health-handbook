@@ -5,7 +5,7 @@ slug: health-check-preparation
 summary: 多数空腹项目需禁食 8～14 小时、可少量饮水；长期常用药一般不停，具体要求按项目确认。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-03-12
 age_group: [child, adult, older]
 tags: [体检, 空腹, 抽血, 超声, 用药]
 sources:

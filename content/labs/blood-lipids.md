@@ -5,7 +5,7 @@ slug: blood-lipids
 summary: 血脂异常不等于得病；四项里 LDL-C 决定治疗目标，而目标值随危险分层变化。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-07-23
 age_group: [adult, older]
 tags: [血脂, 胆固醇, 低密度脂蛋白, 甘油三酯]
 sources:

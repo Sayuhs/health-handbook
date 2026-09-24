@@ -5,7 +5,7 @@ slug: weight-management
 summary: 中国切点：BMI 超重 24.0~27.9、肥胖≥28.0；腰围男≥90 cm、女≥85 cm 为中心型肥胖。
 evidence: strong
 updated: 2026-09-24
-review_due: 2028-09-24
+review_due: 2028-12-21
 age_group: [child, adult, older]
 tags: [体重, BMI, 腰围, 减重, 肥胖]
 sources:

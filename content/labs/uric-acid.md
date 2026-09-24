@@ -5,7 +5,7 @@ slug: uric-acid
 summary: 高尿酸血症不等于痛风，只是最重要的诱因；NICE 用尿酸 ≥360 μmol/L 辅助确认诊断。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-08-22
 age_group: [adult, older]
 tags: [尿酸, 痛风, 高尿酸血症, 体检]
 sources:

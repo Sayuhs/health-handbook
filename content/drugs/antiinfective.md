@@ -5,7 +5,7 @@ slug: antiinfective
 summary: 15 种常见抗感染药物的成分、主要作用与常见商品名对照。
 evidence: moderate
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-03-07
 tags: [药物, 商品名, 抗感染]
 sources:
   - label: "默沙东诊疗手册（中文版）— 药物信息"

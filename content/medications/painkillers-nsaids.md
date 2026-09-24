@@ -5,7 +5,7 @@ slug: painkillers-nsaids
 summary: NSAIDs 可止痛、消肿、退热，但可能伤胃、伤肾并增加心血管风险，特定人群用前需问医生。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-07-06
 age_group: [adult, older, pregnant]
 tags: [止痛药, NSAIDs, 布洛芬, 阿司匹林, 用药]
 sources:

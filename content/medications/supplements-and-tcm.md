@@ -5,7 +5,7 @@ slug: supplements-and-tcm
 summary: 保健食品依法「不以治疗疾病为目的」；「天然」不等于安全，草药可与抗凝药等相互作用。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-09-28
 age_group: [adult, older, pregnant, child]
 tags: [保健品, 中成药, 草药, 肝损伤, 药物相互作用, 用药]
 sources:

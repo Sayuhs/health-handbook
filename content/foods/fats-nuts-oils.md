@@ -5,7 +5,7 @@ slug: fats-nuts-oils
 summary: 用不饱和植物油替代饱和与反式脂肪并控总量；烹调油 25~30 g/天（中国），坚果约每天 10 g。
 evidence: strong
 updated: 2026-09-24
-review_due: 2028-09-24
+review_due: 2028-01-17
 age_group: [child, adult, older]
 tags: [烹调油, 饱和脂肪, 反式脂肪, 坚果, 标签]
 sources:

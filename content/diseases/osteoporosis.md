@@ -5,7 +5,7 @@ slug: osteoporosis
 summary: 骨质疏松常在骨折前无症状；T 值 ≤ −2.5（DXA）是操作性诊断标准，骨折风险不只看骨密度。
 evidence: moderate
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-04-09
 age_group: [adult, older]
 tags: [骨质疏松, 骨密度, T值, 骨折, 跌倒]
 sources:

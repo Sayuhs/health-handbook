@@ -5,7 +5,7 @@ slug: grains-beans-tubers
 summary: 主食换全谷物、杂豆与薯类；纤维与谷类克数按 WHO、NHS 与中国指南原文并列，不做换算。
 evidence: strong
 updated: 2026-09-24
-review_due: 2028-09-24
+review_due: 2028-03-21
 age_group: [child, adult, older]
 tags: [全谷物, 杂豆, 薯类, 膳食纤维, 主食]
 sources:

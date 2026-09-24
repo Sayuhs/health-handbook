@@ -5,7 +5,7 @@ slug: atrial-fibrillation
 summary: 房颤让心跳与脉搏变得不规律，可能完全没有症状，却会提高血栓与卒中风险。
 evidence: moderate
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-06-21
 age_group: [adult, older]
 tags: [心房颤动, 房颤, 心律不齐, 心悸, 卒中]
 sources:

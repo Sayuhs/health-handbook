@@ -5,7 +5,7 @@ slug: no-single-best-food
 summary: 没有单一「最养生」的食物。三家权威机构都以整体饮食模式为单位，「超级食物」防癌的说法有原文否定。
 evidence: strong
 updated: 2026-09-24
-review_due: 2028-09-24
+review_due: 2028-05-19
 age_group: [child, adult, older]
 tags: [饮食模式, 食物多样, 常见误区]
 sources:

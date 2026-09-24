@@ -5,7 +5,7 @@ slug: dyslipidemia
 summary: 血脂异常通常没有任何症状，只能靠血液检查发现；它会让血管阻塞，增加心脏病与卒中风险。
 evidence: moderate
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-12-21
 age_group: [adult, older]
 tags: [血脂, 胆固醇, LDL, HDL, 甘油三酯, 体检]
 sources:

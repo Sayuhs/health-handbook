@@ -5,7 +5,7 @@ slug: osteoarthritis
 summary: 骨关节炎的核心治疗是治疗性运动与体重管理；超重者减 10% 体重可能优于减 5%。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-11-04
 age_group: [adult, older]
 tags: [骨关节炎, 关节, 膝关节, 运动, 体重管理]
 sources:

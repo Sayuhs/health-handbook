@@ -5,7 +5,7 @@ slug: kidney-function
 summary: 肌酐受肌肉量、饮食、年龄影响，单独测不够；肾功能须看 eGFR 与尿 ACR，以本人化验单为准。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-05-22
 age_group: [adult, older]
 tags: [肌酐, eGFR, 尿蛋白, ACR, 肾功能, 体检]
 sources:

@@ -5,7 +5,7 @@ slug: gerd
 summary: 反复烧心反酸即可能是胃食管反流病；胸痛必须先排除心脏问题，55 岁以上伴体重下降属癌症警示组合。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-03-21
 age_group: [adult, older]
 tags: [胃食管反流, GORD, 烧心, 反酸, 消化不良]
 sources:

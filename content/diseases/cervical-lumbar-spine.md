@@ -5,7 +5,7 @@ slug: cervical-lumbar-spine
 summary: 影像上的「突出」不等于疼痛；大小便功能改变或鞍区麻木属立即急诊。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-11-19
 age_group: [adult, older]
 tags: [颈椎病, 腰椎间盘突出, 腰痛, 颈痛, 马尾综合征, 牵引]
 sources:

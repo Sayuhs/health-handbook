@@ -5,7 +5,7 @@ slug: fatty-liver
 summary: 脂肪肝是肝内脂肪堆积的常见情况，通常没有症状，多在做其他检查时被发现；常与超重相关。
 evidence: moderate
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-10-17
 age_group: [adult, older]
 tags: [脂肪肝, MASLD, NAFLD, 肝酶, ALT, AST, 体检]
 sources:

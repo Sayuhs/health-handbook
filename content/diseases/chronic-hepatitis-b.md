@@ -5,7 +5,7 @@ slug: chronic-hepatitis-b
 summary: 乙肝只经血液、性接触、母婴三条途径传播，日常接触不传染；疫苗保护力接近 100%。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-04-17
 age_group: [child, adult, older]
 tags: [乙肝, 肝炎, 乙肝疫苗, 感染]
 sources:

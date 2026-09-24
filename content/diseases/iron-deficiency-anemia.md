@@ -5,7 +5,7 @@ slug: iron-deficiency-anemia
 summary: 缺铁性贫血最常见；成人（尤其绝经后）要查出失血来源，只补铁会掩盖消化道出血或肿瘤。
 evidence: moderate
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-06-07
 age_group: [adult, older, pregnant]
 tags: [缺铁性贫血, 贫血, 铁蛋白, 铁, 消化道出血]
 sources:

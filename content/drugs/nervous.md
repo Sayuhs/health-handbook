@@ -5,7 +5,7 @@ slug: nervous
 summary: 18 种常见神经系统药物的成分、主要作用与常见商品名对照。
 evidence: moderate
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-11-22
 tags: [药物, 商品名, 神经系统]
 sources:
   - label: "默沙东诊疗手册（中文版）— 药物信息"

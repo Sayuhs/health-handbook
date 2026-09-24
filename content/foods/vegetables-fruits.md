@@ -5,7 +5,7 @@ slug: vegetables-fruits
 summary: 蔬果按份数或克数吃够；果汁有每天 150 ml 上限，中国指南与 WHO 都写明果汁不能替代鲜果。
 evidence: strong
 updated: 2026-09-24
-review_due: 2028-09-24
+review_due: 2028-09-21
 age_group: [child, adult, older]
 tags: [蔬菜, 水果, 果汁, 份数, 常见误区]
 sources:

@@ -5,7 +5,7 @@ slug: chronic-kidney-disease
 summary: CKD 早期几乎无症状，靠 eGFR 与尿白蛋白发现；两次相隔 ≥90 天 eGFR<60 即提示存在 CKD。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-09-12
 age_group: [adult, older]
 tags: [慢性肾脏病, CKD, eGFR, 尿白蛋白, 肌酐]
 sources:

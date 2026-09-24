@@ -5,7 +5,7 @@ slug: thyroid-nodules
 summary: 多数甲状腺结节不是癌；TI-RADS 级别越高，需要穿刺或随访的结节尺寸越小。
 evidence: moderate
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-02-04
 age_group: [adult, older]
 tags: [甲状腺结节, 甲状腺, 超声, TI-RADS, 细针穿刺]
 sources:

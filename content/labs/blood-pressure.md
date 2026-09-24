@@ -5,7 +5,7 @@ slug: blood-pressure
 summary: 一次血压偏高不等于高血压；诊室 ≥140/90、家庭 ≥135/85 都只是需要复核的信号。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-12-07
 age_group: [adult, older]
 tags: [血压, 高血压, 心血管, 家庭自测]
 sources:

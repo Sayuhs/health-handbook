@@ -5,7 +5,7 @@ slug: type2-diabetes
 summary: 2 型糖尿病早期常无症状；HbA1c ≥6.5% 或空腹血糖 ≥126 mg/dL 即达诊断切点。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-07-09
 age_group: [adult, older]
 tags: [2 型糖尿病, 血糖, HbA1c, 空腹血糖, 糖尿病前期]
 sources:

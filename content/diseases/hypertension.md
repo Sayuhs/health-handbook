@@ -5,7 +5,7 @@ slug: hypertension
 summary: 高血压通常没有症状，只能靠测量发现；WHO 切点为 140/90 mmHg，美国 CDC 为 130/80 mmHg。
 evidence: strong
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-01-09
 age_group: [adult, older]
 tags: [高血压, 血压, 心血管]
 sources:

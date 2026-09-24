@@ -5,7 +5,7 @@ slug: cardiovascular
 summary: 18 种常见心血管药物的成分、主要作用与常见商品名对照。
 evidence: moderate
 updated: 2026-09-24
-review_due: 2027-09-24
+review_due: 2027-08-04
 tags: [药物, 商品名, 心血管]
 sources:
   - label: "默沙东诊疗手册（中文版）— 药物信息"
