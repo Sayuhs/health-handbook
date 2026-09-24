@@ -2,7 +2,7 @@
 title: 类风湿关节炎与痛风性关节炎
 category: diseases
 slug: rheumatoid-and-gout
-summary: 类风湿是自身免疫病，痛风是尿酸盐结晶性炎症；关节红肿热痛伴高热须立即就医。
+summary: 类风湿是自身免疫病，痛风是尿酸盐结晶性炎症；关节红肿热痛伴高热时，外观可能与化脓性关节炎相同。
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-09-18

@@ -2,7 +2,7 @@
 title: 冠心病与心绞痛
 category: diseases
 slug: coronary-heart-disease
-summary: 冠心病由冠状动脉斑块堆积引起，心绞痛是最常见症状；胸部疼痛持续不缓解必须立即呼叫急救。
+summary: 冠心病由冠状动脉斑块堆积引起，心绞痛是最常见症状；持续不缓解的胸部疼痛是另一回事。
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-07-17

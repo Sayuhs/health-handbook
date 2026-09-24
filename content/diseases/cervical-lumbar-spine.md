@@ -2,7 +2,7 @@
 title: 颈椎病与腰椎间盘突出
 category: diseases
 slug: cervical-lumbar-spine
-summary: 影像上的「突出」不等于疼痛；大小便功能改变或鞍区麻木属立即急诊。
+summary: 影像上的「突出」不等于疼痛；大小便功能改变或鞍区麻木是危险信号。
 evidence: strong
 updated: 2026-09-24
 review_due: 2027-11-19
