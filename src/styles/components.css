@@ -168,6 +168,16 @@
   color: var(--ink-soft);
 }
 
+/* 命中片段：标题与结论里看不出命中理由时，从正文里摘一段出来。
+   比结论再小一号、再淡一档，明确它是「为什么这条会在这儿」而不是正文本身。 */
+.search__result-snippet {
+  margin: var(--space-2xs) 0 0;
+  padding-left: var(--space-s);
+  border-left: 2px solid var(--border);
+  font-size: var(--step--2);
+  color: var(--ink-faint);
+}
+
 .search__result mark {
   background: var(--warn-bg);
   color: inherit;

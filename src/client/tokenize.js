@@ -18,9 +18,14 @@ export function tokenize(text) {
 
   const tokens = [];
 
-  // 1) 词典分词：能切出词就切词
+  // 1) 词典分词：能切出词就切词，**只收两个字以上的**
+  //
+  //    单字在中文里几乎不携带信息：「高」会命中高尿酸、高血压、升高、增高……
+  //    实测过：搜「血压 高」因为查询里多了个单字「高」，结果从 13 条炸到 39 条，
+  //    还把「尿酸」顶到了第三位。而界面本来就要求输入两个字以上才搜，
+  //    所以单字留在索引里没有任何查询会用到它——只有害处。
   for (const seg of SEGMENTER.segment(t)) {
-    if (seg.isWordLike) tokens.push(seg.segment);
+    if (seg.isWordLike && seg.segment.length > 1) tokens.push(seg.segment);
   }
 
   // 2) 相邻双字组合（bigram）
@@ -45,7 +50,11 @@ export function tokenize(text) {
 
 export const SEARCH_OPTIONS = {
   fields: ["title", "summary", "tags", "body"],
-  storeFields: ["url", "title", "summary", "category"],
+  // `body` 也存下来：结果卡片要能**解释自己**。只给标题和一句话结论的话，
+  // 一个只命中正文的结果看起来就毫无道理——实测过：搜「血压」时「老年人防跌倒」
+  // 排在第 7 位（那一页真的写了低血压与体位性血压测量），但标题和结论里没有
+  // 「血压」二字，高亮什么也高亮不出来，于是看着像乱给。
+  storeFields: ["url", "title", "summary", "category", "body"],
   tokenize,
   searchOptions: {
     prefix: true,

@@ -25,17 +25,44 @@ function renderEmpty(q) {
   list.innerHTML = `<li class="search__empty">没有找到「${esc(q)}」。换个说法试试——通用名、商品名、俗名、指标名称都能搜。如果身体正不舒服，不要靠搜索。</li>`;
 }
 
+/** 在文本里找第一个命中的 token（长的优先，避免被短词抢先） */
+function firstHit(text, tokens) {
+  const lower = String(text ?? "").toLowerCase();
+  for (const t of [...new Set(tokens)].sort((a, b) => b.length - a.length)) {
+    const at = lower.indexOf(t);
+    if (at >= 0) return { at, len: t.length };
+  }
+  return null;
+}
+
+/**
+ * 命中片段：标题与结论里都没有查询词时，从正文里摘一段出来。
+ * 目的是让结果**解释自己**——否则读者看到的是一个跟查询词毫无关系的标题。
+ */
+function snippetFor(body, tokens) {
+  const text = String(body ?? "").replace(/\s+/g, " ").trim();
+  const hit = firstHit(text, tokens);
+  if (!hit) return "";
+  const start = Math.max(0, hit.at - 40);
+  const end = Math.min(text.length, hit.at + hit.len + 90);
+  return `${start > 0 ? "…" : ""}${text.slice(start, end)}${end < text.length ? "…" : ""}`;
+}
+
 function renderResults(q, hits) {
   const tokens = tokenizeForHighlight(q);
   list.hidden = false;
   list.innerHTML = hits
-    .map(
-      (h) => `<li><a class="search__result" href="${esc(h.url)}">
+    .map((h) => {
+      // 标题或结论里能看出命中理由，就不必再摘正文
+      const explained = firstHit(h.title, tokens) || firstHit(h.summary, tokens);
+      const snippet = explained ? "" : snippetFor(h.body, tokens);
+      return `<li><a class="search__result" href="${esc(h.url)}">
   <span class="search__result-category">${esc(h.category)}</span>
   <span class="search__result-title">${highlight(h.title, tokens)}</span>
   <p class="search__result-summary">${highlight(h.summary, tokens)}</p>
-</a></li>`,
-    )
+  ${snippet ? `<p class="search__result-snippet">${highlight(snippet, tokens)}</p>` : ""}
+</a></li>`;
+    })
     .join("");
 }
 
