@@ -1,33 +1,6 @@
 /* ==========================================================================
-   components.css — 徽标、搜索、阅读模式控件
+   components.css — 面包屑、搜索
    ========================================================================== */
-
-/* ---- 徽标：证据强度 ---- */
-.badge {
-  display: inline-block;
-  font-family: var(--font-ui);
-  font-size: var(--step--2);
-  letter-spacing: 0.06em;
-  padding: 0.1em 0.5em;
-  border: 1px solid currentColor;
-  border-radius: var(--radius);
-  color: var(--ink-faint);
-  white-space: nowrap;
-}
-
-.badge--evidence-strong {
-  color: var(--link);
-}
-
-.badge--evidence-moderate {
-  color: var(--brass);
-}
-
-.badge--evidence-limited,
-.badge--evidence-none {
-  color: var(--ink-faint);
-  border-style: dashed;
-}
 
 /* ---- 面包屑 ---- */
 .breadcrumb {
@@ -54,38 +27,6 @@
 
 .breadcrumb a {
   color: var(--ink-faint);
-}
-
-/* ---- 阅读模式控件：字号 / 对比 / 主题 ---- */
-.controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-xs);
-  font-family: var(--font-ui);
-}
-
-.control {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2xs);
-  border: var(--border-line);
-  background: var(--paper-raised);
-  color: var(--ink-soft);
-  font: inherit;
-  font-size: var(--step--1);
-  padding: 0.25em 0.6em;
-  cursor: pointer;
-}
-
-.control:hover {
-  border-color: var(--rule-strong);
-  color: var(--ink);
-}
-
-.control[aria-pressed="true"] {
-  border-color: var(--brass);
-  color: var(--ink);
-  background: var(--paper);
 }
 
 /* ---- 搜索 ---- */
@@ -205,9 +146,8 @@
   }
 
   .site-nav,
-  .controls,
-  .search,
-  .site-footer__grid > :not(.site-footer__disclaimer) {
+  .theme-toggle,
+  .search {
     display: none !important;
   }
 

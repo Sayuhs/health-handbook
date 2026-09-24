@@ -9,8 +9,8 @@
 }
 
 html {
-  /* 尊重用户在浏览器里设置的基准字号，只在其上做阅读模式的倍率 */
-  font-size: calc(var(--reading-scale) * 100%);
+  /* 尊重用户在浏览器里设置的基准字号；站点不再缩放它 */
+  font-size: 100%;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   scroll-behavior: smooth;

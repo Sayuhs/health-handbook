@@ -35,8 +35,7 @@
   --font-body: var(--font-serif), var(--font-cjk-serif);
   --font-ui: var(--font-serif), var(--font-cjk-sans);
 
-  /* ---- 字号尺度（rem；根字号由 --reading-scale 缩放） ---- */
-  --reading-scale: 1;
+  /* ---- 字号尺度（rem；根字号用浏览器里设置的大小，不做倍率缩放） ---- */
   --step--2: 0.75rem;
   --step--1: 0.875rem;
   --step-0: 1.0625rem;
@@ -59,6 +58,11 @@
   --space-l: 2rem;
   --space-xl: 3.25rem;
   --space-2xl: 5rem;
+
+  /* ---- 组件尺寸 ---- */
+  /* 页头右上角那条通道的宽度：主题开关钉在那里，按钮宽度跟着它的文字走，
+     这里只保证左侧的标题与导航不会挤到它身上。 */
+  --theme-toggle-reserve: 6.5rem;
 
   /* ---- 线条与直角：维多利亚风靠细线而非圆角 ---- */
   --radius: 2px;
@@ -94,11 +98,4 @@ html[data-theme="dark"] {
   --warn-bg: #2a2314;
 
   color-scheme: dark;
-}
-
-/* 高对比模式（阅读模式的一档），强化正文对比，压掉装饰 */
-html[data-contrast="high"] {
-  --ink-soft: var(--ink);
-  --ink-faint: var(--ink-soft);
-  --rule: var(--rule-strong);
 }

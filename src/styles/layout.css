@@ -1,5 +1,5 @@
 /* ==========================================================================
-   layout.css — 页面外壳：页头、页脚、容器
+   layout.css — 页面外壳：页头、容器
    ========================================================================== */
 
 .wrap {
@@ -16,11 +16,42 @@
 }
 
 .site-header__inner {
+  /* 主题开关要绝对定位钉在右上角，所以这里得是它的定位上下文 */
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   gap: var(--space-s) var(--space-m);
   padding-block: var(--space-m) var(--space-s);
+  /* 给右上角那条通道留空：标题、标签、导航都占不进去，
+     窄屏上标题宁可换行，也不和开关叠在一起。 */
+  padding-inline-end: var(--theme-toggle-reserve);
+}
+
+/* ---- 主题开关：钉在页头右上角的小控件 ----
+   文字由 controls.js 写入（「浅色 ⇄」/「深色 ⇄」/「跟随系统 ⇄」），
+   所以不写死宽度——宽度跟着那行字走，`--theme-toggle-reserve` 只保证
+   左侧的标题与导航不会挤到它身上。 */
+.theme-toggle {
+  position: absolute;
+  inset-block-start: var(--space-m);
+  inset-inline-end: 0;
+  display: inline-flex;
+  align-items: center;
+  border: var(--border-line);
+  background: var(--paper-raised);
+  color: var(--ink-soft);
+  font-family: var(--font-ui);
+  font-size: var(--step--2);
+  line-height: var(--leading-tight);
+  padding: var(--space-3xs) var(--space-xs);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  border-color: var(--rule-strong);
+  color: var(--ink);
 }
 
 .site-title {
@@ -68,55 +99,6 @@
 /* ---- 主内容 ---- */
 .main {
   padding-block: var(--space-l) var(--space-xl);
-}
-
-/* ---- 页脚 ---- */
-.site-footer {
-  border-top: 3px double var(--rule);
-  padding-block: var(--space-l);
-  font-family: var(--font-ui);
-  font-size: var(--step--1);
-  color: var(--ink-faint);
-}
-
-.site-footer__grid {
-  display: grid;
-  gap: var(--space-m);
-  grid-template-columns: 1fr;
-}
-
-@media (min-width: 48em) {
-  .site-footer__grid {
-    grid-template-columns: 2fr 1fr 1fr;
-  }
-}
-
-.site-footer h2 {
-  font-family: var(--font-ui);
-  font-size: var(--step--1);
-  letter-spacing: 0.08em;
-  color: var(--ink-soft);
-  margin-bottom: var(--space-xs);
-}
-
-.site-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.site-footer li {
-  margin-bottom: var(--space-2xs);
-}
-
-.site-footer a {
-  color: var(--ink-soft);
-}
-
-.disclaimer-short {
-  border-left: 2px solid var(--seal);
-  padding-left: var(--space-s);
-  color: var(--ink-soft);
 }
 
 /* ---- 通用区块 ---- */
