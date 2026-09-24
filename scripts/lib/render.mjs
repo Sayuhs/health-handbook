@@ -198,8 +198,8 @@ ${cardHtml}
     const body = `${crumb}
 <h1>${esc(title)}</h1>
 <p class="lede">${esc(description ?? "")}</p>
-${intro}
-${sections}`;
+${sections}
+${intro}`;
 
     return layout({ title, description, path, body, active, noindex });
   }
